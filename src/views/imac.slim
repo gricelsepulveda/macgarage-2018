@@ -1,0 +1,145 @@
+doctype html
+html lang="es"
+  head
+    meta charset="utf-8"
+    title Macgarage
+    meta name="description" content="Hecho en Stgo, Chile"
+    meta name="keywords" content="reparación, apple, tecnología, macbook, iphone, ipad, imac"/
+    meta name="author" content="Lyrics Música &amp; Tecnología. Diseñado por Gricel Sepúlveda"/
+    /! VIEWPORT RESPONSIVE
+    meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/
+    /! NORMALIZE
+    link rel="stylesheet" href="../styles/normalize.min.css" type="text/css"
+    /! FONT AWESOME
+    link rel="stylesheet" href="../styles/fontawesome-5.css" type="text/css"
+    /! STYLES 
+    link rel="stylesheet" href="../styles/mn-styles.css" type="text/css"
+    /! JQUERY
+    script src="http://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"
+    /! INSTAGRAM SCRIPTS
+    script src="../scripts/mn-scripts.min.js"
+    /! LIVERELOAD
+    script src="http://localhost:35729/livereload.js"
+    /! FAVICON
+    link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg"
+  body
+
+    /!NAVBAR
+    nav.mg-top-navbar
+      /! NOTCH IPHONE X
+      .mg-notch
+        .step.part-1
+        .step.part-2
+        .step.part-3
+        .step.part-4
+        .step.part-5
+      /! LOGOS NOTCH
+      .flex.row.space
+        a.mg-logo-macgarage href="#"
+          img src="../assets/img/logo-macgarage-light.svg" title="macgarage" alt="macgarage"
+        .flex.row.start
+          span.mg-span-lyrics Una empresa de
+          a.mg-logo-lyrics href="#"
+            img src="../assets/img/logo-lyrics-light.svg" title="macgarage" alt="macgarage"
+      /! MENU
+      ul.mg-main-menu
+        li.mg-menu-option Inicio
+        li.mg-menu-option Servicios
+        li.mg-menu-option iPhone
+        li.mg-menu-option Macbook / Macbook Pro / Macbook Air
+        li.mg-menu-option iPad
+        li.mg-menu-option iMac
+        li.mg-menu-option Testimonios
+        li.mg-menu-option Reparaciones
+        li.mg-menu-option Preguntas Frecuentes
+      /! TRIGEER MOBILE
+      i.fas.fa-bars.display-none
+    
+    /! SECTION WELCOME
+    section.mg-welcome
+      img src="../assets/img/iphone-open.png" title="iphone" alt="iphone en reparación"
+      .flex.col.center
+        h1.white Soluciones en 72 hrs.
+        h1.white.up Soporte experto
+        h2.black ¿Tienes una emergencia con tu equipo Apple?
+        button.button.normal type="button" Comienza ahora
+      span.note.gray
+        | * Sujeto a stock de piezas. En modelos muy antiguos podría demorar más, pero serás informado al comienzo.
+      nav.mg-quick-access
+        .flex.row.start
+          /! PHONE
+          .mg-phone
+            i.fas.fa-phone
+            .flex.col.start
+              h2.white Llámanos ahora:
+              .flex.row.start
+                a.white href="tel:+56900000000"
+                span.white 
+                  | /
+                a.white href="tel:+56900000000"
+          /! ADRESS
+          .mg-phone
+            i.fas.fa-location-arrow
+            .flex.col.start
+              h2.white Visítanos 
+              .flex.row.start
+                a.white href="#" Nancy #570, Ñuñoa
+          /! MAIL
+          .mg-phone
+            i.fas.fa-envelope
+            .flex.col.start
+              h2.white Escríbenos
+              .flex.row.start
+                a.white href="#" contacto@macgarage.cl
+
+    /! DEVICE PAGE IMAC
+    section.device-page.imac
+      .flex.row.space
+        .flex.col.start
+          h1.white ¿Necesitas una repación
+          h1.black para tu iMac?
+          p.white.text-justify
+            | Pantalla quebrada o rota, cable cortado, botones atascados, puerto usb no funciona, equipo no enciende, ruido, equipo mojado, pantalla sin brillo, volumen bajo, parlantes, cámara, etc.
+          button.button.normal Cotizar ahora
+        img src="../assets/img/device-03-big.png" title="imac" alt="imac"
+    
+    /! FOOTER
+    footer.flex.row.space
+      .flex.col.start
+        p.white.text-left Síguenos en redes sociales
+        .flex.row.start
+          a href="#"
+            i.fab.fa-facebook-f
+          a href="#"
+            i.fab.fa-instagram
+      a.mg-logo-macgarage href="#"
+        img src="../assets/img/logo-macgarage-light.svg" title="macgarage" alt="macgarage"
+      .flex.col.end
+        span.note.white Dirección: Nancy #570, Ñuñoa, Santiago de Chile.
+        span.note.white Teléfonos: 2 25023258 / +569 59171124
+        span.note.white Email: contacto@macgarage.cl
+        span.note.white E-Shop: www.lyrics.cl/tienda
+
+    /! MODAL
+    .mg-modal-display.display-none
+      .mg-modal-bg.flex.col.center
+        .mg-modal.flex.col.center
+          i.fas.fa-times
+          h1.white Contacto
+          p.white ¡Contestamos de inmediato entre 10am - 18pm!
+          form.flex.col.center
+            .mg-form-item.mg-combo
+              select type="text"
+                option disabled="" selected="" Dispositivo...
+                option iPhone
+                option iPad
+                option Macbook
+                option iMac
+                option otro...
+            .mg-form-item.mg-input
+              input placeholder="Tu nombre..."
+            .mg-form-item.mg-input
+              input placeholder="Tu correo..."
+            .mg-form-item.mg-textarea
+              textarea placeholder="Tu mensaje..."
+            button.button.normal enviar

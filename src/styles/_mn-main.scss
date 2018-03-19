@@ -1,0 +1,148 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+//ELEMENTS STYLES
+h1, h2, h3, h4, h5, h6, p, a, span {
+  @include zero-hard;
+  @include clean-webkit;
+  text-decoration: none;
+  line-height: auto;
+  color: initial;
+  &:hover, &:visited, &:focus, &:active {
+    @include zero-hard;
+    @include clean-webkit;
+    text-decoration: none;
+    line-height: auto;
+    color: initial;
+  }
+  .white {
+    color: $white;
+  }
+  .black {
+    color: $black;
+  }
+  .highlight {
+    color: $color-2;
+  }
+  .gray {
+    color: lighten($black, 5%);
+  }
+  .note {
+    font: {
+      size: 10px;
+      style: italic;
+      weight: 300;
+    }
+  }
+}
+
+h1 {
+  font: {
+    size: 48px;
+    weight: 300;
+  }
+  .up {
+    text-transform: uppercase;
+    font: {
+      size: 36px;
+      weight: 600;
+    }
+  }
+}
+
+h2 {
+  font: {
+    size: 18px;
+    weight: 400;
+  }
+}
+
+h3 {
+  font: {
+    size: 16px;
+    weight: 400;
+  }
+}
+
+p {
+  font: {
+    size: 14px;
+    weight: 400;
+  }
+}
+
+button.button {
+  @include clean-button;
+  border-radius: 2px;
+  padding: 10px 20px 10px 20px;
+  color: $white;
+  height: auto;
+  width: auto;
+  font: {
+    weight: 300;
+    size: 16px;
+  }
+  @include flex-row-center;
+  @include shadow;
+  &:hover {
+    padding: 10px 20px 10px 20px;
+  }
+  &.normal {
+    background-color: $color-1;
+  }
+  &.highlight {
+    background-color: $color-1;
+  }
+}
+
+//NAVBAR
+.mg-top-navbar{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 120px;
+  width: 100%;
+  background-color: rgba($black, 0.25);
+  .mg-notch {
+    height: 48px;
+    .step {
+      width: 100%;
+      position: relative;
+      background-color: $black;
+      &.part-1, &.part-5 {
+        height: 12px;
+        width: 30%;
+        top: 0px;
+        position: absolute;
+      }
+      &.part-2 {
+        height: 40px;
+        width: 40px;
+        transform: rotate(44.05deg);
+        position: absolute;
+        left: calc(20% - 9px);
+        top: -10px;
+      }
+      &.part-3{
+        position: absolute;
+        height: 38px; 
+        width: calc(60% - 20px);
+        top: 0;
+        left: calc(20% + 10px);
+      }
+      &.part-4 {
+        height: 40px;
+        width: 40px;
+        transform: rotate(44.05deg);
+        position: absolute;
+        right: calc(20% - 9px);
+        top: -10px;
+      }
+      &.part-5 {
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+}
