@@ -75,125 +75,135 @@ html lang="es"
             span.note.gray.text-center
               | * Sujeto a stock de piezas. En modelos muy antiguos podría demorar más, pero serás informado al comienzo.
         nav.mg-quick-access
-          .flex.row.start
+          .flex.row.around
             /! PHONE
-            .mg-phone
-              i.fas.fa-phone
+            .mg-phone.flex.row.start
+              .mg-icon-access
+                img src="../assets/img/mg-phone.svg" title="phone" alt="phone number"
               .flex.col.start
                 h2.white Llámanos ahora:
                 .flex.row.start
                   a.white href="tel:+56900000000"
-                  span.white 
-                    | /
-                  a.white href="tel:+56900000000"
+                    | +56 9 00000000&nbsp;
+                  a.white href="tel:+56900000000" 
+                    | / +56 9 00000000
             /! ADRESS
-            .mg-phone
-              i.fas.fa-location-arrow
+            .mg-adress.flex.row.start
+              .mg-icon-access
+                img src="../assets/img/mg-location.svg" title="location" alt="location service"
               .flex.col.start
                 h2.white Visítanos 
                 .flex.row.start
                   a.white href="#" Nancy #570, Ñuñoa
             /! MAIL
-            .mg-phone
-              i.fas.fa-envelope
+            .mg-mail.flex.row.start
+              .mg-icon-access
+                img src="../assets/img/mg-mail.svg" title="mail" alt="mail"
               .flex.col.start
                 h2.white Escríbenos
                 .flex.row.start
                   a.white href="#" contacto@macgarage.cl
       
       /! SECTION SERVICES 
-      section.mg-services.display-none
+      section.mg-services
         /! US SUBSECTION
         .mg-us.flex.row.between
           .flex.col.center
-            h1.black Somos el servicio técnico
-            h1.highlight especializado en Apple
-            h2.black de LYRICS, Música & Tecnología.
-            p.gray.text-justify
-            | Somos fanáticos de la tecnología igual que tú y nos dedicamos a reparar y mantener tus equipos Apple para que funcionen como el primer día. Recibimos Macbook, Macbook Pro, iPhone, iPad, iMac, etc...
-          img src="../assets/img/apple-family.png" title="apple devices" alt="apple devices"
+            .flex.col.left
+              h1.black.text-left Somos el servicio técnico
+              h1.highlight.text-left especializado en Apple
+              h2.black.text-left de LYRICS, Música & Tecnología.
+              p.gray.text-justify
+                | Somos fanáticos de la tecnología igual que tú y nos dedicamos a reparar y mantener tus equipos Apple para que funcionen como el primer día. Recibimos Macbook, Macbook Pro, iPhone, iPad, iMac, etc...
+          .flex.row.center
+            img src="../assets/img/apple-family.png" title="apple devices" alt="apple devices"
         /! SERVICE SUBSECTION 
-        ul.mg-service-list
+        ul.mg-service-list.flex.row.center
           /! DIAGNOSIS
-          li.mg-service-detail
-            i.fas.fa-user-md
-            h3.black Diagnóstico
-            p.gray.text-center
+          li.mg-service-detail.diagnosis.flex.col.center
+            .flex.row.center
+              img src="../assets/img/mg-diagnosis.svg" title="diagnosis" alt="diagnosis"
+            h4.black.text-center Diagnóstico
+            p.gray.text-justify
               | Chequeamos y realizamos una evaluación entregando un diagnóstico express de costo cero dentro del mismo  día en que nos entregas tus equipos.
           /! SOLUTION
-          li.mg-service-detail
-            i.fas.fa-check
-            h3.black Solución
-            p.gray.text-center
+          li.mg-service-detail.check.flex.col.center
+            .flex.row.center
+              img src="../assets/img/mg-check.svg" title="check" alt="check"
+            h4.black.text-center Solución
+            p.gray.text-justify
               | Sabemos lo importante que son tus equipos para tu trabajo o tu empresa. Garantizamos solucionar el problema en un plazo máximo de 48hrs. De lo contrario lo sabrás de inmediato. 
           /! PICK UP & DELIVERY
           /! SOLUTION
-          li.mg-service-detail
-            i.fas.fa-truck 
-            h3.black Pickup & Delivery 
-            p.gray.text-center
+          li.mg-service-detail.delivery.flex.col.center
+            .flex.row.center
+              img src="../assets/img/mg-delivery.svg" title="delivery" alt="delivery"
+            h4.black.text-center Pickup & Delivery 
+            p.gray.text-justify
               | Entendemos que tu tiempo es valioso y por eso contamos con servicio de retiro y entrega de tu equipo a reparar. Para que puedas seguir tranquilo tu agenda.
           /! ACCESORIES
-          li.mg-service-detail
-            i.fas.fa-wrench
-            h3.black Accesorios/Repuestos
-            p.gray.text-center
+          li.mg-service-detail.fix.flex.col.center
+            .flex.row.center
+              img src="../assets/img/mg-fix.svg" title="fix" alt="fix"
+            h4.black.text-center Accesorios/Repuestos
+            p.gray.text-justify
               | Resolvemos las fallas técnicas con componentes de calidad ya que valoramos la durabilidad de nuestor trabajo y tu inversión. Contamos con amplia gama de piezas, accesorios, periféricos y repuestos alternativos avalados por Apple. 
           /! UPGRADE
-          li.mg-service-detail 
-            i.fas.fa-arrow-up
-            h3.black Upgrade
-            p.gray.text-center
+          li.mg-service-detail.upgrade.flex.col.center
+            .flex.row.center
+              img src="../assets/img/mg-up.svg" title="upgrade" alt="upgrade"
+            h4.black.text-center Upgrade
+            p.gray.text-justify
               | La tecnología avanza rápido y sabemos la importancia  de que tus equipos funcionen fluido como el primer día, para esto ampliamos las características de hardware y potenciamos la capacidad reemplazando piezas por otras más poderosas.
           
         button.button.normal type="button" Cotizar ahora
-        nav.mg-slider
+        nav.mg-slider.display-none
           i.fas.fa-chevron-circle-left
           .mg-slider-bar
           i.fas.fa-chevron-circle-right
 
       /! SECTION DEVICES
-      section.mg-devices.display-none
-        h1.white Elige tu dispositivo
-        h1.black para empezar tu cotización
+      section.mg-devices
+        h1.white.text-center Elige tu dispositivo
+        h1.black.text-center para empezar tu cotización
         ul.mg-devices-list.flex.row.around  
           /! IPHONE
           li.mg-device
             a.flex.col.center href=""
               img src="../assets/img/device-01.png" title="iphone" alt="iphone"
-              h2 iPhone
+              h2.text-center iPhone
           /! MACBOOK
           li.mg-device
             a.flex.col.center href=""
               img src="../assets/img/device-02.png" title="macbook pro" alt="macbook pro"
-              h2 Macbook
+              h2.text-center Macbook
           /! IMAC
           li.mg-device
             a.flex.col.center href=""
               img src="../assets/img/device-03.png" title="imac" alt="imac"
-              h2 iMac
+              h2.text-center iMac
           /! IPAD
           li.mg-device
             a.flex.col.center href=""
               img src="../assets/img/device-04.png" title="ipad" alt="ipad"
-              h2 iPad
+              h2.text-center iPad
           /! OTROS
           li.mg-device
             a.flex.col.center href=""
               img src="../assets/img/device-05.png" title="dispositivos apple" alt="dispositivos apple"
-              h2 Otro
+              h2.text-center Otro
       
       /! SECTION RATE & FEEDBACK
-      section.mg-rate-feedback.flex.row.between.display-none
+      section.mg-rate-feedback.flex.row.between
         /! TEXT
         .flex.col.center
-          h1.black Opiniones reales
-          h2.black de quienes pasan por MacGarage
-          p.gray
+          h1.black.text-center Opiniones reales
+          h2.black.text-center de quienes pasan por MacGarage
+          p.gray.text-justify
             | Estas son las experiencias reales de personas que han traido su iPhone, Macbook, iMac, iPad y otros dispositivos Apple a reparación en Macgarage.
-          button.button.normal Ver todas en nuestro Fanpage
+          button.button.highlight Ver todas en nuestro Fanpage
         /! QUOTES
-        .flex.col.center
+        .flex.col.center.flex-quote
           /! QUOTE I
           .flex.col.end
             blockquote.mg-quote 
@@ -203,7 +213,7 @@ html lang="es"
           .flex.col.start
             blockquote.mg-quote 
               | Excelente atención, llevamos un notebook Macbook Pro. Le hicimos un upgrade y quedó filete.
-            p.gray.text-right Nombre Apellido 19/03/2017
+            p.gray.text-left Nombre Apellido 19/03/2017
           /! QUOTE III
           .flex.col.end
             blockquote.mg-quote 
@@ -211,12 +221,15 @@ html lang="es"
             p.gray.text-right Nombre Apellido 19/03/2017
       
       /! FIXES
-      section.mg-fixes.flex.col.center.display-none
+      section.mg-fixes.flex.col.center
+        h1.black.text-center Reparaciones
         .mg-instagram-panel
-        button.button.hightlight type="button" Cotizar ahora
+          iframe.snapwidget-widget src="https://snapwidget.com/embed/522513" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:390px; height:390px"
+
+        button.button.highlight type="button" Cotizar ahora
       
       /! FOOTER
-      footer.flex.row.between.display-none
+      footer.flex.row.between
         .flex.col.start
           p.white.text-left Síguenos en redes sociales
           .flex.row.start
@@ -227,10 +240,17 @@ html lang="es"
         a.mg-logo-macgarage href="#"
           img src="../assets/img/logo-macgarage-light.svg" title="macgarage" alt="macgarage"
         .flex.col.end
-          span.note.white Dirección: Nancy #570, Ñuñoa, Santiago de Chile.
-          span.note.white Teléfonos: 2 25023258 / +569 59171124
-          span.note.white Email: contacto@macgarage.cl
-          span.note.white E-Shop: www.lyrics.cl/tienda
+          span.note.white.flex.row.start.text-right Dirección: Nancy #570, Ñuñoa, Santiago de Chile.
+          span.note.white.flex.row.start.text-right 
+            | Teléfonos: 
+            a href="tel:+56222503258" 2 25023258 / 
+            a href="tel:+56959171124" +569 59171124
+          span.note.white.flex.row.start.text-right 
+            | Email: 
+            a href="mailto:contacto@macgarage.cl" contacto@macgarage.cl
+          span.note.white.flex.row.start.text-right 
+            | E-Shop:
+            a href="http://www.lyrics.cl/tienda" www.lyrics.cl/tienda
 
       /! MODAL
       .mg-modal-display.display-none

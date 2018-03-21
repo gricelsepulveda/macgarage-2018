@@ -89,22 +89,26 @@
           </div>
         </div>
         <nav class="mg-quick-access">
-          <div class="flex row start">
+          <div class="flex row around">
             <!--PHONE-->
-            <div class="mg-phone">
-              <i class="fas fa-phone"></i>
+            <div class="mg-phone flex row start">
+              <div class="mg-icon-access">
+                <img alt="phone number" src="../assets/img/mg-phone.svg" title="phone" />
+              </div>
               <div class="flex col start">
                 <h2 class="white">
                   Llámanos ahora:
                 </h2>
                 <div class="flex row start">
-                  <a class="white" href="tel:+56900000000"></a><span class="white">/</span><a class="white" href="tel:+56900000000"></a>
+                  <a class="white" href="tel:+56900000000"> +56 9 00000000&nbsp;</a><a class="white" href="tel:+56900000000">/ +56 9 00000000</a>
                 </div>
               </div>
             </div>
             <!--ADRESS-->
-            <div class="mg-phone">
-              <i class="fas fa-location-arrow"></i>
+            <div class="mg-adress flex row start">
+              <div class="mg-icon-access">
+                <img alt="location service" src="../assets/img/mg-location.svg" title="location" />
+              </div>
               <div class="flex col start">
                 <h2 class="white">
                   Visítanos 
@@ -115,8 +119,10 @@
               </div>
             </div>
             <!--MAIL-->
-            <div class="mg-phone">
-              <i class="fas fa-envelope"></i>
+            <div class="mg-mail flex row start">
+              <div class="mg-icon-access">
+                <img alt="mail" src="../assets/img/mg-mail.svg" title="mail" />
+              </div>
               <div class="flex col start">
                 <h2 class="white">
                   Escríbenos
@@ -130,97 +136,112 @@
         </nav>
       </section>
       <!--SECTION SERVICES -->
-      <section class="mg-services display-none">
+      <section class="mg-services">
         <!--US SUBSECTION-->
         <div class="mg-us flex row between">
           <div class="flex col center">
-            <h1 class="black">
-              Somos el servicio técnico
-            </h1>
-            <h1 class="highlight">
-              especializado en Apple
-            </h1>
-            <h2 class="black">
-              de LYRICS, Música & Tecnología.
-            </h2>
-            <p class="gray text-justify"></p>
-            Somos fanáticos de la tecnología igual que tú y nos dedicamos a reparar y mantener tus equipos Apple para que funcionen como el primer día. Recibimos Macbook, Macbook Pro, iPhone, iPad, iMac, etc...
+            <div class="flex col left">
+              <h1 class="black text-left">
+                Somos el servicio técnico
+              </h1>
+              <h1 class="highlight text-left">
+                especializado en Apple
+              </h1>
+              <h2 class="black text-left">
+                de LYRICS, Música & Tecnología.
+              </h2>
+              <p class="gray text-justify">
+                Somos fanáticos de la tecnología igual que tú y nos dedicamos a reparar y mantener tus equipos Apple para que funcionen como el primer día. Recibimos Macbook, Macbook Pro, iPhone, iPad, iMac, etc...
+              </p>
+            </div>
           </div>
-          <img alt="apple devices" src="../assets/img/apple-family.png" title="apple devices" />
+          <div class="flex row center">
+            <img alt="apple devices" src="../assets/img/apple-family.png" title="apple devices" />
+          </div>
         </div>
         <!--SERVICE SUBSECTION -->
-        <ul class="mg-service-list">
+        <ul class="mg-service-list flex row center">
           <!--DIAGNOSIS-->
-          <li class="mg-service-detail">
-            <i class="fas fa-user-md"></i>
-            <h3 class="black">
+          <li class="mg-service-detail diagnosis flex col center">
+            <div class="flex row center">
+              <img alt="diagnosis" src="../assets/img/mg-diagnosis.svg" title="diagnosis" />
+            </div>
+            <h4 class="black text-center">
               Diagnóstico
-            </h3>
-            <p class="gray text-center">
+            </h4>
+            <p class="gray text-justify">
               Chequeamos y realizamos una evaluación entregando un diagnóstico express de costo cero dentro del mismo  día en que nos entregas tus equipos.
             </p>
           </li>
           <!--SOLUTION-->
-          <li class="mg-service-detail">
-            <i class="fas fa-check"></i>
-            <h3 class="black">
+          <li class="mg-service-detail check flex col center">
+            <div class="flex row center">
+              <img alt="check" src="../assets/img/mg-check.svg" title="check" />
+            </div>
+            <h4 class="black text-center">
               Solución
-            </h3>
-            <p class="gray text-center">
+            </h4>
+            <p class="gray text-justify">
               Sabemos lo importante que son tus equipos para tu trabajo o tu empresa. Garantizamos solucionar el problema en un plazo máximo de 48hrs. De lo contrario lo sabrás de inmediato. 
             </p>
           </li>
           <!--PICK UP & DELIVERY--><!--SOLUTION-->
-          <li class="mg-service-detail">
-            <i class="fas fa-truck"></i>
-            <h3 class="black">
+          <li class="mg-service-detail delivery flex col center">
+            <div class="flex row center">
+              <img alt="delivery" src="../assets/img/mg-delivery.svg" title="delivery" />
+            </div>
+            <h4 class="black text-center">
               Pickup & Delivery 
-            </h3>
-            <p class="gray text-center">
+            </h4>
+            <p class="gray text-justify">
               Entendemos que tu tiempo es valioso y por eso contamos con servicio de retiro y entrega de tu equipo a reparar. Para que puedas seguir tranquilo tu agenda.
             </p>
           </li>
           <!--ACCESORIES-->
-          <li class="mg-service-detail">
-            <i class="fas fa-wrench"></i>
-            <h3 class="black">
+          <li class="mg-service-detail fix flex col center">
+            <div class="flex row center">
+              <img alt="fix" src="../assets/img/mg-fix.svg" title="fix" />
+            </div>
+            <h4 class="black text-center">
               Accesorios/Repuestos
-            </h3>
-            <p class="gray text-center">
+            </h4>
+            <p class="gray text-justify">
               Resolvemos las fallas técnicas con componentes de calidad ya que valoramos la durabilidad de nuestor trabajo y tu inversión. Contamos con amplia gama de piezas, accesorios, periféricos y repuestos alternativos avalados por Apple. 
             </p>
           </li>
           <!--UPGRADE-->
-          <li class="mg-service-detail">
-            <i class="fas fa-arrow-up"></i>
-            <h3 class="black">
+          <li class="mg-service-detail upgrade flex col center">
+            <div class="flex row center">
+              <img alt="upgrade" src="../assets/img/mg-up.svg" title="upgrade" />
+            </div>
+            <h4 class="black text-center">
               Upgrade
-            </h3>
-            <p class="gray text-center">
+            </h4>
+            <p class="gray text-justify">
               La tecnología avanza rápido y sabemos la importancia  de que tus equipos funcionen fluido como el primer día, para esto ampliamos las características de hardware y potenciamos la capacidad reemplazando piezas por otras más poderosas.
             </p>
           </li>
         </ul>
         <button class="button normal" type="button">Cotizar ahora</button>
-        <nav class="mg-slider">
+        <nav class="mg-slider display-none">
           <i class="fas fa-chevron-circle-left"></i>
           <div class="mg-slider-bar"></div>
           <i class="fas fa-chevron-circle-right"></i>
         </nav>
       </section>
       <!--SECTION DEVICES-->
-      <section class="mg-devices display-none">
-        <h1 class="white">
+      <section class="mg-devices">
+        <h1 class="white text-center">
           Elige tu dispositivo
         </h1>
-        <h1 class="black">
+        <h1 class="black text-center">
           para empezar tu cotización
         </h1>
         <ul class="mg-devices-list flex row around">
           <!--IPHONE-->
           <li class="mg-device">
             <a class="flex col center" href=""><img alt="iphone" src="../assets/img/device-01.png" title="iphone" />
-              <h2>
+              <h2 class="text-center">
                 iPhone
               </h2>
             </a>
@@ -228,7 +249,7 @@
           <!--MACBOOK-->
           <li class="mg-device">
             <a class="flex col center" href=""><img alt="macbook pro" src="../assets/img/device-02.png" title="macbook pro" />
-              <h2>
+              <h2 class="text-center">
                 Macbook
               </h2>
             </a>
@@ -236,7 +257,7 @@
           <!--IMAC-->
           <li class="mg-device">
             <a class="flex col center" href=""><img alt="imac" src="../assets/img/device-03.png" title="imac" />
-              <h2>
+              <h2 class="text-center">
                 iMac
               </h2>
             </a>
@@ -244,7 +265,7 @@
           <!--IPAD-->
           <li class="mg-device">
             <a class="flex col center" href=""><img alt="ipad" src="../assets/img/device-04.png" title="ipad" />
-              <h2>
+              <h2 class="text-center">
                 iPad
               </h2>
             </a>
@@ -252,7 +273,7 @@
           <!--OTROS-->
           <li class="mg-device">
             <a class="flex col center" href=""><img alt="dispositivos apple" src="../assets/img/device-05.png" title="dispositivos apple" />
-              <h2>
+              <h2 class="text-center">
                 Otro
               </h2>
             </a>
@@ -260,22 +281,22 @@
         </ul>
       </section>
       <!--SECTION RATE & FEEDBACK-->
-      <section class="mg-rate-feedback flex row between display-none">
+      <section class="mg-rate-feedback flex row between">
         <!--TEXT-->
         <div class="flex col center">
-          <h1 class="black">
+          <h1 class="black text-center">
             Opiniones reales
           </h1>
-          <h2 class="black">
+          <h2 class="black text-center">
             de quienes pasan por MacGarage
           </h2>
-          <p class="gray">
+          <p class="gray text-justify">
              Estas son las experiencias reales de personas que han traido su iPhone, Macbook, iMac, iPad y otros dispositivos Apple a reparación en Macgarage.
           </p>
-          <button class="button normal">Ver todas en nuestro Fanpage</button>
+          <button class="button highlight">Ver todas en nuestro Fanpage</button>
         </div>
         <!--QUOTES-->
-        <div class="flex col center">
+        <div class="flex col center flex-quote">
           <!--QUOTE I-->
           <div class="flex col end">
             <blockquote class="mg-quote">El mejor lugar para llevar un Mac. Te explican todo lo que harán, te guían para tomar la mejor decisión y siempre de una manera muy amable. ¡Completamente recomendado!</blockquote>
@@ -286,7 +307,7 @@
           <!--QUOTE II-->
           <div class="flex col start">
             <blockquote class="mg-quote">Excelente atención, llevamos un notebook Macbook Pro. Le hicimos un upgrade y quedó filete.</blockquote>
-            <p class="gray text-right">
+            <p class="gray text-left">
               Nombre Apellido 19/03/2017
             </p>
           </div>
@@ -300,12 +321,17 @@
         </div>
       </section>
       <!--FIXES-->
-      <section class="mg-fixes flex col center display-none">
-        <div class="mg-instagram-panel"></div>
-        <button class="button hightlight" type="button">Cotizar ahora</button>
+      <section class="mg-fixes flex col center">
+        <h1 class="black text-center">
+          Reparaciones
+        </h1>
+        <div class="mg-instagram-panel">
+          <iframe allowTransparency="true" class="snapwidget-widget" frameborder="0" scrolling="no" src="https://snapwidget.com/embed/522513" style="border:none; overflow:hidden; width:390px; height:390px"></iframe>
+        </div>
+        <button class="button highlight" type="button">Cotizar ahora</button>
       </section>
       <!--FOOTER-->
-      <footer class="flex row between display-none">
+      <footer class="flex row between">
         <div class="flex col start">
           <p class="white text-left">
             Síguenos en redes sociales
@@ -316,7 +342,7 @@
         </div>
         <a class="mg-logo-macgarage" href="#"><img alt="macgarage" src="../assets/img/logo-macgarage-light.svg" title="macgarage" /></a>
         <div class="flex col end">
-          <span class="note white">Dirección: Nancy #570, Ñuñoa, Santiago de Chile.</span><span class="note white">Teléfonos: 2 25023258 / +569 59171124</span><span class="note white">Email: contacto@macgarage.cl</span><span class="note white">E-Shop: www.lyrics.cl/tienda</span>
+          <span class="note white flex row start text-right">Dirección: Nancy #570, Ñuñoa, Santiago de Chile.</span><span class="note white flex row start text-right">Teléfonos: <a href="tel:+56222503258">2 25023258 / </a><a href="tel:+56959171124">+569 59171124</a></span><span class="note white flex row start text-right">Email: <a href="mailto:contacto@macgarage.cl">contacto@macgarage.cl</a></span><span class="note white flex row start text-right"> E-Shop:<a href="http://www.lyrics.cl/tienda">www.lyrics.cl/tienda</a></span>
         </div>
       </footer>
       <!--MODAL-->
