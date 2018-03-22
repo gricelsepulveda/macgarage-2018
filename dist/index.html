@@ -13,10 +13,12 @@
     <link href="../styles/mn-styles.css" rel="stylesheet" type="text/css" />
     <!--JQUERY-->
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
-    <!--INSTAGRAM SCRIPTS-->
-    <script src="../scripts/mn-scripts.min.js"></script>
     <!--LIVERELOAD-->
     <script src="http://localhost:35729/livereload.js"></script>
+    <!--EMAIL SENDER-->
+    <script src="https://smtpjs.com/v2/smtp.js"></script>
+    <!--SCRIPTS -->
+    <script src="../scripts/mg-scripts.min.js"></script>
     <!--FAVICON-->
     <link href="../assets/img/favicon.svg" rel="icon" type="image/svg+xml" />
   </head>
@@ -42,28 +44,31 @@
         <!--MENU-->
         <ul class="mg-main-menu flex row start">
           <li class="mg-menu-option">
-            <a href="#">Inicio</a>
+            <a href="#welcome">Inicio</a>
           </li>
           <li class="mg-menu-option">
-            <a href="#">Servicios</a>
+            <a href="#services">Servicios</a>
           </li>
           <li class="mg-menu-option">
-            <a href="#">iPhone</a>
+            <a href="http://www.macgarage.cl/iphone.html">" iPhone</a>
           </li>
           <li class="mg-menu-option">
-            <a href="#">Macbook / Macbook Pro / Macbook Air</a>
+            <a href="http://www.macgarage.cl/macbook.html">Macbook / Macbook Pro / Macbook Air</a>
           </li>
           <li class="mg-menu-option">
-            <a href="#">iPad</a>
+            <a href="http://www.macgarage.cl/ipad.html">iPad</a>
           </li>
           <li class="mg-menu-option">
-            <a href="#">iMac</a>
+            <a href="http://www.macgarage.cl/imac.html">iMac</a>
           </li>
           <li class="mg-menu-option">
-            <a href="#">Testimonios</a>
+            <a href="#ratefeedback">Testimonios</a>
           </li>
           <li class="mg-menu-option">
-            <a href="#">Reparaciones</a>
+            <a href="#fix">Reparaciones</a>
+          </li>
+          <li class="mg-menu-option">
+            <a href="#">Sedes</a>
           </li>
           <li class="mg-menu-option">
             <a href="#">Preguntas Frecuentes</a>
@@ -85,7 +90,7 @@
             <h2 class="black text-center">
               ¿Tienes una emergencia con tu equipo Apple?
             </h2>
-            <a href="#"><button class="button normal" type="button">Comienza tu reparación ahora</button></a><span class="note gray text-center">* Sujeto a stock de piezas. En modelos muy antiguos podría demorar más, pero serás informado al comienzo.</span>
+            <a href="#"><button class="button normal" onclick="modalContact()" type="button">Comienza tu reparación ahora</button></a><span class="note gray text-center">* Sujeto a stock de piezas. En modelos muy antiguos podría demorar más, pero serás informado al comienzo.</span>
           </div>
         </div>
         <nav class="mg-quick-access">
@@ -222,7 +227,7 @@
             </p>
           </li>
         </ul>
-        <button class="button normal" type="button">Cotizar ahora</button>
+        <button class="button normal" onclick="modalContact()" type="button">Cotizar ahora</button>
         <nav class="mg-slider display-none">
           <i class="fas fa-chevron-circle-left"></i>
           <div class="mg-slider-bar"></div>
@@ -328,7 +333,7 @@
         <div class="mg-instagram-panel">
           <iframe allowTransparency="true" class="snapwidget-widget" frameborder="0" scrolling="no" src="https://snapwidget.com/embed/522513" style="border:none; overflow:hidden; width:390px; height:390px"></iframe>
         </div>
-        <button class="button highlight" type="button">Cotizar ahora</button>
+        <button class="button highlight" onclick="modalContact()" type="button">Cotizar ahora</button>
       </section>
       <!--FOOTER-->
       <footer class="flex row between">
@@ -346,9 +351,9 @@
         </div>
       </footer>
       <!--MODAL-->
-      <div class="mg-modal-display display-none">
+      <div class="mg-modal-display">
         <div class="mg-modal-bg flex col center">
-          <div class="mg-modal flex col center">
+          <div class="mg-modal flex col center modal-contact">
             <i class="fas fa-times"></i>
             <h1 class="white">
               Contacto
@@ -358,41 +363,78 @@
             </p>
             <form class="flex col center">
               <div class="mg-form-item mg-combo">
-                <select type="text">
+                <select name="device" type="text">
                   <option disabled="" selected="">
                     Dispositivo...
                   </option>
-                  <option>
+                  <option value="iPhone">
                     iPhone
                   </option>
-                  <option>
+                  <option value="iPad">
                     iPad
                   </option>
-                  <option>
+                  <option value="Macbook">
                     Macbook
                   </option>
-                  <option>
+                  <option value="iMac">
                     iMac
                   </option>
-                  <option>
+                  <option value="otro dispositivo Apple">
                     otro...
                   </option>
                 </select>
               </div>
               <div class="mg-form-item mg-input">
-                <input placeholder="Tu nombre..." />
+                <input name="name" placeholder="Tu nombre..." />
               </div>
               <div class="mg-form-item mg-input">
-                <input placeholder="Tu correo..." />
+                <input name="mail" placeholder="Tu correo..." />
               </div>
               <div class="mg-form-item mg-textarea">
-                <textarea placeholder="Tu mensaje..."></textarea>
+                <textarea name="message" placeholder="Tu mensaje..."></textarea>
               </div>
-              <button class="button normal">enviar</button>
+              <button class="button normal" onclick="sendmail()" type="button">enviar</button>
             </form>
           </div>
         </div>
       </div>
+      <!--MODAL-->
+      <div class="mg-modal-display display-none">
+        <div class="mg-modal-bg flex col center">
+          <div class="mg-modal-faq flex col center">
+            <i class="fas fa-times"></i>
+            <h1 class="white">
+              Preguntas frecuentes
+            </h1>
+          </div>
+        </div>
+      </div>
+      <script>
+        //SHOW MODAL CONTACT
+        function modalContact(){
+          $(".modal-contact").closest(".mg-modal-display").fadeIn("slow");
+        }
+        
+        function sendmail(){
+          //GET VALUES
+          var emailName = $("input[name='name']").val();
+          var emailMail = $("input[name='mail']").val();
+          var emailSubject = $("select[name='device']").val();
+          var emailMessage = $("textarea[name='message']").val();
+          //SEND VALUES TO MAIL
+          Email.send(
+            emailMail,
+            "contacto@gricel.cl",
+            emailSubject,
+            emailMessage,
+            "mail.gricel.cl",
+            "contacto@gricel.cl",
+            "Mumumau2710_",
+            function done(message) { alert("sent") }    
+          );
+          console.log(emailSubject, emailName, emailMail, emailMessage);
+        }
+      </script>
     </div>
   </body>
 </html>

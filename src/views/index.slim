@@ -13,10 +13,12 @@ html lang="es"
     link rel="stylesheet" href="../styles/mn-styles.css" type="text/css"
     /! JQUERY
     script src="http://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"
-    /! INSTAGRAM SCRIPTS
-    script src="../scripts/mn-scripts.min.js"
     /! LIVERELOAD
     script src="http://localhost:35729/livereload.js"
+    /! EMAIL SENDER
+    script src="https://smtpjs.com/v2/smtp.js"
+    /! SCRIPTS 
+    script src="../scripts/mg-scripts.min.js"
     /! FAVICON
     link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg"
   body
@@ -42,21 +44,23 @@ html lang="es"
         /! MENU
         ul.mg-main-menu.flex.row.start
           li.mg-menu-option 
-            a href="#" Inicio
+            a href="#welcome" Inicio
           li.mg-menu-option
-            a href="#" Servicios
+            a href="#services" Servicios
           li.mg-menu-option
-            a href="#" iPhone
+            a href="http://www.macgarage.cl/iphone.html"" iPhone
           li.mg-menu-option 
-            a href="#" Macbook / Macbook Pro / Macbook Air
+            a href="http://www.macgarage.cl/macbook.html" Macbook / Macbook Pro / Macbook Air
           li.mg-menu-option
-            a href="#" iPad
+            a href="http://www.macgarage.cl/ipad.html" iPad
           li.mg-menu-option
-            a href="#" iMac
+            a href="http://www.macgarage.cl/imac.html" iMac
           li.mg-menu-option
-            a href="#" Testimonios
+            a href="#ratefeedback" Testimonios
           li.mg-menu-option
-            a href="#" Reparaciones
+            a href="#fix" Reparaciones
+          li.mg-menu-option
+            a href="#" Sedes
           li.mg-menu-option
             a href="#" Preguntas Frecuentes
         /! TRIGEER MOBILE
@@ -71,7 +75,7 @@ html lang="es"
             h1.white.up.text-center Soporte experto
             h2.black.text-center ¿Tienes una emergencia con tu equipo Apple?
             a href="#"
-              button.button.normal type="button" Comienza tu reparación ahora
+              button.button.normal type="button" onclick="modalContact()" Comienza tu reparación ahora
             span.note.gray.text-center
               | * Sujeto a stock de piezas. En modelos muy antiguos podría demorar más, pero serás informado al comienzo.
         nav.mg-quick-access
@@ -156,7 +160,7 @@ html lang="es"
             p.gray.text-justify
               | La tecnología avanza rápido y sabemos la importancia  de que tus equipos funcionen fluido como el primer día, para esto ampliamos las características de hardware y potenciamos la capacidad reemplazando piezas por otras más poderosas.
           
-        button.button.normal type="button" Cotizar ahora
+        button.button.normal type="button" onclick="modalContact()" Cotizar ahora
         nav.mg-slider.display-none
           i.fas.fa-chevron-circle-left
           .mg-slider-bar
@@ -226,7 +230,7 @@ html lang="es"
         .mg-instagram-panel
           iframe.snapwidget-widget src="https://snapwidget.com/embed/522513" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:390px; height:390px"
 
-        button.button.highlight type="button" Cotizar ahora
+        button.button.highlight type="button" onclick="modalContact()" Cotizar ahora
       
       /! FOOTER
       footer.flex.row.between
@@ -253,25 +257,58 @@ html lang="es"
             a href="http://www.lyrics.cl/tienda" www.lyrics.cl/tienda
 
       /! MODAL
-      .mg-modal-display.display-none
+      .mg-modal-display
         .mg-modal-bg.flex.col.center
-          .mg-modal.flex.col.center
+          .mg-modal.flex.col.center.modal-contact
             i.fas.fa-times
             h1.white Contacto
             p.white ¡Contestamos de inmediato entre 10am - 18pm!
-            form.flex.col.center
+            form.flex.col.center 
               .mg-form-item.mg-combo
-                select type="text"
+                select name="device" type="text"
                   option disabled="" selected="" Dispositivo...
-                  option iPhone
-                  option iPad
-                  option Macbook
-                  option iMac
-                  option otro...
+                  option value="iPhone" iPhone
+                  option value="iPad" iPad
+                  option value="Macbook" Macbook
+                  option value="iMac" iMac
+                  option value="otro dispositivo Apple" otro...
               .mg-form-item.mg-input
-                input placeholder="Tu nombre..."
+                input name="name" placeholder="Tu nombre..."
               .mg-form-item.mg-input
-                input placeholder="Tu correo..."
+                input name="mail" placeholder="Tu correo..."
               .mg-form-item.mg-textarea
-                textarea placeholder="Tu mensaje..."
-              button.button.normal enviar
+                textarea name="message" placeholder="Tu mensaje..."
+              button.button.normal type="button" onclick="sendmail()"enviar
+      
+      /! MODAL
+      .mg-modal-display.display-none
+        .mg-modal-bg.flex.col.center
+          .mg-modal-faq.flex.col.center
+            i.fas.fa-times
+            h1.white Preguntas frecuentes
+    
+      javascript:
+        //SHOW MODAL CONTACT
+        function modalContact(){
+          $(".modal-contact").closest(".mg-modal-display").fadeIn("slow");
+        }
+        
+        function sendmail(){
+          //GET VALUES
+          var emailName = $("input[name='name']").val();
+          var emailMail = $("input[name='mail']").val();
+          var emailSubject = $("select[name='device']").val();
+          var emailMessage = $("textarea[name='message']").val();
+          //SEND VALUES TO MAIL
+          Email.send(
+            emailMail,
+            "contacto@gricel.cl",
+            emailSubject,
+            emailMessage,
+            "mail.gricel.cl",
+            "contacto@gricel.cl",
+            "Mumumau2710_",
+            function done(message) { alert("sent") }    
+          );
+          console.log(emailSubject, emailName, emailMail, emailMessage);
+        }

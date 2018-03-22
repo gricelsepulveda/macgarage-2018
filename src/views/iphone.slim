@@ -42,38 +42,43 @@ html lang="es"
         /! MENU
         ul.mg-main-menu.flex.row.start
           li.mg-menu-option 
-            a href="#" Inicio
+            a href="http://www.macgarage.cl/#welcome" Inicio
           li.mg-menu-option
-            a href="#" Servicios
+            a href="http://www.macgarage.cl/#services" Servicios
           li.mg-menu-option
             a href="#" iPhone
           li.mg-menu-option 
-            a href="#" Macbook / Macbook Pro / Macbook Air
+            a href="http://www.macgarage.cl/macbook.html" Macbook / Macbook Pro / Macbook Air
           li.mg-menu-option
-            a href="#" iPad
+            a href="http://www.macgarage.cl/ipad.html" iPad
           li.mg-menu-option
-            a href="#" iMac
+            a href="http://www.macgarage.cl/imac.html" iMac
           li.mg-menu-option
-            a href="#" Testimonios
+            a href="http://www.macgarage.cl/#ratefeedback" Testimonios
           li.mg-menu-option
-            a href="#" Reparaciones
+            a href="http://www.macgarage.cl/#fix" Reparaciones
+          li.mg-menu-option
+            a href="#" Sedes
           li.mg-menu-option
             a href="#" Preguntas Frecuentes
         /! TRIGEER MOBILE
         i.fas.fa-bars.display-none
       
-      /! DEVICE PAGE IPHONE
-      section.device-page.iphone.flex.col.center
-        .flex.row.space
-          .flex.col.start
-            h1.white ¿Necesitas una repación
-            h1.black para tu iPhone?
-            p.white.text-justify
-              | Pantalla quebrada o rota, batería agotada, botones atascados, touch id no funciona, equipo no enciende, iPhone mojado, pantalla sin brillo, cámara, parlante, volumen bajo, equipo no carga, etc.
-            button.button.normal Cotizar ahora
+      /! SECTION DEVICE PAGE
+      section.mg-device-page
+        /! DEVICE DETAIL
+        .mg-device-detail.flex.row.between
           .flex.col.center
-            img src="../assets/img/device-01-big.png" title="iphone" alt="iphone"
-      
+            .flex.col.left
+              h1.white.text-left ¿Necesitas una reparación
+              h1.black.text-left para tu iPhone?
+              h2.black.text-left Probablemente estás pasando por alguno de estos problemas:
+              p.gray.text-justify
+                | Pantalla quebrada o rota, batería agotada, botones atascados, touch id no funciona, equipo no enciende, equipo mojado, pantalla sin brillo, volumen bajo, equipo no carga, etc.
+              button.button.normal type="button" Cotizar
+          .flex.row.center 
+            img src="../assets/img/device-01-big.png" title="apple iphone" alt="apple iphone"
+
       /! FOOTER
       footer.flex.row.between
         .flex.col.start
@@ -120,4 +125,4 @@ html lang="es"
                 input placeholder="Tu correo..."
               .mg-form-item.mg-textarea
                 textarea placeholder="Tu mensaje..."
-              button.button.normal enviar
+              button.button.normal type="button" onclick="sendmail();" enviar
