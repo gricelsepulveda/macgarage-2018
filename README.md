@@ -1,4 +1,4 @@
-# mini-nature-temp
+# macgarage
 
 1. install ruby 
 2. install the following gems: sass, compass, slim via ´gem install *gem*´
