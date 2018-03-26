@@ -15,8 +15,6 @@ html lang="es"
     script src="http://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"
     /! LIVERELOAD
     script src="http://localhost:35729/livereload.js"
-    /! EMAIL SENDER
-    script src="https://smtpjs.com/v2/smtp.js"
     /! SCRIPTS 
     script src="../scripts/mg-scripts.min.js"
     /! FAVICON
@@ -48,21 +46,21 @@ html lang="es"
           li.mg-menu-option
             a href="#services" Servicios
           li.mg-menu-option
-            a href="http://www.macgarage.cl/iphone.html"" iPhone
+            a href="./iphone.html" iPhone
           li.mg-menu-option 
-            a href="http://www.macgarage.cl/macbook.html" Macbook / Macbook Pro / Macbook Air
+            a href="./macbook.html" Macbook / Macbook Pro / Macbook Air
           li.mg-menu-option
-            a href="http://www.macgarage.cl/ipad.html" iPad
+            a href="./ipad.html" iPad
           li.mg-menu-option
-            a href="http://www.macgarage.cl/imac.html" iMac
+            a href="./imac.html" iMac
           li.mg-menu-option
             a href="#ratefeedback" Testimonios
           li.mg-menu-option
             a href="#fix" Reparaciones
           li.mg-menu-option
-            a href="#" Sedes
+            a onclick="openVenue()" Sedes
           li.mg-menu-option
-            a href="#" Preguntas Frecuentes
+            a onclick="openFAQ()" Preguntas Frecuentes
         /! TRIGEER MOBILE
         i.fas.fa-bars.display-none
       
@@ -87,10 +85,10 @@ html lang="es"
               .flex.col.start
                 h2.white Llámanos ahora:
                 .flex.row.start
-                  a.white href="tel:+56900000000"
-                    | +56 9 00000000&nbsp;
-                  a.white href="tel:+56900000000" 
-                    | / +56 9 00000000
+                  a.white href="tel:+56225023258"
+                    | +56 22 5023258&nbsp;
+                  a.white href="tel:+56971635614" 
+                    | / +56 9 71635614
             /! ADRESS
             .mg-adress.flex.row.start
               .mg-icon-access
@@ -98,7 +96,7 @@ html lang="es"
               .flex.col.start
                 h2.white Visítanos 
                 .flex.row.start
-                  a.white href="#" Nancy #570, Ñuñoa
+                  a.white href="https://www.google.cl/maps/place/Nancy+570,+%C3%91u%C3%B1oa,+Regi%C3%B3n+Metropolitana/@-33.455842,-70.6265402,17z/data=!3m1!4b1!4m5!3m4!1s0x9662c5624d9abdfd:0x139f4b510c06d75f!8m2!3d-33.455842!4d-70.6243515" target="_blank" Nancy #570, Ñuñoa
             /! MAIL
             .mg-mail.flex.row.start
               .mg-icon-access
@@ -106,7 +104,7 @@ html lang="es"
               .flex.col.start
                 h2.white Escríbenos
                 .flex.row.start
-                  a.white href="#" contacto@macgarage.cl
+                  a.white href="mailto:contacto@macgarage.cl" contacto@macgarage.cl
       
       /! SECTION SERVICES 
       section.mg-services
@@ -118,7 +116,7 @@ html lang="es"
               h1.highlight.text-left especializado en Apple
               h2.black.text-left de LYRICS, Música & Tecnología.
               p.gray.text-justify
-                | Somos fanáticos de la tecnología igual que tú y nos dedicamos a reparar y mantener tus equipos Apple para que funcionen como el primer día. Recibimos Macbook, Macbook Pro, iPhone, iPad, iMac, etc...
+                | Somos expertos de la tecnología y fanáticos al igual que tú. Nos dedicamos a reparar y mantener tus equipos Apple para que funcionen como el primer día. Recibimos Macbook, Macbook Pro, iPhone, iPad, iMac, etc...
           .flex.row.center
             img src="../assets/img/apple-family.png" title="apple devices" alt="apple devices"
         /! SERVICE SUBSECTION 
@@ -173,27 +171,27 @@ html lang="es"
         ul.mg-devices-list.flex.row.around  
           /! IPHONE
           li.mg-device
-            a.flex.col.center href=""
+            a.flex.col.center href="./iphone.html" target="_blank"
               img src="../assets/img/device-01.png" title="iphone" alt="iphone"
               h2.text-center iPhone
           /! MACBOOK
           li.mg-device
-            a.flex.col.center href=""
+            a.flex.col.center href="./macbook.html" target="_blank"
               img src="../assets/img/device-02.png" title="macbook pro" alt="macbook pro"
               h2.text-center Macbook
           /! IMAC
           li.mg-device
-            a.flex.col.center href=""
+            a.flex.col.center href="./imac.html" target="_blank"
               img src="../assets/img/device-03.png" title="imac" alt="imac"
               h2.text-center iMac
           /! IPAD
           li.mg-device
-            a.flex.col.center href=""
+            a.flex.col.center href="./ipad.html" target="_blank"
               img src="../assets/img/device-04.png" title="ipad" alt="ipad"
               h2.text-center iPad
           /! OTROS
           li.mg-device
-            a.flex.col.center href=""
+            a.flex.col.center onclick="modalContact()"
               img src="../assets/img/device-05.png" title="dispositivos apple" alt="dispositivos apple"
               h2.text-center Otro
       
@@ -205,30 +203,31 @@ html lang="es"
           h2.black.text-center de quienes pasan por MacGarage
           p.gray.text-justify
             | Estas son las experiencias reales de personas que han traido su iPhone, Macbook, iMac, iPad y otros dispositivos Apple a reparación en Macgarage.
-          button.button.highlight Ver todas en nuestro Fanpage
+          a href="https://www.facebook.com/macgarageonline/"
+            button.button.highlight Ver todas en nuestro Fanpage
         /! QUOTES
         .flex.col.center.flex-quote
           /! QUOTE I
           .flex.col.end
             blockquote.mg-quote 
               | El mejor lugar para llevar un Mac. Te explican todo lo que harán, te guían para tomar la mejor decisión y siempre de una manera muy amable. ¡Completamente recomendado!
-            p.gray.text-right Nombre Apellido 19/03/2017
+            p.gray.text-right Angel Quiroga 19/12/2017
           /! QUOTE II
           .flex.col.start
             blockquote.mg-quote 
               | Excelente atención, llevamos un notebook Macbook Pro. Le hicimos un upgrade y quedó filete.
-            p.gray.text-left Nombre Apellido 19/03/2017
+            p.gray.text-left Luis Villagra 12/10/2017
           /! QUOTE III
           .flex.col.end
             blockquote.mg-quote 
               | Compré un base para discos sata 2.5 con USB 3.0. El servicio es estupendo, rápido, amables y confiables. El producto es buenísimo, recomendables 100%.
-            p.gray.text-right Nombre Apellido 19/03/2017
+            p.gray.text-right Brian Smith 05/06/2017
       
       /! FIXES
       section.mg-fixes.flex.col.center
         h1.black.text-center Reparaciones
         .mg-instagram-panel
-          iframe.snapwidget-widget src="https://snapwidget.com/embed/522513" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:390px; height:390px"
+          iframe.snapwidget-widget src="https://snapwidget.com/embed/524777" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; height: 100%;"
 
         button.button.highlight type="button" onclick="modalContact()" Cotizar ahora
       
@@ -237,27 +236,34 @@ html lang="es"
         .flex.col.start
           p.white.text-left Síguenos en redes sociales
           .flex.row.start
-            a href="#"
+            a href="https://www.facebook.com/macgarageonline/" target="_blank"
               i.fab.fa-facebook-f
-            a href="#"
+            a href="https://www.instagram.com/macgarageonline/" target="_blank"
               i.fab.fa-instagram
         a.mg-logo-macgarage href="#"
           img src="../assets/img/logo-macgarage-light.svg" title="macgarage" alt="macgarage"
         .flex.col.end
-          span.note.white.flex.row.start.text-right Dirección: Nancy #570, Ñuñoa, Santiago de Chile.
+          span.note.white.flex.row.start.text-right 
+            | Dirección: 
+            a href="https://www.google.cl/maps/place/Nancy+570,+%C3%91u%C3%B1oa,+Regi%C3%B3n+Metropolitana/@-33.455842,-70.6265402,17z/data=!3m1!4b1!4m5!3m4!1s0x9662c5624d9abdfd:0x139f4b510c06d75f!8m2!3d-33.455842!4d-70.6243515" target="_blank"
+              | &nbsp; Nancy #570, Ñuñoa, Santiago de Chile.
           span.note.white.flex.row.start.text-right 
             | Teléfonos: 
-            a href="tel:+56222503258" 2 25023258 / 
-            a href="tel:+56959171124" +569 59171124
+            a href="tel:+56222503258"
+              | &nbsp;2 25023258 / 
+            a href="tel:+56959171124"
+              | &nbsp;+569 59171124
           span.note.white.flex.row.start.text-right 
             | Email: 
-            a href="mailto:contacto@macgarage.cl" contacto@macgarage.cl
+            a href="mailto:contacto@macgarage.cl"
+              | &nbsp;contacto@macgarage.cl
           span.note.white.flex.row.start.text-right 
             | E-Shop:
-            a href="http://www.lyrics.cl/tienda" www.lyrics.cl/tienda
+            a href="http://www.lyrics.cl/tienda" target="_blank"
+              | &nbsp;www.lyrics.cl/tienda
 
       /! MODAL
-      .mg-modal-display
+      .mg-modal-display.display-none
         .mg-modal-bg.flex.col.center
           .mg-modal.flex.col.center.modal-contact
             i.fas.fa-times
@@ -279,36 +285,90 @@ html lang="es"
               .mg-form-item.mg-textarea
                 textarea name="message" placeholder="Tu mensaje..."
               button.button.normal type="button" onclick="sendmail()"enviar
-      
-      /! MODAL
+
+      /! MODAL VENUES
+      .mg-modal-display
+        .mg-modal-bg.flex.col.center
+          .mg-modal.flex.col.center.mg-modal-venue
+            i.fas.fa-times
+            h1.white Sedes
+            .flex.row.center 
+              /! VENUE
+              a.flex.col.center href="./sede-nunoa" target="_blank"
+                .mg-venue-picture
+                h3.text-center.black Sede Ñuñoa
+              /! VENUE
+              a.flex.col.center href="./sede-providencia" target="_blank"
+                .mg-venue-picture
+                h3.text-center.black Sede Providencia
+              /! VENUE
+              a.flex.col.center href="#"
+                .mg-venue-picture
+                .flex.col.center
+                  h3.text-center.black Sede Lo Barnechea
+                  h4.text-center.white Pronto...
+
+
+      /! MODAL FAQ
       .mg-modal-display.display-none
         .mg-modal-bg.flex.col.center
           .mg-modal-faq.flex.col.center
+            h1.white.text-center 
+              | Preguntas frecuentes
             i.fas.fa-times
-            h1.white Preguntas frecuentes
-    
-      javascript:
-        //SHOW MODAL CONTACT
-        function modalContact(){
-          $(".modal-contact").closest(".mg-modal-display").fadeIn("slow");
-        }
+            .mg-faq-container
+              ul.mg-faq-list
+                li.mg-faq-item
+                  h5.mg-h5 ¿En qué consiste el diagnóstico?
+                  p.mg-p.gray
+                    | Muchas veces los problemas de tus equipos no son evidentes. Nuestros técnicos deben revisarlo y/o desarmarlo para poder determinar la causa del problema. Te enviaremos una Ficha de Diagnóstico en un plazo máximo de 3 horas y te anexaremos un presupuesto.
+                li.mg-faq-item
+                  h5.mg-h5 Acepté el presupuesto para arreglar mis equipos. ¿Qué hago ahora?
+                  p.mg-p.gray
+                    | Primero comunícate con nosotros. Llámanos al 
+                    a href="tel:+56225023258" 
+                      | 22 502 32 58
+                    | , escríbenos por Whatsapp al 
+                    a href="tel:+56959171124" 
+                      | +56959171124
+                    | o a 
+                    a href="mailto:contacto@macgarage.cl" 
+                      | contacto@macgarage.cl 
+                    | o a nuestro formulario en línea y te enviaremos una Orden de Trabajo. A contar de este punto nuestros técnicos solucionarán el problema de tus equipos y te los entregaremos en 72 horas.
+                li.mg-faq-item
+                  h5.mg-h5 La reparación de mi equipo requiere de pieza o repuestos nuevos. ¿Están incluidas en el presupuesto o debo comprarlas por separado?
+                  p.mg-p.gray
+                    | Sí, está todo incluido en el presupuesto, así que no necesitas comprarlas por separado. Todas las Fichas de Diagnóstico vienen con un presupuesto anexo donde están incluidas todas las piezas o repuestos que sean necesarios para resolver el problema de tus equipos. Trabajamos con piezas y repuestos alternativos de alta calidad, que son garantizados por MAC. En caso que quieras comprarlos por tu cuenta, no podremos garantizarte resolver el problema de tu equipo en 72 horas, y el plazo de entrega te lo informaremos una vez que nos hagas llegar las piezas o repuestos.
+                li.mg-faq-item
+                  h5.mg-h5 No puedo ir a dejar o retirar mi equipo del taller. ¿Tienen servicio a domicilio?
+                  p.mg-p.gray
+                    | Sabemos que el tiempo es valioso. Si no puedes ir a nuestro taller, te ofrecemos nuestro servicio de PICK UP y DELIVERY. Vamos a buscar tus equipos y luego te los vamos a dejar donde necesites dentro de Santiago.
+                li.mg-faq-item
+                  h5.mg-h5 Quiero optar por el servicio de pick up y delivery, ¿Qué costo tiene?
+                  p.mg-p.gray
+                    | Es gratuito dentro de Santiago y es exclusivo para clientes que hayan aceptado el presupuesto enviado.
+                li.mg-faq-item 
+                  h5.mg-h5 Entregué mi equipo para diagnóstico con servicio de pick up y delivery pero no acepté el presupuesto. ¿Tiene algún costo?
+                  p.mg-p.gray
+                    | Sí, tiene un costo fijo de $5.990 dentro de Santiago, incluido el PICK UP y DELIVERY. Este servicio es gratuito únicamente para clientes que hayan aceptado el presupuesto.
+                li.mg-faq-item
+                  h5.mg-h5 Opté por servicio de pick up y delivery. ¿Los tiempos de traslado están incluidos en las 72 horas?
+                  p.mg-p.gray
+                    | Sí. Si optaste por el servicio de PICK UP y DELIVERY recibirás tus equipos dentro de las 72 horas garantizadas. Recuerda que las 72 horas corren desde el momento en que aceptas el presupuesto, no desde el PICK UP.
+                li.mg-faq-item 
+                  h5.mg-h5 Mis equipos fueron entregados fuera del plazo estipulado y ¿Qué ocurre en caso que no se cumpla el plazo de 72 horas?
+                  p.mg-p.gray
+                    | Si por algún motivo recibes tus equipos fuera de las 72 horas hábiles garantizadas, te lo informaremos previamente, y te compensaremos con un 50% de descuento en tu presupuesto final.
+                li.mg-faq-item
+                  h5.mg-h5 Mi equipo necesita un upgrade. ¿Puedo solamente comprar las piezas o repuestos que necesito?
+                  p.mg-p.gray
+                    | Sí, puedes revisarlos y comprarlos en línea a través de nuestro E-SHOP 
+                    a href="http://www.lyrics.cl/tienda" 
+                      | lyrics.cl/tienda
+                li.mg-faq-item
+                  h5.mg-h5 Tengo una urgencia con mis equipos y estoy fuera del horario hábil. ¿Qué puedo hacer?
+                  p.mg-p.gray
+                    | Por el momento no atendemos urgencias, pero estamos trabajando para iniciar pronto una marcha blanca para nuestro SERVICIO 24/7.
+
+
         
-        function sendmail(){
-          //GET VALUES
-          var emailName = $("input[name='name']").val();
-          var emailMail = $("input[name='mail']").val();
-          var emailSubject = $("select[name='device']").val();
-          var emailMessage = $("textarea[name='message']").val();
-          //SEND VALUES TO MAIL
-          Email.send(
-            emailMail,
-            "contacto@gricel.cl",
-            emailSubject,
-            emailMessage,
-            "mail.gricel.cl",
-            "contacto@gricel.cl",
-            "Mumumau2710_",
-            function done(message) { alert("sent") }    
-          );
-          console.log(emailSubject, emailName, emailMail, emailMessage);
-        }

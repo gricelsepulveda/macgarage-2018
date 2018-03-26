@@ -48,9 +48,9 @@ html lang="es"
           li.mg-menu-option
             a href="./iphone.html" iPhone
           li.mg-menu-option 
-            a href="./macbook.html" Macbook / Macbook Pro / Macbook Air
+            a href="#" Macbook / Macbook Pro / Macbook Air
           li.mg-menu-option
-            a href="#" iPad
+            a href="./ipad.html" iPad
           li.mg-menu-option
             a href="./imac.html" iMac
           li.mg-menu-option
@@ -64,20 +64,32 @@ html lang="es"
         /! TRIGEER MOBILE
         i.fas.fa-bars.display-none
       
-      /! SECTION DEVICE PAGE
-      section.mg-device-page
-        /! DEVICE DETAIL
-        .mg-device-detail.flex.row.between
-          .flex.col.center
-            .flex.col.left
-              h1.white.text-left ¿Necesitas una reparación
-              h1.black.text-left para tu iPad?
-              h2.black.text-left Probablemente estás pasando por alguno de estos problemas:
-              p.gray.text-justify
-                | Pantalla quebrada o rota, batería agotada, botones atascados, touch id no funciona, equipo no enciende, iPad mojado, iPad abollado, pantalla sin brillo, volumen bajo, equipo no carga, parlante, cámara, etc.
-              button.button.normal type="button" onclick="modalContact()" Cotizar
-          .flex.row.center 
-            img.mg-img-ipad src="../assets/img/device-02-big.png" title="apple iphone" alt="apple iphone"
+      /! SECTION VENUE PAGE
+      section.mg-venue-page
+        .flex.row.center
+          .flex.col
+            .flex.row.start
+              .mg-venue-photo-container
+                img.mg-img-venue src="../assets/img/nunoa-photo.jpg" title="sede nunoa reparaciones mac" alt="sede nunoa reparaciones mac"
+              .flex.col.start
+                h1.highlight.text-left Sede
+                h1.black.text-left Ñuñoa
+            .flex.col.start.mg-venue-data
+              .flex.row.start
+                .mg-icon-venue
+                  img src="../assets/img/mg-phone.svg"
+                span Teléfonos:
+                a href="tel:+56222503258"
+                  | &nbsp;22 5023258 / 
+                a href="tel:+56959171124"
+                  | &nbsp;+569 59171124
+              .flex.row.start
+                .mg-icon-venue
+                  img src="../assets/img/mg-location.svg"
+                span Dirección:
+                a href="https://goo.gl/maps/bKXbWkXuU1n" target="_blank" 
+                  | &nbsp;Nancy #570, Ñuñoa.
+          .flex.row.center.mg-nunoa
 
       /! FOOTER
       footer.flex.row.between
@@ -133,7 +145,7 @@ html lang="es"
               .mg-form-item.mg-textarea
                 textarea name="message" placeholder="Tu mensaje..."
               button.button.normal type="button" onclick="sendmail()"enviar
-      
+        
       /! MODAL FAQ
       .mg-modal-display.display-none
         .mg-modal-bg.flex.col.center

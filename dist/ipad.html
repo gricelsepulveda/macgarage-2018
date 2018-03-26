@@ -13,14 +13,12 @@
     <link href="../styles/mn-styles.css" rel="stylesheet" type="text/css" />
     <!--JQUERY-->
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
-    <!--INSTAGRAM SCRIPTS-->
-    <script src="../scripts/mn-scripts.min.js"></script>
+    <!--SCRIPTS-->
+    <script src="../scripts/mg-scripts.min.js"></script>
     <!--LIVERELOAD-->
     <script src="http://localhost:35729/livereload.js"></script>
     <!--FAVICON-->
     <link href="../assets/img/favicon.svg" rel="icon" type="image/svg+xml" />
-    <!--EMAIL SENDER-->
-    <script src="https://smtpjs.com/v2/smtp.js"></script>
   </head>
   <body>
     <div class="mg-center">
@@ -50,16 +48,16 @@
             <a href="http://www.macgarage.cl/#services">Servicios</a>
           </li>
           <li class="mg-menu-option">
-            <a href="http://www.macgarage.cl/iphone.html">iPhone</a>
+            <a href="./iphone.html">iPhone</a>
           </li>
           <li class="mg-menu-option">
-            <a href="http://www.macgarage.cl/macbook.html">Macbook / Macbook Pro / Macbook Air</a>
+            <a href="./macbook.html">Macbook / Macbook Pro / Macbook Air</a>
           </li>
           <li class="mg-menu-option">
             <a href="#">iPad</a>
           </li>
           <li class="mg-menu-option">
-            <a href="http://www.macgarage.cl/imac.html">iMac</a>
+            <a href="./imac.html">iMac</a>
           </li>
           <li class="mg-menu-option">
             <a href="http://www.macgarage.cl/#ratefeedback">Testimonios</a>
@@ -68,10 +66,10 @@
             <a href="http://www.macgarage.cl/#fix">Reparaciones</a>
           </li>
           <li class="mg-menu-option">
-            <a href="#">Sedes</a>
+            <a onclick="openVenue()">Sedes</a>
           </li>
           <li class="mg-menu-option">
-            <a href="#">Preguntas Frecuentes</a>
+            <a onclick="openFAQ()">Preguntas Frecuentes</a>
           </li>
         </ul>
         <!--TRIGEER MOBILE--><i class="fas fa-bars display-none"></i>
@@ -94,7 +92,7 @@
               <p class="gray text-justify">
                 Pantalla quebrada o rota, batería agotada, botones atascados, touch id no funciona, equipo no enciende, iPad mojado, iPad abollado, pantalla sin brillo, volumen bajo, equipo no carga, parlante, cámara, etc.
               </p>
-              <button class="button normal" type="button">Cotizar</button>
+              <button class="button normal" onclick="modalContact()" type="button">Cotizar</button>
             </div>
           </div>
           <div class="flex row center">
@@ -109,18 +107,18 @@
             Síguenos en redes sociales
           </p>
           <div class="flex row start">
-            <a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/macgarageonline/" target="_blank"><i class="fab fa-facebook-f"></i></a><a href="https://www.instagram.com/macgarageonline/" target="_blank"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
         <a class="mg-logo-macgarage" href="#"><img alt="macgarage" src="../assets/img/logo-macgarage-light.svg" title="macgarage" /></a>
         <div class="flex col end">
-          <span class="note white flex row start text-right">Dirección: Nancy #570, Ñuñoa, Santiago de Chile.</span><span class="note white flex row start text-right">Teléfonos: <a href="tel:+56222503258">2 25023258 / </a><a href="tel:+56959171124">+569 59171124</a></span><span class="note white flex row start text-right">Email: <a href="mailto:contacto@macgarage.cl">contacto@macgarage.cl</a></span><span class="note white flex row start text-right"> E-Shop:<a href="http://www.lyrics.cl/tienda">www.lyrics.cl/tienda</a></span>
+          <span class="note white flex row start text-right">Dirección: <a href="https://www.google.cl/maps/place/Nancy+570,+%C3%91u%C3%B1oa,+Regi%C3%B3n+Metropolitana/@-33.455842,-70.6265402,17z/data=!3m1!4b1!4m5!3m4!1s0x9662c5624d9abdfd:0x139f4b510c06d75f!8m2!3d-33.455842!4d-70.6243515" target="_blank">&nbsp; Nancy #570, Ñuñoa, Santiago de Chile.</a></span><span class="note white flex row start text-right">Teléfonos: <a href="tel:+56222503258">&nbsp;2 25023258 / </a><a href="tel:+56959171124">&nbsp;+569 59171124</a></span><span class="note white flex row start text-right">Email: <a href="mailto:contacto@macgarage.cl">&nbsp;contacto@macgarage.cl</a></span><span class="note white flex row start text-right"> E-Shop:<a href="http://www.lyrics.cl/tienda" target="_blank">&nbsp;www.lyrics.cl/tienda</a></span>
         </div>
       </footer>
       <!--MODAL-->
       <div class="mg-modal-display display-none">
         <div class="mg-modal-bg flex col center">
-          <div class="mg-modal flex col center">
+          <div class="mg-modal flex col center modal-contact">
             <i class="fas fa-times"></i>
             <h1 class="white">
               Contacto
@@ -130,38 +128,133 @@
             </p>
             <form class="flex col center">
               <div class="mg-form-item mg-combo">
-                <select type="text">
+                <select name="device" type="text">
                   <option disabled="" selected="">
                     Dispositivo...
                   </option>
-                  <option>
+                  <option value="iPhone">
                     iPhone
                   </option>
-                  <option>
+                  <option value="iPad">
                     iPad
                   </option>
-                  <option>
+                  <option value="Macbook">
                     Macbook
                   </option>
-                  <option>
+                  <option value="iMac">
                     iMac
                   </option>
-                  <option>
+                  <option value="otro dispositivo Apple">
                     otro...
                   </option>
                 </select>
               </div>
               <div class="mg-form-item mg-input">
-                <input placeholder="Tu nombre..." />
+                <input name="name" placeholder="Tu nombre..." />
               </div>
               <div class="mg-form-item mg-input">
-                <input placeholder="Tu correo..." />
+                <input name="mail" placeholder="Tu correo..." />
               </div>
               <div class="mg-form-item mg-textarea">
-                <textarea placeholder="Tu mensaje..."></textarea>
+                <textarea name="message" placeholder="Tu mensaje..."></textarea>
               </div>
-              <button class="button normal" onclick="sendmail();" type="button">enviar</button>
+              <button class="button normal" onclick="sendmail()" type="button">enviar</button>
             </form>
+          </div>
+        </div>
+      </div>
+      <!--MODAL FAQ-->
+      <div class="mg-modal-display display-none">
+        <div class="mg-modal-bg flex col center">
+          <div class="mg-modal-faq flex col center">
+            <h1 class="white text-center">
+              Preguntas frecuentes
+            </h1>
+            <i class="fas fa-times"></i>
+            <div class="mg-faq-container">
+              <ul class="mg-faq-list">
+                <li class="mg-faq-item">
+                  <h5 class="mg-h5">
+                    ¿En qué consiste el diagnóstico?
+                  </h5>
+                  <p class="mg-p gray">
+                    Muchas veces los problemas de tus equipos no son evidentes. Nuestros técnicos deben revisarlo y/o desarmarlo para poder determinar la causa del problema. Te enviaremos una Ficha de Diagnóstico en un plazo máximo de 3 horas y te anexaremos un presupuesto.
+                  </p>
+                </li>
+                <li class="mg-faq-item">
+                  <h5 class="mg-h5">
+                    Acepté el presupuesto para arreglar mis equipos. ¿Qué hago ahora?
+                  </h5>
+                  <p class="mg-p gray">
+                    Primero comunícate con nosotros. Llámanos al <a href="tel:+56225023258">22 502 32 58</a>, escríbenos por Whatsapp al <a href="tel:+56959171124">+56959171124</a>o a <a href="mailto:contacto@macgarage.cl">contacto@macgarage.cl </a>o a nuestro formulario en línea y te enviaremos una Orden de Trabajo. A contar de este punto nuestros técnicos solucionarán el problema de tus equipos y te los entregaremos en 72 horas.
+                  </p>
+                </li>
+                <li class="mg-faq-item">
+                  <h5 class="mg-h5">
+                    La reparación de mi equipo requiere de pieza o repuestos nuevos. ¿Están incluidas en el presupuesto o debo comprarlas por separado?
+                  </h5>
+                  <p class="mg-p gray">
+                    Sí, está todo incluido en el presupuesto, así que no necesitas comprarlas por separado. Todas las Fichas de Diagnóstico vienen con un presupuesto anexo donde están incluidas todas las piezas o repuestos que sean necesarios para resolver el problema de tus equipos. Trabajamos con piezas y repuestos alternativos de alta calidad, que son garantizados por MAC. En caso que quieras comprarlos por tu cuenta, no podremos garantizarte resolver el problema de tu equipo en 72 horas, y el plazo de entrega te lo informaremos una vez que nos hagas llegar las piezas o repuestos.
+                  </p>
+                </li>
+                <li class="mg-faq-item">
+                  <h5 class="mg-h5">
+                    No puedo ir a dejar o retirar mi equipo del taller. ¿Tienen servicio a domicilio?
+                  </h5>
+                  <p class="mg-p gray">
+                    Sabemos que el tiempo es valioso. Si no puedes ir a nuestro taller, te ofrecemos nuestro servicio de PICK UP y DELIVERY. Vamos a buscar tus equipos y luego te los vamos a dejar donde necesites dentro de Santiago.
+                  </p>
+                </li>
+                <li class="mg-faq-item">
+                  <h5 class="mg-h5">
+                    Quiero optar por el servicio de pick up y delivery, ¿Qué costo tiene?
+                  </h5>
+                  <p class="mg-p gray">
+                    Es gratuito dentro de Santiago y es exclusivo para clientes que hayan aceptado el presupuesto enviado.
+                  </p>
+                </li>
+                <li class="mg-faq-item">
+                  <h5 class="mg-h5">
+                    Entregué mi equipo para diagnóstico con servicio de pick up y delivery pero no acepté el presupuesto. ¿Tiene algún costo?
+                  </h5>
+                  <p class="mg-p gray">
+                    Sí, tiene un costo fijo de $5.990 dentro de Santiago, incluido el PICK UP y DELIVERY. Este servicio es gratuito únicamente para clientes que hayan aceptado el presupuesto.
+                  </p>
+                </li>
+                <li class="mg-faq-item">
+                  <h5 class="mg-h5">
+                    Opté por servicio de pick up y delivery. ¿Los tiempos de traslado están incluidos en las 72 horas?
+                  </h5>
+                  <p class="mg-p gray">
+                    Sí. Si optaste por el servicio de PICK UP y DELIVERY recibirás tus equipos dentro de las 72 horas garantizadas. Recuerda que las 72 horas corren desde el momento en que aceptas el presupuesto, no desde el PICK UP.
+                  </p>
+                </li>
+                <li class="mg-faq-item">
+                  <h5 class="mg-h5">
+                    Mis equipos fueron entregados fuera del plazo estipulado y ¿Qué ocurre en caso que no se cumpla el plazo de 72 horas?
+                  </h5>
+                  <p class="mg-p gray">
+                    Si por algún motivo recibes tus equipos fuera de las 72 horas hábiles garantizadas, te lo informaremos previamente, y te compensaremos con un 50% de descuento en tu presupuesto final.
+                  </p>
+                </li>
+                <li class="mg-faq-item">
+                  <h5 class="mg-h5">
+                    Mi equipo necesita un upgrade. ¿Puedo solamente comprar las piezas o repuestos que necesito?
+                  </h5>
+                  <p class="mg-p gray">
+                    Sí, puedes revisarlos y comprarlos en línea a través de nuestro E-SHOP <a href="http://www.lyrics.cl/tienda"> lyrics.cl/tienda</a>
+                  </p>
+                </li>
+                <li class="mg-faq-item">
+                  <h5 class="mg-h5">
+                    Tengo una urgencia con mis equipos y estoy fuera del horario hábil. ¿Qué puedo hacer?
+                  </h5>
+                  <p class="mg-p gray">
+                    Por el momento no atendemos urgencias, pero estamos trabajando para iniciar pronto una marcha blanca para nuestro SERVICIO 24/7.
+                  </p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
