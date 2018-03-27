@@ -75,3 +75,13 @@ function openVenue(){
   $(".mg-modal-venue").closest(".mg-modal-display").fadeIn("slow");
   no_scrollbody();
 }
+
+//SHOW SENT CONTACT
+function openContactSent(){
+  $(".modal-contact-sent").closest(".mg-modal-display").fadeIn("slow");
+}
+
+//SHOW SENT CONTACT
+function closeContactSent(){
+  $(".modal-contact-sent").closest(".mg-modal-display").fadeOut("fast");
+}

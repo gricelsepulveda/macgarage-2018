@@ -269,7 +269,7 @@ html lang="es"
             i.fas.fa-times
             h1.white Contacto
             p.white ¡Contestamos de inmediato entre 10am - 18pm!
-            form.flex.col.center 
+            form.flex.col.center action="send.php" method="post"
               .mg-form-item.mg-combo
                 select name="device" type="text"
                   option disabled="" selected="" Dispositivo...
@@ -281,10 +281,17 @@ html lang="es"
               .mg-form-item.mg-input
                 input name="name" placeholder="Tu nombre..."
               .mg-form-item.mg-input
-                input name="mail" placeholder="Tu correo..."
+                input name="email" placeholder="Tu correo..."
               .mg-form-item.mg-textarea
-                textarea name="message" placeholder="Tu mensaje..."
-              button.button.normal type="button" onclick="sendmail()"enviar
+                textarea name="user_message" placeholder="Tu mensaje..."
+              button.button.normal enviar
+
+      /! MODAL
+      .mg-modal-display.display-none
+        .mg-modal-bg.flex.col.center
+          .mg-modal.flex.col.center.modal-contact-sent
+            i.fas.fa-times
+            p.white ¡Mensaje enviado!
 
       /! MODAL VENUES
       .mg-modal-display

@@ -359,7 +359,7 @@
             <p class="white">
               ¡Contestamos de inmediato entre 10am - 18pm!
             </p>
-            <form class="flex col center">
+            <form action="send.php" class="flex col center" method="post">
               <div class="mg-form-item mg-combo">
                 <select name="device" type="text">
                   <option disabled="" selected="">
@@ -386,13 +386,24 @@
                 <input name="name" placeholder="Tu nombre..." />
               </div>
               <div class="mg-form-item mg-input">
-                <input name="mail" placeholder="Tu correo..." />
+                <input name="email" placeholder="Tu correo..." />
               </div>
               <div class="mg-form-item mg-textarea">
-                <textarea name="message" placeholder="Tu mensaje..."></textarea>
+                <textarea name="user_message" placeholder="Tu mensaje..."></textarea>
               </div>
-              <button class="button normal" onclick="sendmail()" type="button">enviar</button>
+              <button class="button normal">enviar</button>
             </form>
+          </div>
+        </div>
+      </div>
+      <!--MODAL-->
+      <div class="mg-modal-display display-none">
+        <div class="mg-modal-bg flex col center">
+          <div class="mg-modal flex col center modal-contact-sent">
+            <i class="fas fa-times"></i>
+            <p class="white">
+              ¡Mensaje enviado!
+            </p>
           </div>
         </div>
       </div>
