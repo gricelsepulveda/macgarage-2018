@@ -120,11 +120,11 @@ html lang="es"
             form.flex.col.center 
               .mg-form-item.mg-combo
                 select name="device" type="text"
-                  option disabled="" selected="" Dispositivo...
+                  option disabled=""  Dispositivo...
                   option value="iPhone" iPhone
                   option value="iPad" iPad
                   option value="Macbook" Macbook
-                  option value="iMac" iMac
+                  option value="iMac" selected="" iMac
                   option value="otro dispositivo Apple" otro...
               .mg-form-item.mg-input
                 input name="name" placeholder="Tu nombre..."
@@ -133,6 +133,28 @@ html lang="es"
               .mg-form-item.mg-textarea
                 textarea name="message" placeholder="Tu mensaje..."
               button.button.normal type="button" onclick="sendmail()"enviar
+
+      /! MODAL VENUES
+      .mg-modal-display.display-none
+        .mg-modal-bg.flex.col.center
+          .mg-modal.flex.col.center.mg-modal-venue
+            i.fas.fa-times
+            h1.white Sedes
+            .flex.row.center 
+              /! VENUE
+              a.flex.col.center href="./sede-nunoa" target="_blank"
+                .mg-venue-picture
+                h3.text-center.black Sede Ñuñoa
+              /! VENUE
+              a.flex.col.center href="./sede-providencia" target="_blank"
+                .mg-venue-picture
+                h3.text-center.black Sede Providencia
+              /! VENUE
+              a.flex.col.center href="#"
+                .mg-venue-picture
+                .flex.col.center
+                  h3.text-center.black Sede Lo Barnechea
+                  h4.text-center.white Pronto...
         
       /! MODAL FAQ
       .mg-modal-display.display-none

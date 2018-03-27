@@ -19,6 +19,8 @@ html lang="es"
     script src="../scripts/mg-scripts.min.js"
     /! FAVICON
     link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg"
+    /! SCROLL
+    script src="../scripts/smooth-scroll.min.js"
     javascript:
       var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
       (function(){
@@ -60,9 +62,9 @@ html lang="es"
         /! MENU
         ul.mg-main-menu.flex.row.start
           li.mg-menu-option 
-            a href="#welcome" Inicio
+            a data-scroll="" href="#welcome" Inicio
           li.mg-menu-option
-            a href="#services" Servicios
+            a data-scroll="" href="#services" Servicios
           li.mg-menu-option
             a href="./iphone.html" iPhone
           li.mg-menu-option 
@@ -72,9 +74,9 @@ html lang="es"
           li.mg-menu-option
             a href="./imac.html" iMac
           li.mg-menu-option
-            a href="#ratefeedback" Testimonios
+            a data-scroll="" href="#ratefeedback" Testimonios
           li.mg-menu-option
-            a href="#fix" Reparaciones
+            a data-scroll="" href="#fix" Reparaciones
           li.mg-menu-option
             a onclick="openVenue()" Sedes
           li.mg-menu-option
@@ -83,7 +85,7 @@ html lang="es"
         i.fas.fa-bars.display-none
       
       /! SECTION WELCOME
-      section.mg-welcome
+      section#welcome.mg-welcome
         .flex.row.between
           img src="../assets/img/iphone-open.png" title="iphone" alt="iphone en reparación"
           .flex.col.center
@@ -183,7 +185,7 @@ html lang="es"
           i.fas.fa-chevron-circle-right
 
       /! SECTION DEVICES
-      section.mg-devices
+      section#services.mg-devices
         h1.white.text-center Elige tu dispositivo
         h1.black.text-center para empezar tu cotización
         ul.mg-devices-list.flex.row.around  
@@ -214,7 +216,7 @@ html lang="es"
               h2.text-center Otro
       
       /! SECTION RATE & FEEDBACK
-      section.mg-rate-feedback.flex.row.between
+      section#ratefeedback.mg-rate-feedback.flex.row.between
         /! TEXT
         .flex.col.center
           h1.black.text-center Opiniones reales
@@ -242,7 +244,7 @@ html lang="es"
             p.gray.text-right Brian Smith 05/06/2017
       
       /! FIXES
-      section.mg-fixes.flex.col.center
+      section#fix.mg-fixes.flex.col.center
         h1.black.text-center Reparaciones
         .mg-instagram-panel
           iframe.snapwidget-widget src="https://snapwidget.com/embed/524777" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; height: 100%;"
@@ -280,6 +282,10 @@ html lang="es"
             a href="http://www.lyrics.cl/tienda" target="_blank"
               | &nbsp;www.lyrics.cl/tienda
 
+      /! JAVASCRIPT FOR SMOOTH SCROLLLING EFFECT
+      javascript:
+        var scroll = new SmoothScroll('a[href*="#"]');
+
       /! MODAL
       .mg-modal-display.display-none
         .mg-modal-bg.flex.col.center
@@ -312,7 +318,7 @@ html lang="es"
             p.white ¡Mensaje enviado!
 
       /! MODAL VENUES
-      .mg-modal-display
+      .mg-modal-display.display-none
         .mg-modal-bg.flex.col.center
           .mg-modal.flex.col.center.mg-modal-venue
             i.fas.fa-times

@@ -19,6 +19,8 @@
     <script src="../scripts/mg-scripts.min.js"></script>
     <!--FAVICON-->
     <link href="../assets/img/favicon.svg" rel="icon" type="image/svg+xml" />
+    <!--SCROLL-->
+    <script src="../scripts/smooth-scroll.min.js"></script>
     <script>
       var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
       (function(){
@@ -61,10 +63,10 @@
         <!--MENU-->
         <ul class="mg-main-menu flex row start">
           <li class="mg-menu-option">
-            <a href="#welcome">Inicio</a>
+            <a data-scroll="" href="#welcome">Inicio</a>
           </li>
           <li class="mg-menu-option">
-            <a href="#services">Servicios</a>
+            <a data-scroll="" href="#services">Servicios</a>
           </li>
           <li class="mg-menu-option">
             <a href="./iphone.html">iPhone</a>
@@ -79,10 +81,10 @@
             <a href="./imac.html">iMac</a>
           </li>
           <li class="mg-menu-option">
-            <a href="#ratefeedback">Testimonios</a>
+            <a data-scroll="" href="#ratefeedback">Testimonios</a>
           </li>
           <li class="mg-menu-option">
-            <a href="#fix">Reparaciones</a>
+            <a data-scroll="" href="#fix">Reparaciones</a>
           </li>
           <li class="mg-menu-option">
             <a onclick="openVenue()">Sedes</a>
@@ -94,7 +96,7 @@
         <!--TRIGEER MOBILE--><i class="fas fa-bars display-none"></i>
       </nav>
       <!--SECTION WELCOME-->
-      <section class="mg-welcome">
+      <section class="mg-welcome" id="welcome">
         <div class="flex row between">
           <img alt="iphone en reparación" src="../assets/img/iphone-open.png" title="iphone" />
           <div class="flex col center">
@@ -252,7 +254,7 @@
         </nav>
       </section>
       <!--SECTION DEVICES-->
-      <section class="mg-devices">
+      <section class="mg-devices" id="services">
         <h1 class="white text-center">
           Elige tu dispositivo
         </h1>
@@ -303,7 +305,7 @@
         </ul>
       </section>
       <!--SECTION RATE & FEEDBACK-->
-      <section class="mg-rate-feedback flex row between">
+      <section class="mg-rate-feedback flex row between" id="ratefeedback">
         <!--TEXT-->
         <div class="flex col center">
           <h1 class="black text-center">
@@ -343,7 +345,7 @@
         </div>
       </section>
       <!--FIXES-->
-      <section class="mg-fixes flex col center">
+      <section class="mg-fixes flex col center" id="fix">
         <h1 class="black text-center">
           Reparaciones
         </h1>
@@ -367,6 +369,10 @@
           <span class="note white flex row start text-right">Dirección: <a href="https://www.google.cl/maps/place/Nancy+570,+%C3%91u%C3%B1oa,+Regi%C3%B3n+Metropolitana/@-33.455842,-70.6265402,17z/data=!3m1!4b1!4m5!3m4!1s0x9662c5624d9abdfd:0x139f4b510c06d75f!8m2!3d-33.455842!4d-70.6243515" target="_blank">&nbsp; Nancy #570, Ñuñoa, Santiago de Chile.</a></span><span class="note white flex row start text-right">Teléfonos: <a href="tel:+56222503258">&nbsp;2 25023258 / </a><a href="tel:+56959171124">&nbsp;+569 59171124</a></span><span class="note white flex row start text-right">Email: <a href="mailto:contacto@macgarage.cl">&nbsp;contacto@macgarage.cl</a></span><span class="note white flex row start text-right"> E-Shop:<a href="http://www.lyrics.cl/tienda" target="_blank">&nbsp;www.lyrics.cl/tienda</a></span>
         </div>
       </footer>
+      <!--JAVASCRIPT FOR SMOOTH SCROLLLING EFFECT-->
+      <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+      </script>
       <!--MODAL-->
       <div class="mg-modal-display display-none">
         <div class="mg-modal-bg flex col center">
@@ -427,7 +433,7 @@
         </div>
       </div>
       <!--MODAL VENUES-->
-      <div class="mg-modal-display">
+      <div class="mg-modal-display display-none">
         <div class="mg-modal-bg flex col center">
           <div class="mg-modal flex col center mg-modal-venue">
             <i class="fas fa-times"></i>
