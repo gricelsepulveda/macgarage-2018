@@ -188,6 +188,10 @@ button.button {
     a.mg-logo-macgarage {
       width: 22.5%;
       position: relative;
+      @media #{$sm}{
+        width: auto;
+        height: 40px;
+      }
       img {
         width: auto;
         height: 100%;
@@ -198,16 +202,29 @@ button.button {
       width: 22.5%;
       align-items: flex-end;
       margin-top: 5px;
+      @media #{$sm} {
+        width: auto; 
+        position: absolute;
+        top: -15px;
+        right: calc(50% - 50px);
+        margin-top: 0px;
+      }
       span.mg-span-lyrics {
         display: inline-block;
         font-size: 10px;
         min-width: 90px;
         padding-bottom: 5px!important;
+        @media #{$sm} {
+          display: none!important;
+        }
       }
       a.mg-logo-lyrics{
         img {
           width: 100%;
           height: auto;
+          @media #{$sm} {
+            width: 100px;
+          }
         }
       }
     }
@@ -225,6 +242,16 @@ button.button {
     color: white;
     text-transform: capitalize;
     margin-top: 70px;
+    @media #{$sm}{
+      flex-direction: column;
+      &.active {
+        background-color: $black;
+        height: auto;
+        li.mg-menu-option {
+          display: inline-block;
+        }
+      }
+    }
     li.mg-menu-option {
       margin-right: 20px;
       height: 30px;
@@ -235,6 +262,33 @@ button.button {
         display: inline-block;
         line-height: 30px;
       }
+      @media #{$sm}{
+        background-color: $black;
+        width: 100%;
+        display: none;
+        box-sizing: border-box;
+        text-align: center;
+        height: 32px;
+        margin-right: 0px;
+        border-bottom: 1px solid rgba($white, 0.125);
+        &:last-of-type{
+          border-bottom: 0px;
+        }
+      }
+    }
+  }
+  //TRIGGER MENU MOBILE
+  i.fas.fa-bars {
+    @media #{$sm}{
+      position: absolute;
+      right: 18px;
+      width: 40px;
+      height: 40px;
+      top: 37px;
+      font-size: 24px;
+      @include flex-col-center;
+      cursor: pointer;
+      color: $white;
     }
   }
 }
@@ -247,10 +301,17 @@ section.mg-welcome {
     position: top; 
     repeat: no-repeat;
   }
+  @media #{$sm}{
+    background-size: auto 100%;
+  }
   > .flex {
     > img {
       height: 400px;
       margin-top: 125px;
+      @media #{$sm}{
+        margin-top: 0px;
+        display: none;
+      }
     }
     > .flex {
       box-sizing: border-box;
@@ -259,13 +320,35 @@ section.mg-welcome {
       justify-content: center;
       position: relative;
       width: 60%;
+      @media #{$sm}{
+        width: 100%;
+        padding-bottom: 80px;
+        background: {
+          image: url('../assets/img/iphone-open.png');
+          size: auto 100%;
+          position: 100%; 
+          repeat: no-repeat;
+          color: rgba($black, 0.35);
+          blend-mode: multiply;
+        }
+      }
       h1 {
         &:first-of-type {
           margin-top: 20px!important;
+          @media #{$sm}{
+            margin-top: 120px!important;
+            color: white;
+          }
+        }
+        @media #{$sm}{
+          color: white;
         }
       }
       h2 {
         margin-top: 20px!important;
+        @media #{$sm}{
+          color: $white;
+        }
       }
       button {
         margin-top: 20px!important;
@@ -290,17 +373,46 @@ section.mg-welcome {
         .mg-icon-access {
           background: linear-gradient(180deg, lighten($color-5, 10%) 0%, $color-5 100%);
         }
+        @media #{$sm}{
+          .flex {
+            h2, .flex a {
+              display: none;
+            }
+          }
+        }
       }
       // ADRESS
       .mg-adress {
         .mg-icon-access { 
           background: linear-gradient(180deg, lighten($color-6, 10%) 0%, $color-6 100%);
         }
+        @media #{$sm}{
+          > .flex {
+            h2 {
+              display: none;
+            }
+            .flex {
+              a {
+                display: none;
+              }
+            }
+          }
+        }
       }
       // MAIL
       .mg-mail {
         .mg-icon-access {
           background: linear-gradient(180deg, lighten($color-7, 10%) 0%, $color-7 100%);
+        }
+        @media #{$sm}{
+          > .flex {
+            h2 {
+              display: none;
+            }
+            a {
+              display: none;
+            }
+          }
         }
       }
       .mg-phone, .mg-adress, .mg-mail {
@@ -338,12 +450,23 @@ section.mg-services {
   // US SUBSECTION
   .mg-us {
     padding-bottom: 80px;
+    @media #{$sm}{
+      flex-direction: column;
+    }
     > .flex {
       width: 50%;
       .flex {
+        h1 {
+          @media #{$sm}{
+            text-align: center;
+          }
+        }
         h2 {
           margin-top: 10px!important;
           margin-bottom: 20px!important;
+          @media #{$sm}{
+            text-align: center;
+          }
         }
         p {
           max-width: 400px;
@@ -354,6 +477,10 @@ section.mg-services {
       width: 50%;
       > img {
         width: 400px;
+        @media #{$sm}{
+          width: 250px;
+          margin-top: 80px;
+        }
       }
     }
   }
@@ -361,6 +488,10 @@ section.mg-services {
   ul.mg-service-list {
     @include clean-list;
     align-content: flex-start;
+    @media #{$sm}{
+      flex-direction: column;
+      @include clean-webkit;
+    }
     li {
       @include zero-hard;
       align-self: stretch;
@@ -368,6 +499,11 @@ section.mg-services {
       background-color: rgba($black, 0.036125);
       margin: 10px;
       flex-basis: 220px;
+      @media #{$sm}{
+        align-self: initial;
+        padding: 0;
+        background-color: transparent;
+      }
       .flex {
         width: 64px;
         height: 64px;
@@ -422,17 +558,44 @@ section.mg-devices {
   width: 100%;
   background: linear-gradient(45deg, $color-2 0%, $color-3 100%);
   padding: 40px 30px 40px 30px;
+  @media #{$sm}{
+    padding: 0px;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    h1 {
+      font-size: 28px;
+    }
+  }
   ul.mg-devices-list {
     @include clean-list;
     flex-basis: 220px;
     align-items: flex-end!important;
     margin-top: 40px;
+    @media #{$sm}{
+      flex-direction: column;
+      @include clean-webkit;
+      justify-content: center!important;
+      align-items: center!important;
+      margin-top: 80px!important;
+    }
     li {
       @include zero-hard;
       margin: 20px!important;
+      @media #{$sm}{
+        margin: 0px!important;
+        margin-bottom: 40px!important;
+        &:last-of-type {
+          margin-bottom: 0px!important;
+        }
+      }
       a {
         h2 {
           margin-top: 10px!important;
+        }
+        img {
+          @media #{$sm}{
+            max-width: 200px;
+          }
         }
       }
     }
@@ -442,19 +605,43 @@ section.mg-devices {
 //SECTION RATE & FEEDBACK
 section.mg-rate-feedback {
   padding: 80px 30px 80px 30px;
+  @media #{$sm}{
+    flex-direction: column!important;
+    justify-content: center!important;
+    padding: 0;
+    padding-top: 80px;
+    box-sizing: border-box;
+    padding-bottom: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   > .flex {
     width: 50%;
+    @media #{$sm}{
+      width: 100%;
+      box-sizing: border-box;
+    }
     p {
       max-width: 400px;
       margin-top: 20px!important;
       margin-bottom: 40px!important;
+      @media #{$sm}{
+        max-width: auto;
+      }
     }
     button.button {
       cursor: pointer;
+      @media #{$sm}{
+        margin-bottom: 80px;
+      }
     }
   }
   .flex-quote {
     width: 50%;
+    @media #{$sm}{
+      width: 100%;
+      box-sizing: border-box;
+    }
     .col {
       width: 80%;
       blockquote.mg-quote {
@@ -467,6 +654,9 @@ section.mg-rate-feedback {
         border-radius: 15px;
         max-width: 350px;
         position: relative;
+        @media #{$sm}{
+          text-align: center;
+        }
         &:after {
           content: '';
           width: 0; 
@@ -557,6 +747,10 @@ section.mg-fixes {
     height: 390px;
     background-color: white;
     overflow: hidden;
+    @media #{$sm}{
+      width: 250px;
+      height: 250px;
+    }
   }
   button.button {
     margin-top: 40px;
@@ -569,7 +763,14 @@ footer {
   background-color: black;
   padding: 30px 30px 30px 30px;
   box-sizing: border-box;
+  @media #{$sm}{
+    flex-direction: column!important;
+    justify-content: center!important;
+  }
   > .flex {
+    @media #{$sm}{
+      align-items: center!important;
+    }
     p {
       margin-bottom: 10px!important;
     }
@@ -602,6 +803,11 @@ footer {
     img {
       width: 200px;
     }
+    @media #{$sm}{
+      margin-left: 0px!important;
+      margin-bottom: 20px!important;
+      margin-top: 20px!important;
+    }
   }
 }
 
@@ -622,20 +828,44 @@ section.mg-device-page {
     padding-bottom: 80px;
     box-sizing: border-box;
     min-height:  calc(100vh - 123px - 210px); 
+    @media #{$sm}{
+      flex-direction: column!important;
+      justify-content: center!important;
+    }
     > .flex {
       width: 50%;
+      @media #{$sm}{
+        width: 100%;
+      }
       .flex {
+        h1 {
+          @media #{$sm}{
+            text-align: center;
+          }
+        }
         h2 {
           margin-top: 10px!important;
           margin-bottom: 20px!important;
+          @media #{$sm}{
+            text-align: center;
+          }
         }
         p {
           max-width: 400px;
+          @media #{$sm}{
+            text-align: center;
+          }
         }
         button {
           margin-top: 40px!important;
           width: 120px;
           cursor: pointer;
+          @media #{$sm}{
+            display: block;
+            margin: 0 auto!important;
+            margin-top: 40px!important;
+            margin-bottom: 80px!important;
+          }
         }
       }
     }
@@ -693,6 +923,9 @@ section.mg-device-page {
       justify-content: center;
       align-content: center;
       align-items: center;
+      @media #{$sm}{
+        max-width: 90vw;
+      }
       > i {
         position: absolute;
         top: 20px;
@@ -706,6 +939,9 @@ section.mg-device-page {
           margin-bottom: 10px;
           width: 300px;
           position: relative;
+          @media #{$sm}{
+            width: 250px;
+          }
           &:after {
             position: absolute;
             content: '';
@@ -734,6 +970,9 @@ section.mg-device-page {
               box-sizing: border-box;
               content: '';
               background-color: $white;
+              @media #{$sm}{
+                width: 250px;
+              }
             }
             > select {
               background:  transparent;
@@ -745,6 +984,9 @@ section.mg-device-page {
               width: calc(300px - 20px);
               -webkit-appearance: none;
               -moz-appearance: none;
+              @media #{$sm}{
+                width: calc(250px - 20px);
+              }
               &::-ms-expand{
                 display: none;
               }
@@ -813,6 +1055,9 @@ section.mg-device-page {
   max-height: 90vh;
   padding: 52px 20px 20px 20px;
   box-sizing: border-box;
+  @media #{$sm}{
+    max-width: 90vw;
+  }
   h1 {
     background-color: $color-1;
     width: 100%;
@@ -869,12 +1114,21 @@ section.mg-device-page {
 
 .mg-modal.mg-modal-venue {
   background-image: url('../assets/img/bg-1.jpg')!important;
+  @media #{$sm}{
+    max-width: 90vw!important;
+    min-width: 90vw!important;
+  }
   h1 {
     margin-bottom: 40px!important;
   }
   > .flex {
     align-content: stretch;
     align-items: flex-start;
+    @media #{$sm}{
+     align-items: center;
+     align-content: center;
+     flex-direction: column!important;
+    }
     > a.flex {
       margin: 10px!important;
       .mg-venue-picture {
@@ -884,6 +1138,11 @@ section.mg-device-page {
         background-color: $black;
         margin-bottom: 10px;
         overflow: hidden;
+        @media #{$sm}{
+          width: 75px;
+          height: 75px;
+          border-radius: 75px;
+        }
       }
       &:nth-of-type(1){
         .mg-venue-picture {
@@ -928,10 +1187,17 @@ section.mg-venue-page {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  @media #{$sm}{
+    height: auto;
+    padding-bottom: 40px;
+  }
   >.flex.row {
     height: calc(100vh - 123px);
     box-sizing: border-box;
     //background: linear-gradient(45deg, $color-2 0%, $color-3 100%);
+    @media #{$sm}{
+      height: auto;
+    }
     > .flex.col {
       width: 50%;
       box-sizing: border-box;
@@ -939,8 +1205,16 @@ section.mg-venue-page {
       padding-top: 163px;
       padding-left: 30px;
       padding-right: 30px;
+      @media #{$sm}{
+        width: 100%;
+      }
       > .flex.row {
         //align-items: flex-end;
+        @media #{$sm}{
+          flex-direction: column!important;
+          align-content: center!important;
+          align-items: center!important;
+        }
         .mg-venue-photo-container {
           min-width: 150px;
           min-height: 150px;
@@ -956,10 +1230,30 @@ section.mg-venue-page {
             height: auto;
           }
         }
+        > .flex {
+          @media #{$sm}{
+            justify-content: center!important;
+            align-content: center!important;
+            align-items: center!important;
+          }
+          h1 {
+            @media #{$sm}{
+              justify-content: center!important;
+              align-content: center!important;
+              align-items: center!important;
+              text-align: center;
+            }
+          }
+        }
       }
       .mg-venue-data {
         margin-top: 20px;
         font-size: 14px;
+        @media #{$sm}{
+          justify-content: center!important;
+          align-content: center!important;
+          align-items: center!important;
+        }
         span {
           font-weight: 500;
           font-size: 16px;
@@ -967,6 +1261,12 @@ section.mg-venue-page {
         }
         .flex.row.start {
           margin-bottom: 20px;
+          @media #{$sm}{
+            justify-content: center!important;
+            align-content: center!important;
+            align-items: center!important;
+            flex-direction: column!important;
+          }
           .mg-icon-venue {
             background-color: $color-5;
             width: 32px;
@@ -974,6 +1274,10 @@ section.mg-venue-page {
             @include flex-row-center;
             border-radius: 4px;
             margin-right: 10px;
+            @media #{$sm}{
+              margin-right: 0px;
+              margin-bottom: 10px;
+            }
             img {
               width: 18px;
             }
@@ -995,6 +1299,9 @@ section.mg-venue-page {
         size: cover;
         position: center;
         repeat: no-repeat;
+      }
+      @media #{$sm}{
+        display: none;
       }
       &.mg-lo-barnechea {
         background-image: url('../assets/img/nunoa-map.png');

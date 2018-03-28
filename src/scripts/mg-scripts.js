@@ -51,11 +51,18 @@ $(document).ready(function(){
     scrollbody();
   });
 
-  //GET VALUES
-  var emailName = $("input[name='name']").val();
-  var emailMail = $("input[name='mail']").val();
-  var emailSubject = $("select[name='device']").val();
-  var emailMessage = $("textarea[name='message']").val();
+  $("li.mg-menu-option").click(function(){
+    $("ul.mg-main-menu").removeClass('active');
+  });
+  //TRIGGER MOBILE
+  $("i.fas.fa-bars").click(function(){
+    if ($("ul.mg-main-menu").hasClass('active')) {
+      $("ul.mg-main-menu").removeClass('active');
+    }
+    else {
+      $("ul.mg-main-menu").addClass('active');
+    }
+  });
 });
 
 //SHOW MODAL CONTACT
