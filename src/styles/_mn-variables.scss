@@ -27,7 +27,7 @@ $lg-abs: "(min-width: 992px) and (max-width: 1199px)";
 
 /* SCROLLBARS */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 8px;
   @include animate;
 }
 ::-webkit-scrollbar-track {
