@@ -20,7 +20,7 @@
   echo 
     '<script type="text/javascript">
       alert("Mensaje enviado");
-      location.replace("https://www.gricelsepulveda.cl/macgarage");
+      location.replace("https://www.macgarage.cl/");
 
     </script>';
 ?>

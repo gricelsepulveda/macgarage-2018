@@ -133,7 +133,7 @@
             <p class="white">
               ¡Contestamos de inmediato entre 10am - 18pm!
             </p>
-            <form class="flex col center">
+            <form action="send.php" class="flex col center" method="post">
               <div class="mg-form-item mg-combo">
                 <select name="device" type="text">
                   <option disabled="">
@@ -165,7 +165,7 @@
               <div class="mg-form-item mg-textarea">
                 <textarea name="message" placeholder="Tu mensaje..."></textarea>
               </div>
-              <button class="button normal" onclick="sendmail()" type="button">enviar</button>
+              <button class="button normal">enviar</button>
             </form>
           </div>
         </div>
