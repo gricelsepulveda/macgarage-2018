@@ -93,24 +93,26 @@ html lang="es"
       /! SECTION WELCOME
       section#welcome.mg-welcome
         .mg-slider-welcome
-          #slide-welcome-a.flex.row.between.slide-welcome.active
-            img src="assets/img/iphone-open.png" title="iphone" alt="iphone en reparación"
-            .flex.col.center
-              h1.white.text-center Soluciones en 30 min.*
-              h1.white.up.text-center Soporte experto
-              h2.black.text-center &#42; Si llamas para agendar tu atención
-              button.button.normal type="button" onclick="modalContact()" COMIENZA TU REPARACIÓN
-              span.note.gray.text-center
-                | Sujeto a stock de piezas. En modelos muy antiguos podría demorar más, pero serás informado al comienzo.
-          #slide-welcome-b.flex.row.between.slide-welcome
-            img src="assets/img/android-phone-apple.png" title="android" alt="reparación de celulares android"
-            .flex.col.center
-              h1.white.text-center Bienvenidos Androides
-              h1.white.up.text-center Soporte celulares Android
-              h2.black.text-center Lo pediste. Lo tenemos.
-              button.button.normal type="button" onclick="modalContact()" COMIENZA TU REPARACIÓN
-              span.note.gray.text-center
-                | Samsung, LG, Huawei, Sony y más.
+          #slide-welcome-a.slide-home-container.active
+            .flex.row.between.slide-welcome
+              img src="assets/img/iphone-open.png" title="iphone" alt="iphone en reparación"
+              .flex.col.center
+                h1.white.text-center Soluciones en 30 min.*
+                h1.white.up.text-center Soporte experto
+                h2.black.text-center &#42; Si llamas para agendar tu atención
+                button.button.normal type="button" onclick="modalContact()" COMIENZA TU REPARACIÓN
+                span.note.gray.text-center
+                  | Sujeto a stock de piezas. En modelos muy antiguos podría demorar más, pero serás informado al comienzo.
+          #slide-welcome-b.slide-home-container
+            .flex.row.between.slide-welcome
+              img src="assets/img/android-phone-apple.png" title="android" alt="reparación de celulares android"
+              .flex.col.center
+                h1.white.text-center Soporte Smartphones
+                h1.white.up.text-center Reparaciones Android
+                h2.black.text-center Lo pediste. Lo tenemos.
+                button.button.normal type="button" onclick="modalContact()" COMIENZA TU REPARACIÓN
+                span.note.gray.text-center
+                  | Samsung, LG, Huawei, Sony y más.
         nav.mg-quick-access
           .flex.row.around
             /! PHONE

@@ -311,67 +311,70 @@ section.mg-welcome {
     overflow: hidden;
     max-height: 525px;
     @media #{$sm} {
-      max-height: 410px;
+      max-height: 394px;
     }
-    .slide-welcome {
+    .slide-home-container {
       display: none;
       &.active {
-        display: flex;
+        display: block;
       }
-      > img {
-        height: 400px;
-        margin-top: 125px;
-        @media #{$sm}{
-          margin-top: 0px;
-          display: none;
-        }
-      }
-      > .flex {
-        box-sizing: border-box;
-        padding: 30px;
-        align-self: stretch;
-        justify-content: center;
-        position: relative;
-        width: 60%;
-        @media #{$sm}{
-          width: 100%;
-          padding-bottom: 80px;
-          background: {
-            image: url('../assets/img/iphone-open.png');
-            size: auto 100%;
-            position: 100%; 
-            repeat: no-repeat;
-            color: rgba($black, 0.35);
-            blend-mode: multiply;
+      .slide-welcome {
+        > img {
+          height: 400px;
+          margin-top: 125px;
+          @media #{$sm}{
+            margin-top: 0px;
+            display: none;
           }
         }
-        h1 {
-          &:first-of-type {
-            margin-top: 20px!important;
+        > .flex {
+          box-sizing: border-box;
+          padding: 30px;
+          align-self: stretch;
+          justify-content: center;
+          position: relative;
+          width: 60%;
+          @media #{$sm}{
+            width: 100%;
+            padding-bottom: 80px;
+            background: {
+              image: url('../assets/img/iphone-open.png');
+              size: auto 100%;
+              position: 100%; 
+              repeat: no-repeat;
+              color: rgba($black, 0.35);
+              blend-mode: multiply;
+            }
+          }
+          h1 {
+            &:first-of-type {
+              margin-top: 20px!important;
+              @media #{$sm}{
+                margin-top: 120px!important;
+                color: white;
+                font-size: 28px;
+              }
+            }
             @media #{$sm}{
-              margin-top: 120px!important;
               color: white;
             }
           }
-          @media #{$sm}{
-            color: white;
+          h2 {
+            margin-top: 20px!important;
+            @media #{$sm}{
+              color: $white;
+            }
           }
-        }
-        h2 {
-          margin-top: 20px!important;
-          @media #{$sm}{
-            color: $white;
+          button {
+            margin-top: 20px!important;
+            cursor: pointer;
           }
-        }
-        button {
-          margin-top: 20px!important;
-          cursor: pointer;
-        }
-        span.note {
-          display: block;
-          text-align: center;
-          position: absolute;
-          bottom: 20px;
+          span.note {
+            display: block;
+            text-align: center;
+            position: absolute;
+            bottom: 20px;
+          }
         }
       }
     }
