@@ -105,6 +105,13 @@ button.button {
   @include shadow;
   @include animate;
   cursor: pointer;
+  @media #{$sm}{
+    font-size: 13px;
+    padding: 5px 10px 5px 10px;
+    &:hover {
+      padding: 5px 10px 5px 10px;
+    }
+  }
   &:hover {
     padding: 10px 20px 10px 20px!important;
   }
@@ -309,7 +316,7 @@ section.mg-welcome {
   .mg-slider-welcome {
     position: relative;
     overflow: hidden;
-    max-height: 525px;
+    max-height: 524px;
     @media #{$sm} {
       max-height: 394px;
     }
@@ -363,6 +370,7 @@ section.mg-welcome {
             margin-top: 20px!important;
             @media #{$sm}{
               color: $white;
+              font-size: 12px!important;
             }
           }
           button {
@@ -840,6 +848,19 @@ section.mg-device-page {
   background-position: center;
   background-repeat: no-repeat;
   background-blend-mode: soft-light;
+  position: relative;
+  @media #{$sm}{
+    padding-bottom: 240px;
+  }
+  .mg-img-android {
+    width: 350px;
+    position: absolute;
+    bottom: 0px;
+    right: calc(25% - 175px);
+    @media #{$sm}{
+      right: calc(50% - 175px);
+    }
+  }
   // US SUBSECTION
   .mg-device-detail {
     padding-bottom: 80px;
