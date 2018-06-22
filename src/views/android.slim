@@ -6,9 +6,9 @@ html lang="es"
     meta name="description" content="Hecho en Stgo, Chile"
     meta name="keywords" content="reparación, apple, tecnología, macbook, iphone, ipad, imac"/
     meta name="author" content="Lyrics Música &amp; Tecnología"
-    link rel="stylesheet" href="styles/normalize.min.css" type="text/css"
     /! VIEWPORT RESPONSIVE
     meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/
+    link rel="stylesheet" href="styles/normalize.min.css" type="text/css"
     /! FONT AWESOME
     link rel="stylesheet" href="styles/fontawesome-5.css" type="text/css" 
     /! STYLES 
@@ -25,6 +25,7 @@ html lang="es"
     noscript
       img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1629610427076491&ev=PageView&noscript=1"
     script src="https://widget.flowxo.com/embed.js" data-fxo-widget="eyJ0aGVtZSI6IiMwMDAwMDAiLCJ3ZWIiOnsiYm90SWQiOiI1YWZhY2RiM2M4OGY3YjY1N2VjMGQ0Y2QiLCJ0aGVtZSI6IiMwMDAwMDAiLCJsYWJlbCI6IsKhRXNjcsOtYmVub3MhIn0sIndlbGNvbWVUZXh0Ijoiwr9UaWVuZXMgZHVkYXM/IMKhQ29udmVyc2Vtb3MhIn0=" async="" defer=""
+
   body
     .mg-center
 
@@ -72,32 +73,21 @@ html lang="es"
         /! TRIGEER MOBILE
         i.fas.fa-bars.display-none
       
-      /! SECTION VENUE PAGE
-      section.mg-venue-page
-        .flex.row.center
-          .flex.col
-            .flex.row.start
-              .mg-venue-photo-container
-                img.mg-img-venue src="assets/img/nunoa-photo.jpg" title="sede nunoa reparaciones mac" alt="sede nunoa reparaciones mac"
-              .flex.col.start
-                h1.highlight.text-left Sede
-                h1.black.text-left Lo Barnechea
-            .flex.col.start.mg-venue-data
-              .flex.row.start
-                .mg-icon-venue
-                  img src="assets/img/mg-phone.svg"
-                span Teléfonos:
-                a href="tel:+56222503258"
-                  | &nbsp;22 5023258
-                a href="tel:+56950664815"
-                  | &nbsp;+569 5 066 4815
-              .flex.row.start
-                .mg-icon-venue
-                  img src="assets/img/mg-location.svg"
-                span Dirección:
-                a href="https://www.google.cl/maps/place/Nancy+570,+%C3%91u%C3%B1oa,+Regi%C3%B3n+Metropolitana/@-33.455842,-70.6265402,17z/data=!3m1!4b1!4m5!3m4!1s0x9662c5624d9abdfd:0x139f4b510c06d75f!8m2!3d-33.455842!4d-70.6243515" target="_blank" 
-                  | &nbsp;Nancy #570, Ñuñoa.
-          a.flex.row.center.mg-lo-barnechea href="https://www.google.cl/maps/place/Nancy+570,+%C3%91u%C3%B1oa,+Regi%C3%B3n+Metropolitana/@-33.455842,-70.6265402,17z/data=!3m1!4b1!4m5!3m4!1s0x9662c5624d9abdfd:0x139f4b510c06d75f!8m2!3d-33.455842!4d-70.6243515" target="_blank"
+      /! SECTION DEVICE PAGE
+      section.mg-device-page
+        /! DEVICE DETAIL
+        .mg-device-detail.flex.row.between
+          img.mg-img-android src="assets/img/android-smartphone.png" title="android smartphone" alt="android smartphone"
+          .flex.col.center
+            .flex.col.left
+              h1.white.text-left ¿Necesitas una reparación
+              h1.black.text-left para tu smartphone Android?
+              h2.black.text-left Probablemente estás pasando por alguno de estos problemas:
+              p.gray.text-justify
+                | Pantalla quebrada o rota, batería agotada, botones atascados, equipo no enciende, equipo mojado, pantalla sin brillo, volumen bajo, equipo no carga, etc.
+              h2.gray.text-left Contáctanos ahora mismo al +56 22 9527652 o en el siguiente botón y obtén tu presupuesto hoy mismo.
+              button.button.normal type="button" onclick="modalContact()" Cotizar
+          .flex.row.center 
 
       /! FOOTER
       footer.flex.row.between
@@ -144,20 +134,20 @@ html lang="es"
             form.flex.col.center action="send.php" method="post"
               .mg-form-item.mg-combo
                 select name="device" type="text"
-                  option disabled="" selected="" Dispositivo...
+                  option disabled=""  Dispositivo...
                   option value="iPhone" iPhone
                   option value="iPad" iPad
                   option value="Macbook" Macbook
-                  option value="iMac" iMac
-                  option value="otro dispositivo Apple" otro...  
+                  option value="iMac" selected="" iMac
+                  option value="otro dispositivo Apple" otro...
               .mg-form-item.mg-input
                 input name="name" placeholder="Tu nombre..."
               .mg-form-item.mg-input
-                input name="email" placeholder="Tu correo..."
+                input name="mail" placeholder="Tu correo..."
               .mg-form-item.mg-textarea
                 textarea name="message" placeholder="Tu mensaje..."
               button.button.normal enviar
-      
+
       /! MODAL VENUES
       .mg-modal-display.display-none
         .mg-modal-bg.flex.col.center

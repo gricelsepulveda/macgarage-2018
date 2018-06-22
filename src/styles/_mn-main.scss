@@ -105,6 +105,13 @@ button.button {
   @include shadow;
   @include animate;
   cursor: pointer;
+  @media #{$sm}{
+    font-size: 13px;
+    padding: 5px 10px 5px 10px;
+    &:hover {
+      padding: 5px 10px 5px 10px;
+    }
+  }
   &:hover {
     padding: 10px 20px 10px 20px!important;
   }
@@ -295,6 +302,8 @@ button.button {
 
 // SECTION WELCOME
 section.mg-welcome {
+  overflow: hidden;
+  position: relative;
   background: {
     image: url('../assets/img/bg-1.jpg');
     size: 100% auto;
@@ -304,61 +313,77 @@ section.mg-welcome {
   @media #{$sm}{
     background-size: auto 100%;
   }
-  > .flex {
-    > img {
-      height: 400px;
-      margin-top: 125px;
-      @media #{$sm}{
-        margin-top: 0px;
-        display: none;
-      }
+  .mg-slider-welcome {
+    position: relative;
+    overflow: hidden;
+    max-height: 524px;
+    @media #{$sm} {
+      max-height: 394px;
     }
-    > .flex {
-      box-sizing: border-box;
-      padding: 30px;
-      align-self: stretch;
-      justify-content: center;
-      position: relative;
-      width: 60%;
-      @media #{$sm}{
-        width: 100%;
-        padding-bottom: 80px;
-        background: {
-          image: url('../assets/img/iphone-open.png');
-          size: auto 100%;
-          position: 100%; 
-          repeat: no-repeat;
-          color: rgba($black, 0.35);
-          blend-mode: multiply;
-        }
+    .slide-home-container {
+      display: none;
+      &.active {
+        display: block;
       }
-      h1 {
-        &:first-of-type {
-          margin-top: 20px!important;
+      .slide-welcome {
+        > img {
+          height: 400px;
+          margin-top: 125px;
           @media #{$sm}{
-            margin-top: 120px!important;
-            color: white;
+            margin-top: 0px;
+            display: none;
           }
         }
-        @media #{$sm}{
-          color: white;
+        > .flex {
+          box-sizing: border-box;
+          padding: 30px;
+          align-self: stretch;
+          justify-content: center;
+          position: relative;
+          width: 60%;
+          @media #{$sm}{
+            width: 100%;
+            padding-bottom: 80px;
+            background: {
+              image: url('../assets/img/iphone-open.png');
+              size: auto 100%;
+              position: 100%; 
+              repeat: no-repeat;
+              color: rgba($black, 0.35);
+              blend-mode: multiply;
+            }
+          }
+          h1 {
+            &:first-of-type {
+              margin-top: 20px!important;
+              @media #{$sm}{
+                margin-top: 120px!important;
+                color: white;
+                font-size: 28px;
+              }
+            }
+            @media #{$sm}{
+              color: white;
+            }
+          }
+          h2 {
+            margin-top: 20px!important;
+            @media #{$sm}{
+              color: $white;
+              font-size: 12px!important;
+            }
+          }
+          button {
+            margin-top: 20px!important;
+            cursor: pointer;
+          }
+          span.note {
+            display: block;
+            text-align: center;
+            position: absolute;
+            bottom: 20px;
+          }
         }
-      }
-      h2 {
-        margin-top: 20px!important;
-        @media #{$sm}{
-          color: $white;
-        }
-      }
-      button {
-        margin-top: 20px!important;
-        cursor: pointer;
-      }
-      span.note {
-        display: block;
-        text-align: center;
-        position: absolute;
-        bottom: 20px;
       }
     }
   }
@@ -823,6 +848,19 @@ section.mg-device-page {
   background-position: center;
   background-repeat: no-repeat;
   background-blend-mode: soft-light;
+  position: relative;
+  @media #{$sm}{
+    padding-bottom: 240px;
+  }
+  .mg-img-android {
+    width: 350px;
+    position: absolute;
+    bottom: 0px;
+    right: calc(25% - 175px);
+    @media #{$sm}{
+      right: calc(50% - 175px);
+    }
+  }
   // US SUBSECTION
   .mg-device-detail {
     padding-bottom: 80px;

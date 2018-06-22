@@ -80,6 +80,8 @@ html lang="es"
           li.mg-menu-option
             a href="./imac.html" iMac
           li.mg-menu-option
+            a href="./android.html" Android
+          li.mg-menu-option
             a data-scroll="" href="#ratefeedback" Testimonios
           li.mg-menu-option
             a data-scroll="" href="#fix" Reparaciones
@@ -92,15 +94,27 @@ html lang="es"
       
       /! SECTION WELCOME
       section#welcome.mg-welcome
-        .flex.row.between
-          img src="assets/img/iphone-open.png" title="iphone" alt="iphone en reparación"
-          .flex.col.center
-            h1.white.text-center Soluciones en 72 hrs.
-            h1.white.up.text-center Soporte experto
-            h2.black.text-center ¿Tienes una emergencia con tu equipo Apple?
-            button.button.normal type="button" onclick="modalContact()" COMIENZA TU REPARACIÓN
-            span.note.gray.text-center
-              | * Sujeto a stock de piezas. En modelos muy antiguos podría demorar más, pero serás informado al comienzo.
+        .mg-slider-welcome
+          #slide-welcome-a.slide-home-container.active
+            .flex.row.between.slide-welcome
+              img src="assets/img/iphone-open.png" title="iphone" alt="iphone en reparación"
+              .flex.col.center
+                h1.white.text-center Soluciones en 30 min.*
+                h1.white.up.text-center Soporte experto
+                h2.black.text-center &#42; Si llamas para agendar tu atención
+                button.button.normal type="button" onclick="modalContact()" COMIENZA TU REPARACIÓN
+                span.note.gray.text-center
+                  | Sujeto a stock de piezas. En modelos muy antiguos podría demorar más, pero serás informado al comienzo.
+          #slide-welcome-b.slide-home-container
+            .flex.row.between.slide-welcome
+              img src="assets/img/android-phone-apple.png" title="android" alt="reparación de celulares android"
+              .flex.col.center
+                h1.white.text-center Soporte Smartphones
+                h1.white.up.text-center Reparaciones Android
+                h2.black.text-center Lo pediste. Lo tenemos.
+                button.button.normal type="button" onclick="modalContact()" COMIENZA TU REPARACIÓN
+                span.note.gray.text-center
+                  | Samsung, LG, Huawei, Sony y más.
         nav.mg-quick-access
           .flex.row.around
             /! PHONE
@@ -161,7 +175,7 @@ html lang="es"
               img src="assets/img/mg-check.svg" title="check" alt="check"
             h4.black.text-center Solución
             p.gray.text-justify
-              | Sabemos lo importante que son tus equipos para tu trabajo o tu empresa. Garantizamos solucionar el problema en un plazo máximo de 48hrs. De lo contrario lo sabrás de inmediato. 
+              | Sabemos lo importante que son tus equipos para tu trabajo o tu empresa. Garantizamos solucionar el problema en un plazo de 30 minutos si agendas tu atención previamente. Sino, lo reparamos en un plazo máximo de 48hrs.
           /! PICK UP & DELIVERY
           /! SOLUTION
           li.mg-service-detail.delivery.flex.col.center
@@ -363,7 +377,7 @@ html lang="es"
                 li.mg-faq-item
                   h5.mg-h5 ¿En qué consiste el diagnóstico?
                   p.mg-p.gray
-                    | Muchas veces los problemas de tus equipos no son evidentes. Nuestros técnicos deben revisarlo y/o desarmarlo para poder determinar la causa del problema. Te enviaremos una Ficha de Diagnóstico en un plazo máximo de 3 horas y te anexaremos un presupuesto.
+                    | Si el problema es evidente el diagnóstico nos permite saber qué hacer para ayudarte y el tiempo de reparación. Fallas comunes se arreglan en 30 minutos (teniendo disponibilidad de piezas). Muchas veces los problemas de tus equipos no son evidentes. Nuestros técnicos deben revisarlo y/o desarmarlo para poder determinar la causa del problema. Si ese ese el caso, te enviaremos una Ficha de Diagnóstico en un plazo máximo de 3 horas y te anexaremos un presupuesto.
                 li.mg-faq-item
                   h5.mg-h5 Acepté el presupuesto para arreglar mis equipos. ¿Qué hago ahora?
                   p.mg-p.gray
@@ -377,7 +391,7 @@ html lang="es"
                       a href="tel:+5650664815"
                         | +569 5 066 4815
                       a href="mailto:contacto@macgarage.cl" 
-                        | contacto@macgarage.cl 
+                        |  contacto@macgarage.cl 
                       | o a nuestro formulario en línea y te enviaremos una Orden de Trabajo. A contar de este punto nuestros técnicos solucionarán el problema de tus equipos y te los entregaremos en 72 horas.
                 li.mg-faq-item
                   h5.mg-h5 La reparación de mi equipo requiere de pieza o repuestos nuevos. ¿Están incluidas en el presupuesto o debo comprarlas por separado?

@@ -1,3 +1,13 @@
+# Ignore DS Stores files
+\.DS_Store
+\*.DS_Store
+\.DS_Store*
+.DS_Store*
+*.DS_Store
+
+#Dist folder
+dist
+
 # Logs
 logs
 *.log
@@ -29,14 +39,17 @@ bower_components
 # node-waf configuration
 .lock-wscript
 
-# Compiled binary addons (http://nodejs.org/api/addons.html)
+# Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
 
 # Dependency directories
 node_modules/
+./node_modules/
+./node_modules/*
+node_modules/*
 jspm_packages/
 
-# Typescript v1 declaration files
+# TypeScript v1 declaration files
 typings/
 
 # Optional npm cache directory
@@ -57,17 +70,5 @@ typings/
 # dotenv environment variables file
 .env
 
-# Ignore sass files
-src/styles/.sass-cache
-src/styles/.sass-cache/*
-.sass-cache
-.sass-cache/*
-
-# Ignore mac files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
+# next.js build output
+.next

@@ -113,3 +113,15 @@ function openContactSent(){
 function closeContactSent(){
   $(".modal-contact-sent").closest(".mg-modal-display").fadeOut("fast");
 }
+
+setInterval(function(){
+  if ($('#slide-welcome-a').hasClass('active')){
+    $('#slide-welcome-a').removeClass('active');
+    $('#slide-welcome-b').addClass('active');
+  }
+  else {
+    $('#slide-welcome-b').removeClass('active');
+    $('#slide-welcome-a').addClass('active');
+    
+  }
+}, 5000);
