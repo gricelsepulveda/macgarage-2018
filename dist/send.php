@@ -1,12 +1,10 @@
 <?php 
   $name = $_POST['name'];
-  $phone = $_POST['phone'];
   $email = $_POST['email'];
   $device = $_POST['device'];
-  $user_message = $_POST['user_message'];
+  $user_message = $_POST['message'];
   $subject = "Nuevo contacto desde Macgarage.cl";
-  $message =  "Nombre: " . $name . "\n\n" . 
-              "Teléfono: " . $phone . "\n\n" .
+  $message =  "Nombre: " . $name . "\n\n" .
               "Email Address: " . $email . "\n\n" .
               "Dispositivo: " . $device . "\n\n" .
               "Mensaje: " . $user_message ;
