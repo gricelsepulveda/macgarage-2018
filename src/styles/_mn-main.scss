@@ -331,7 +331,7 @@ section.mg-welcome {
     overflow: hidden;
     max-height: 524px;
     @media #{$sm} {
-      max-height: 394px;
+      max-height: 520px;
     }
     .slide-home-container {
       display: none;
@@ -357,14 +357,14 @@ section.mg-welcome {
           @media #{$sm}{
             width: 100%;
             padding-bottom: 80px;
-            background: {
+            /*background: {
               image: url('../assets/img/apple-family-2.png');
               size: auto 100%;
               position: 100%; 
               repeat: no-repeat;
               color: rgba($black, 0.35);
               blend-mode: multiply;
-            }
+            }*/
           }
           h1 {
             &:first-of-type {
@@ -395,9 +395,17 @@ section.mg-welcome {
             text-align: center;
             position: absolute;
             bottom: 20px;
+            @media #{$sm}{
+              flex-direction: row;
+            }
             img.android-icon {
               width: 32px;
               margin-bottom: 5px;
+              @media #{$sm}{
+                width: 16px;
+                margin-bottom: 0px;
+                margin-right: 5px;
+              }
             }
           }
         }
