@@ -124,4 +124,4 @@ setInterval(function(){
     $('#slide-welcome-a').addClass('active');
     
   }
-}, 5000);
+}, 6000);

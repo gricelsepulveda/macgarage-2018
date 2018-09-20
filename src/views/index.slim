@@ -16,11 +16,12 @@ html lang="es"
     /! JQUERY
     script src="scripts/jquery-3.3.1.min.js" type="text/javascript"
     /! LIVERELOAD
-    script src="http://localhost:35729/livereload.js"
+    script src="http://localhost:35729/livereload.js" 
     /! SCRIPTS 
     script src="scripts/mg-scripts.min.js"
     /! FAVICON
-    link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg"
+    link rel="icon" type="image/png" href="/assets/img/favicon-32x32.png" sizes="32x32"
+    link rel="icon" type="image/png" href="/assets/img/favicon-16x16.png" sizes="16x16"
     /! SCROLL
     script src="scripts/smooth-scroll.min.js"
     script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-109501441-1"
@@ -105,24 +106,26 @@ html lang="es"
         .mg-slider-welcome
           #slide-welcome-a.slide-home-container.active
             .flex.row.between.slide-welcome
-              img src="assets/img/iphone-open.png" title="iphone" alt="iphone en reparación"
+              img src="assets/img/iphone-water.png" title="iphone" alt="iphone en reparación"
               .flex.col.center
-                h1.white.text-center MacGarage, soluciones en 30 minutos
-                h1.white.up.text-center Soporte experto
-                h2.black.text-center &#42; Agendando previamente una hora
-                button.button.normal type="button" onclick="modalContact()" COMIENZA TU REPARACIÓN
-                span.note.gray.text-center
-                  | Sujeto a stock de piezas. En modelos muy antiguos podría demorar más, pero serás informado al comienzo.
+                h1.white.text-center Baño Químico. Mejoramos la fórmula:
+                h1.highlight.up.text-center  Funciona en 5 de cada 10 equipos.
+                h2.white.text-center
+                  | (La fórmula estándar garantiza sólo 3 de cada 10 casos)
+                button.button.normal type="button" onclick="modalContact()" SALVA TU EQUIPO
+                span.note.white.text-center
+                  | O visítanos y comienza la reperación de tu dispositivo ahora
           #slide-welcome-b.slide-home-container
             .flex.row.between.slide-welcome
-              img src="assets/img/android-phone-apple.png" title="android" alt="reparación de celulares android"
+              img src="assets/img/apple-family-2.png" title="pantalla rota bateria placa apple android" alt="pantalla rota bateria placa apple android"
               .flex.col.center
-                h1.white.text-center Soporte Smartphones
-                h1.white.up.text-center Reparaciones Android
-                h2.black.text-center Lo pediste. Lo tenemos.
-                button.button.normal type="button" onclick="modalContact()" COMIENZA TU REPARACIÓN
-                span.note.gray.text-center
-                  | Samsung, LG, Huawei, Sony y más.
+                h1.white.text-center ¿Pantalla Rota? ¿Problemas de Placa? 
+                h1.highlight.up.text-center ¿Baterías que no duran?
+                h2.white.text-center Elije una reparación de calidad
+                button.button.normal type="button" onclick="modalContact()" COTIZA CON NOSOTROS
+                span.note.white.text-center
+                  img.android-icon src="assets/img/android-icon.png" title="android" alt="reparación de celulares android"
+                  | ¿Tienes un Android? También reparamos Samsung, LG, Huawei, Sony y más.
         nav.mg-quick-access
           .flex.row.around
             /! PHONE
@@ -228,11 +231,11 @@ html lang="es"
               button.button.highlight type="button" Ir a la tienda
           /! PRODUCT #2
           li.mg-products-detail.flex.col.center.product-2
-            h4.white.text-center Pantalla iPhone 6/iPhone X
+            h4.white.text-center Pantalla iPhone 6/iPhone X (Instalación incl.)
             .flex.row.center
               img src="assets/img/product-2.jpg" title="Pantalla iPhone 6/iPhone X" alt="Pantalla iPhone 6/iPhone X"
             p.white.text-justify
-              | -
+              | $49.990 / $349.000
               button.button.highlight  onclick="modalContact()" type="button" Consultar
           /! PRODUCT #3
           li.mg-products-detail.flex.col.center.product-3
@@ -334,7 +337,7 @@ html lang="es"
 
       /! SECTION PRESS QUOTES
       section#press-quotes.mg-press-quotes
-        h1.black.text-center Reparaciones
+        h1.black.text-center Prensa
         /! PRESS UL 1
         ul.mg-press-list.flex.row.center
           /! PRESS 1
@@ -398,7 +401,7 @@ html lang="es"
       
       /! FIXES
       section#fix.mg-fixes.flex.col.center
-        h1.black.text-center Reparaciones
+        h1.white.text-center Reparaciones
         .mg-instagram-panel
           iframe.snapwidget-widget src="https://snapwidget.com/embed/524777" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; height: 100%;"
 
