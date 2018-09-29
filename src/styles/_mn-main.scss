@@ -317,7 +317,7 @@ section.mg-welcome {
   overflow: hidden;
   position: relative;
   background: {
-    image: url('../assets/img/bg-3.jpg');
+    image: url('/macgarage/assets/img/bg-3.jpg');
     size: 65%;
     position: center bottom; 
     repeat: no-repeat;
@@ -796,7 +796,7 @@ section.mg-rate-feedback {
         blockquote {
           &:before {
             content: '';
-            background-image: url('../assets/img/mg-heart.svg');
+            background-image: url('/macgarage/assets/img/mg-heart.svg');
             background-size: cover;
             background-position: center;
             width: 48px;
@@ -818,7 +818,7 @@ section.mg-rate-feedback {
           color: $black;
           &:before {
             content: '';
-            background-image: url('../assets/img/mg-haha.svg');
+            background-image: url('/macgarage/assets/img/mg-haha.svg');
             background-size: cover;
             background-position: center;
             width: 48px;
@@ -901,28 +901,28 @@ section.mg-press-quotes {
           repeat: no-repeat;
         }
         &.press-1{
-          background-image: url('../assets/img/press-1.png');
+          background-image: url('/macgarage/assets/img/press-1.png');
         }
         &.press-2{
-          background-image: url('../assets/img/press-2.png');
+          background-image: url('/macgarage/assets/img/press-2.png');
         }
         &.press-3{
-          background-image: url('../assets/img/press-3.png');
+          background-image: url('/macgarage/assets/img/press-3.png');
         }
         &.press-4{
-          background-image: url('../assets/img/press-4.png');
+          background-image: url('/macgarage/assets/img/press-4.png');
         }
         &.press-5{
-          background-image: url('../assets/img/press-5.png');
+          background-image: url('/macgarage/assets/img/press-5.png');
         }
         &.press-6{
-          background-image: url('../assets/img/press-6.png');
+          background-image: url('/macgarage/assets/img/press-6.png');
         }
         &.press-7{
-          background-image: url('../assets/img/press-7.png');
+          background-image: url('/macgarage/assets/img/press-7.png');
         }
         &.press-8{
-          background-image: url('../assets/img/press-8.png');
+          background-image: url('/macgarage/assets/img/press-8.png');
         }
       }
       h4 {
@@ -968,7 +968,7 @@ section.mg-fixes {
   padding: 80px 30px 80px 30px;
   box-sizing: border-box;
   background: {
-    image: url('../assets/img/bg-1.jpg');
+    image: url('/macgarage/assets/img/bg-1.jpg');
     size: cover;
     position: top;
     repeat: no-repeat;
@@ -1155,7 +1155,7 @@ section.mg-device-page {
     .mg-modal {
       border-radius: 4px;
       background: {
-        image: url('../assets/img/bg-2.jpg');
+        image: url('/macgarage/assets/img/bg-2.jpg');
         size: cover;
         position: center;
         repeat: no-repeat;
@@ -1246,7 +1246,7 @@ section.mg-device-page {
               }
             }
             &:after {
-              background-image: url('../assets/img/mg-caret.svg');
+              background-image: url('/macgarage/assets/img/mg-caret.svg');
               transform: rotate(-90deg);
               right: 8px!important;
               left: inherit;
@@ -1254,17 +1254,17 @@ section.mg-device-page {
           }
           &:nth-child(2){
             &:after {
-              background-image: url('../assets/img/mg-user.svg');
+              background-image: url('/macgarage/assets/img/mg-user.svg');
             }
           }
           &:nth-child(3){
             &:after {
-              background-image: url('../assets/img/mg-mail-mini.svg');
+              background-image: url('/macgarage/assets/img/mg-mail-mini.svg');
             }
           }
           &:nth-child(4){
             &:after {
-              background-image: url('../assets/img/mg-message.svg');
+              background-image: url('/macgarage/assets/img/mg-message.svg');
             }
           }
           > * {
@@ -1360,7 +1360,7 @@ section.mg-device-page {
 //MODAL VENUE
 
 .mg-modal.mg-modal-venue {
-  background-image: url('../assets/img/bg-1.jpg')!important;
+  background-image: url('/macgarage/assets/img/bg-1.jpg')!important;
   @media #{$sm}{
     max-width: 90vw!important;
     min-width: 90vw!important;
@@ -1394,7 +1394,7 @@ section.mg-device-page {
       &:nth-of-type(1){
         .mg-venue-picture {
           background: {
-            image: url('../assets/img/nunoa-photo.jpg');
+            image: url('/macgarage/assets/img/nunoa-photo.jpg');
             size: cover;
             repeat: no-repeat;
             position: center;
@@ -1404,7 +1404,7 @@ section.mg-device-page {
       &:nth-of-type(2){
         .mg-venue-picture {
           background: {
-            image: url('../assets/img/providencia-photo.jpg');
+            image: url('/macgarage/assets/img/providencia-photo.jpg');
             size: cover;
             repeat: no-repeat;
             position: center;
@@ -1414,7 +1414,7 @@ section.mg-device-page {
       &:nth-of-type(3){
         .mg-venue-picture {
           background: {
-            image: url('../assets/img/logo-macgarage-light.svg');
+            image: url('/macgarage/assets/img/logo-macgarage-light.svg');
             size: 120px auto;
             repeat: no-repeat;
             position: center;
@@ -1551,13 +1551,13 @@ section.mg-venue-page {
         display: none;
       }
       &.mg-lo-barnechea {
-        background-image: url('../assets/img/nunoa-map.png');
+        background-image: url('/macgarage/assets/img/nunoa-map.png');
       }
       &.mg-nunoa {
-        background-image: url('../assets/img/nunoa-map.png');
+        background-image: url('/macgarage/assets/img/nunoa-map.png');
       }
       &.mg-nunoa {
-        background-image: url('../assets/img/providencia-map.png');
+        background-image: url('/macgarage/assets/img/providencia-map.png');
       }
     }
   }
