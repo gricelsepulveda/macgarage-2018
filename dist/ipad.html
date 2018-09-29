@@ -24,7 +24,6 @@
     <link href="assets/img/favicon.svg" rel="icon" type="image/svg+xml" />
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-109501441-1"></script>
     <noscript><img height="1" src="https://www.facebook.com/tr?id=1629610427076491&amp;ev=PageView&amp;noscript=1" style="display:none" width="1" /></noscript>
-    <script async="" data-fxo-widget="eyJ0aGVtZSI6IiMwMDAwMDAiLCJ3ZWIiOnsiYm90SWQiOiI1YWZhY2RiM2M4OGY3YjY1N2VjMGQ0Y2QiLCJ0aGVtZSI6IiMwMDAwMDAiLCJsYWJlbCI6IsKhRXNjcsOtYmVub3MhIn0sIndlbGNvbWVUZXh0Ijoiwr9UaWVuZXMgZHVkYXM/IMKhQ29udmVyc2Vtb3MhIn0=" defer="" src="https://widget.flowxo.com/embed.js"></script>
     <meta content="website" property="og:type" />
     <meta content="https://macgarage.cl/mg-covershare.jpg" property="og:image" />
     <meta content="MacGarage, expertos en reparaciones de iPad" property="og:title" />
@@ -144,7 +143,7 @@
             <p class="white">
               ¡Contestamos de inmediato entre 10am - 18pm!
             </p>
-            <form action="send.php" class="flex col center" method="post">
+            <form action="mailer.php" class="flex col center" method="post">
               <div class="mg-form-item mg-combo">
                 <select name="device" type="text">
                   <option disabled="">
@@ -313,3 +312,14 @@
     </div>
   </body>
 </html>
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/es_ES/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+<div attribution="setup_tool" class="fb-customerchat" logged_in_greeting="¡Hola! ¿cómo te ayudamos? Horario Lu-Vi 10-24 y 25 a 19 y Sábado 10:30-14:00" logged_out_greeting="¡Hola! ¿cómo te ayudamos? Horario Lu-Vi 10-24 y 25 a 19 y Sábado 10:30-14:00" page_id="235150480217890" theme_color="#000000"></div>

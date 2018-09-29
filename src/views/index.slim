@@ -27,7 +27,6 @@ html lang="es"
     script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-109501441-1"
     noscript
       img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1629610427076491&ev=PageView&noscript=1"
-    script src="https://widget.flowxo.com/embed.js" data-fxo-widget="eyJ0aGVtZSI6IiMwMDAwMDAiLCJ3ZWIiOnsiYm90SWQiOiI1YWZhY2RiM2M4OGY3YjY1N2VjMGQ0Y2QiLCJ0aGVtZSI6IiMwMDAwMDAiLCJsYWJlbCI6IsKhRXNjcsOtYmVub3MhIn0sIndlbGNvbWVUZXh0Ijoiwr9UaWVuZXMgZHVkYXM/IMKhQ29udmVyc2Vtb3MhIn0=" async="" defer=""
     meta property="og:type" content="website"
     meta property="og:image" content="https://macgarage.cl/mg-covershare.jpg"
     meta property="og:title" content="MacGarage, expertos en reparaciones de productos Apple"
@@ -453,7 +452,7 @@ html lang="es"
             i.fas.fa-times
             h1.white Contacto
             p.white ¡Contestamos de inmediato entre 10am - 18pm!
-            form.flex.col.center action="send.php" method="post"
+            form.flex.col.center action="mailer.php" method="post"
               .mg-form-item.mg-combo
                 select name="device" type="text"
                   option disabled="" selected="" Dispositivo...
@@ -562,6 +561,16 @@ html lang="es"
                   h5.mg-h5 Tengo una urgencia con mis equipos y estoy fuera del horario hábil. ¿Qué puedo hacer?
                   p.mg-p.gray
                     | Por el momento no atendemos urgencias, pero estamos trabajando para iniciar pronto una marcha blanca para nuestro SERVICIO 24/7.
+div id="fb-root"
+javascript:
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/es_ES/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
 
+div class="fb-customerchat" attribution="setup_tool" page_id="235150480217890" theme_color="#000000" logged_in_greeting="¡Hola! ¿cómo te ayudamos? Horario Lu-Vi 10-24 y 25 a 19 y Sábado 10:30-14:00" logged_out_greeting="¡Hola! ¿cómo te ayudamos? Horario Lu-Vi 10-24 y 25 a 19 y Sábado 10:30-14:00"
 
         

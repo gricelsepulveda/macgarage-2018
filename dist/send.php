@@ -17,7 +17,7 @@
   mail($to, $subject, $message, $headers);
   echo 
     '<script type="text/javascript">
-      alert("Mensaje enviado");
+      alert("Mensaje enviado, si necesitas ayuda urgente por favor llámanos al +56 22 9527652 o al +569 5 066 4815");
       location.replace("https://www.macgarage.cl/");
 
     </script>';
