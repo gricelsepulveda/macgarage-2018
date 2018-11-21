@@ -72,7 +72,7 @@ html lang="es"
           li.mg-menu-option
             a href="http://www.macgarage.cl/#fix" Reparaciones
           li.mg-menu-option
-            a onclick="openVenue()" Sedes
+            a onclick="openVenue()" Laboratorios
           li.mg-menu-option
             a onclick="openFAQ()" Preguntas Frecuentes
         /! TRIGEER MOBILE
@@ -136,7 +136,7 @@ html lang="es"
             i.fas.fa-times
             h1.white Contacto
             p.white ¡Contestamos de inmediato entre 10am - 18pm!
-            form.flex.col.center action="send.php" method="post"
+            form.flex.col.center action="mailer.php" method="post"
               .mg-form-item.mg-combo
                 select name="device" type="text"
                   option disabled="" Dispositivo...
@@ -158,22 +158,16 @@ html lang="es"
         .mg-modal-bg.flex.col.center
           .mg-modal.flex.col.center.mg-modal-venue
             i.fas.fa-times
-            h1.white Sedes
+            h1.white Laboratorios
             .flex.row.center 
               /! VENUE
               a.flex.col.center href="./sede-nunoa.html" target="_blank"
                 .mg-venue-picture
-                h3.text-center.black Sede Ñuñoa
+                h3.text-center.black Laboratorio Ñuñoa
               /! VENUE
               a.flex.col.center href="./sede-providencia.html" target="_blank"
                 .mg-venue-picture
-                h3.text-center.black Sede Providencia
-              /! VENUE
-              a.flex.col.center href=""
-                .mg-venue-picture
-                .flex.col.center
-                  h3.text-center.black Sede Lo Barnechea
-                  h4.text-center.black Pronto...
+                h3.text-center.black Laboratorio Providencia
       
       /! MODAL FAQ
       .mg-modal-display.display-none
