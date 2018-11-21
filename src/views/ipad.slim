@@ -138,18 +138,17 @@ html lang="es"
             form.flex.col.center action="mailer.php" method="post"
               .mg-form-item.mg-combo
                 select name="device" type="text"
-                  option disabled="" Dispositivo...
                   option value="iPhone" iPhone
-                  option value="iPad"  iPad
-                  option value="Macbook" selected="" Macbook
+                  option value="iPad" iPad
+                  option value="Macbook" Macbook
                   option value="iMac" iMac
-                  option value="otro dispositivo Apple" otro...
+                  option value="otro dispositivo" Otro Dispositivo
               .mg-form-item.mg-input
-                input name="name" placeholder="Tu nombre..."
+                input name="name" placeholder="Tu nombre..." required=""
               .mg-form-item.mg-input
-                input name="email" placeholder="Tu correo..."
+                input name="email" placeholder="Tu correo..." required=""
               .mg-form-item.mg-textarea
-                textarea name="message" placeholder="Tu mensaje..."
+                textarea name="message" placeholder="Tu mensaje..." required=""
               button.button.normal enviar
 
       /! MODAL VENUES

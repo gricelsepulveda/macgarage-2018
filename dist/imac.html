@@ -79,7 +79,7 @@
             <a href="http://www.macgarage.cl/#fix">Reparaciones</a>
           </li>
           <li class="mg-menu-option">
-            <a onclick="openVenue()">Sedes</a>
+            <a onclick="openVenue()">Laboratorios</a>
           </li>
           <li class="mg-menu-option">
             <a onclick="openFAQ()">Preguntas Frecuentes</a>
@@ -145,9 +145,6 @@
             <form action="mailer.php" class="flex col center" method="post">
               <div class="mg-form-item mg-combo">
                 <select name="device" type="text">
-                  <option disabled="">
-                    Dispositivo...
-                  </option>
                   <option value="iPhone">
                     iPhone
                   </option>
@@ -157,22 +154,22 @@
                   <option value="Macbook">
                     Macbook
                   </option>
-                  <option selected="" value="iMac">
+                  <option value="iMac">
                     iMac
                   </option>
-                  <option value="otro dispositivo Apple">
-                    otro...
+                  <option value="otro dispositivo">
+                    Otro Dispositivo
                   </option>
                 </select>
               </div>
               <div class="mg-form-item mg-input">
-                <input name="name" placeholder="Tu nombre..." />
+                <input name="name" placeholder="Tu nombre..." required="" />
               </div>
               <div class="mg-form-item mg-input">
-                <input name="email" placeholder="Tu correo..." />
+                <input name="email" placeholder="Tu correo..." required="" />
               </div>
               <div class="mg-form-item mg-textarea">
-                <textarea name="message" placeholder="Tu mensaje..."></textarea>
+                <textarea name="message" placeholder="Tu mensaje..." required=""></textarea>
               </div>
               <button class="button normal">enviar</button>
             </form>
@@ -185,29 +182,19 @@
           <div class="mg-modal flex col center mg-modal-venue">
             <i class="fas fa-times"></i>
             <h1 class="white">
-              Sedes
+              Laboratorios
             </h1>
             <div class="flex row center">
-              <!--VENUE--><a class="flex col center" href="./sede-nunoa.html" target="_blank">
+              <a class="flex col center" href="./sede-nunoa.html" target="_blank">
                 <div class="mg-venue-picture"></div>
                 <h3 class="text-center black">
-                  Sede Ñuñoa
+                  Laboratorio Ñuñoa
                 </h3>
               </a><!--VENUE--><a class="flex col center" href="./sede-providencia.html" target="_blank">
                 <div class="mg-venue-picture"></div>
                 <h3 class="text-center black">
-                  Sede Providencia
+                  Laboratorio Providencia
                 </h3>
-              </a><!--VENUE--><a class="flex col center" href="">
-                <div class="mg-venue-picture"></div>
-                <div class="flex col center">
-                  <h3 class="text-center black">
-                    Sede Lo Barnechea
-                  </h3>
-                  <h4 class="text-center black">
-                    Pronto...
-                  </h4>
-                </div>
               </a>
             </div>
           </div>
