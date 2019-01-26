@@ -527,9 +527,18 @@ section.mg-welcome {
 //SECTION SERVICES
 section.mg-services {
   padding: 80px 30px 40px 30px;
+  &.static-content{
+    padding-top: 150px;
+    p{
+      font-size: 16px;
+    }
+  }
   // US SUBSECTION
   .mg-us {
     padding-bottom: 80px;
+    &.static-content{
+      padding-bottom: 20px;
+    }
     @media #{$sm}{
       flex-direction: column;
     }
@@ -550,6 +559,10 @@ section.mg-services {
         }
         p {
           max-width: 400px;
+          &.static-content{
+            max-width: 100%;
+            font-size: 16px;
+          }
         }
       }
     }
@@ -557,6 +570,11 @@ section.mg-services {
       width: 50%;
       > img {
         width: 400px;
+        &.little{
+          height: 200px;
+          width: auto;
+          margin-top: 10px;
+        }
         @media #{$sm}{
           width: 250px;
           margin-top: 80px;
