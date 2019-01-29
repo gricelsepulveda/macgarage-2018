@@ -1,0 +1,127 @@
+doctype html
+html lang="es"
+  head
+    meta charset="utf-8"
+    title MacGarage - Servicio Técnico Especializado en Apple
+    meta name="description" content="Reparamos tus equipos Apple, iPhone, Macbook. Soluciones en 30 minutos."
+    meta name="keywords" content="reparación, apple, tecnología, macbook, iphone, ipad, imac"/
+    meta name="author" content="Lyrics Música &amp; Tecnología"
+    link rel="stylesheet" href="macgarage/styles/normalize.min.css" type="text/css"
+    /! VIEWPORT RESPONSIVE
+    meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/
+    /! FONT AWESOME
+    link rel="stylesheet" href="macgarage/styles/fontawesome-5.css" type="text/css"   
+    /! STYLES 
+    link rel="stylesheet" href="macgarage/styles/mn-styles.css" type="text/css"
+    /! JQUERY
+    script src="macgarage/scripts/jquery-3.3.1.min.js" type="text/javascript"
+    /! LIVERELOAD
+    script src="http://localhost:35729/livereload.js" 
+    /! SCRIPTS 
+    script src="macgarage/scripts/mg-scripts.min.js"
+    /! FAVICON
+    link rel="icon" type="image/png" href="macgarage/favicon.ico" 
+    /! SCROLL
+    script src="macgarage/scripts/smooth-scroll.min.js"
+    script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-109501441-1"
+    noscript
+      img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1629610427076491&ev=PageView&noscript=1"
+    meta property="og:type" content="website"
+    meta property="og:image" content="https://macgarage.cl/mg-covershare.jpg"
+    meta property="og:title" content="MacGarage, expertos en reparaciones de productos Apple"
+    meta property="og:description" content="Soluciones expertas en 30 minutos reservando tu hora."
+    meta property="og:site_name" content="MacGarage"
+    meta property="og:url" content="https://www.macgarage.cl"
+    javascript:
+      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+      (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/5a97fbea4b401e45400d5166/default';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+      })();
+
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-109501441-1', 'auto');
+      ga('send', 'pageview');
+  body
+    .mg-center
+      /!NAVBAR
+      nav.mg-top-navbar
+        /! NOTCH IPHONE X
+        .mg-notch
+          .step.part-1
+          .step.part-2
+          .step.part-3
+          .step.part-4
+          .step.part-5
+        /! LOGOS NOTCH
+        .flex.row.between
+          a.mg-logo-macgarage href="http://www.macgarage.cl"
+            img src="macgarage/assets/img/logo-macgarage-light.svg" title="macgarage" alt="macgarage"
+          .flex.row.start
+            span.mg-span-lyrics.white Una empresa de
+            a.mg-logo-lyrics href="http://www.lyrics.cl/tienda"
+              img src="macgarage/assets/img/logo-lyrics-light.svg" title="macgarage" alt="macgarage"
+        /! MENU
+        ul.mg-main-menu.flex.row.start
+          li.mg-menu-option 
+            a data-scroll="" href="#welcome" Inicio
+          li.mg-menu-option
+            a data-scroll="" href="#services" Servicios
+          li.mg-menu-option
+            a href="/macgarage/iphone.html" title="Reparaciones iPhone" iPhone
+          li.mg-menu-option 
+            a href="/macgarage/macbook.html" title="Reparaciones Macbook" Macbook / Macbook Pro / Macbook Air
+          li.mg-menu-option
+            a href="/macgarage/ipad.html" title="Reparaciones iPad" iPad
+          li.mg-menu-option
+            a href="/macgarage/imac.html" title="Reparaciones iMac" iMac
+          li.mg-menu-option
+            a href="/macgarage/android.html" title="Reparaciones Android" Android
+          li.mg-menu-option
+            a data-scroll="" href="#ratefeedback" Testimonios
+          li.mg-menu-option
+            a data-scroll="" href="#press-quotes" Prensa
+          li.mg-menu-option
+            a data-scroll="" href="#fix" Reparaciones
+          li.mg-menu-option
+            a onclick="openVenue()" Laboratorios
+          li.mg-menu-option
+            a onclick="openFAQ()" Preguntas Frecuentes
+        /! TRIGEER MOBILE
+        i.fas.fa-bars.display-none
+
+      section.mg-services.static-content
+        /! US SUBSECTION
+        .mg-us.flex.row.between.static-content
+          .flex.col.center
+            .flex.col.left
+              h1.black.text-left Tu Computador o Smartphone
+              h1.highlight.text-left ¿andan muy lento?
+              h2.black.text-left Es hora de devolverlos a la vida
+              p.gray.text-justify.static-content Si ocupas todo el día tus dispositivos electrónicos, podrás haberte dado cuenta que con el paso del tiempo estos se colocan cada vez más lentos, por un lado esto es normal debido a que las aplicaciones son cada vez más pesadas, pero también, puede que tengas muchos archivos que no ocupes, puedas tener uno o más virus en el dispositivo o quizá su configuración no es la más óptima.
+          .flex.row.center
+            img.little  src="macgarage/assets/img/format-1.png" title="apple devices" alt="apple devices"
+
+        .flex.row.between
+          .flex.col.center
+            .flex.col.left
+              p.gray.text-justify.static-content Esto ocurre por igual para dispositivos móviles como smartphones, notebook o dispositivos de escritorio, y la solución más efectiva para recuperar su antiguo rendimiento consiste en hacer un reformateo de la máquina e instalar todas sus aplicaciones desde el principio. Este proceso implica si o si la pérdida de todos los archivos que tengas, pero no te preocupes, en las manos de las personas adecuadas no perderás nada de tu valiosa información.
+        .mg-us.flex.row.between.static-content
+          .flex.row.center
+            img.little src="macgarage/assets/img/format-2.jpg" title="apple devices" alt="apple devices"
+          .flex.col.center
+            .flex.col.left
+              p.gray.text-justify.static-content Tráenos tu equipo y en pocos días te lo tendremos cero kilómetros y funcionando como el primer día, además, si nos indicas cuales son los archivos que no quieres perder, nosotros podemos hacer un respaldo de ellos y dejarlos nuevamente en tu computador al final del proceso, para que puedas seguir trabajando como si nada hubiese pasado. Finalmente, recuerda que también contamos con un servicio de instalación de programas, por lo que podemos dejar andando todas tus aplicaciones de uso diario para que puedas llegar a trabajar o disfrutar en tu dispositivo desde el primer minuto y sin preocupaciones adicionales.
+        .flex.row.between
+          .flex.col.center
+            .flex.col.left
+              p.gray.text-justify.static-content ¿Tuviste un accidente con tu equipo y necesitas urgentemente ayuda? Ingresa a nuestro formulario a través del botó inferior, llámanos o utiliza el chat en la zona inferior derecha de la página, ¡estamos para ayudarte!
+        button.button.normal.display-none type="button" onclick="modalContact()" Contáctanos Ahora
