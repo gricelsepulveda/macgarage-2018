@@ -131,7 +131,7 @@
             </div>
           </div>
           <div class="flex row center">
-            <img alt="apple devices" class="little" src="macgarage/assets/img/ram1.png" title="apple devices" />
+            <img alt="Memoria RAM" class="little" src="macgarage/assets/img/ram1.png" />
           </div>
         </div>
         <div class="flex row between">
@@ -145,7 +145,7 @@
         </div>
         <div class="mg-us flex row between static-content">
           <div class="flex row center">
-            <img alt="apple devices" class="little" src="macgarage/assets/img/ram2.jpeg" title="apple devices" />
+            <img alt="Memoria RAM" class="little" src="macgarage/assets/img/ram2.jpeg" />
           </div>
           <div class="flex col center">
             <div class="flex col left">
@@ -166,6 +166,196 @@
         </div>
         <button class="button normal display-none" onclick="modalContact()" type="button">Contáctanos Ahora</button>
       </section>
+      <!--FOOTER-->
+      <footer class="flex row between">
+        <div class="flex col start">
+          <p class="white text-left">
+            Síguenos en redes sociales
+          </p>
+          <div class="flex row start">
+            <a href="https://www.facebook.com/macgarageonline/" target="_blank"><i class="fab fa-facebook-f"></i></a><a href="https://www.instagram.com/macgarageonline/" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <a class="mg-logo-macgarage" href="http://www.macgarage.cl"><img alt="macgarage" src="assets/img/logo-macgarage-light.svg" title="macgarage" /></a>
+        <div class="flex col end">
+          <span class="note white flex row start text-right">Dirección Laboratorio Providencia: <a href="https://goo.gl/maps/Hn9JiHm5zkM2" target="_blank">&nbsp; Luis Thayer Ojeda Norte 0180 Of. 809, Providenchia.</a></span><span class="note white flex row start text-right">Dirección Laboratorio Ñuñoa: <a href="https://goo.gl/maps/tipDj8xAbM62" target="_blank">&nbsp; Nancy 570, Ñuñoa.</a></span><span class="note white flex row start text-right">Teléfonos: <a href="tel:+56229527652">&nbsp; 22 9527652&nbsp;</a><a href="tel:+56222503258">/ 22 5023258&nbsp;</a><a href="tel:+56950664815">/ +569 5 066 4815</a></span><span class="note white flex row start text-right">Horario: LUN-VIER 10 - 14hrs / 15 - 19hrs - SAB 10:30hr - 14.30hrs</span><span class="note white flex row start text-right">Email: <a href="mailto:contacto@macgarage.cl">&nbsp;contacto@macgarage.cl</a></span><span class="note white flex row start text-right"> E-Shop:<a href="http://www.lyrics.cl/tienda" target="_blank">&nbsp;www.lyrics.cl/tienda</a></span>
+        </div>
+      </footer>
+      <!--MODAL-->
+      <div class="mg-modal-display display-none">
+        <div class="mg-modal-bg flex col center">
+          <div class="mg-modal flex col center modal-contact">
+            <i class="fas fa-times"></i>
+            <h1 class="white">
+              Contacto
+            </h1>
+            <p class="white">
+              ¡Contestamos de inmediato entre 10am - 18pm!
+            </p>
+            <form action="mailer.php" class="flex col center" method="post">
+              <div class="mg-form-item mg-combo">
+                <select name="device" type="text">
+                  <option value="iPhone">
+                    iPhone
+                  </option>
+                  <option value="iPad">
+                    iPad
+                  </option>
+                  <option value="Macbook">
+                    Macbook
+                  </option>
+                  <option value="iMac">
+                    iMac
+                  </option>
+                  <option value="otro dispositivo">
+                    Otro Dispositivo
+                  </option>
+                </select>
+              </div>
+              <div class="mg-form-item mg-input">
+                <input name="name" placeholder="Tu nombre..." required="" />
+              </div>
+              <div class="mg-form-item mg-input">
+                <input name="email" placeholder="Tu correo..." required="" />
+              </div>
+              <div class="mg-form-item mg-textarea">
+                <textarea name="message" placeholder="Tu mensaje..." required=""></textarea>
+              </div>
+              <button class="button normal">enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!--MODAL VENUES-->
+      <div class="mg-modal-display display-none">
+        <div class="mg-modal-bg flex col center">
+          <div class="mg-modal flex col center mg-modal-venue">
+            <i class="fas fa-times"></i>
+            <h1 class="white">
+              Laboratorios
+            </h1>
+            <div class="flex row center">
+              <!--VENUE--><a class="flex col center" href="./sede-nunoa.html" target="_blank">
+                <div class="mg-venue-picture"></div>
+                <h3 class="text-center black">
+                  Laboratorio Ñuñoa
+                </h3>
+              </a><!--VENUE--><a class="flex col center" href="./sede-providencia.html" target="_blank">
+                <div class="mg-venue-picture"></div>
+                <h3 class="text-center black">
+                  Laboratorio Providencia
+                </h3>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--MODAL FAQ-->
+      <div class="mg-modal-display display-none">
+        <div class="mg-modal-bg flex col center">
+          <div class="mg-modal-faq flex col center">
+            <h1 class="white text-center">
+              Preguntas frecuentes
+            </h1>
+            <i class="fas fa-times"></i>
+            <div class="mg-faq-container">
+              <ul class="mg-faq-list">
+                <li class="mg-faq-item">
+                  <h5 class="mg-h5">
+                    ¿En qué consiste el diagnóstico?
+                  </h5>
+                  <p class="mg-p gray">
+                    Si el problema es evidente el diagnóstico nos permite saber qué hacer para ayudarte y el tiempo de reparación. Fallas comunes se arreglan en 30 minutos (teniendo disponibilidad de piezas). Muchas veces los problemas de tus equipos no son evidentes. Nuestros técnicos deben revisarlo y/o desarmarlo para poder determinar la causa del problema. Si ese ese el caso, te enviaremos una Ficha de Diagnóstico en un plazo máximo de 3 horas y te anexaremos un presupuesto.
+                  </p>
+                </li>
+                <li class="mg-faq-item">
+                  <h5 class="mg-h5">
+                    Acepté el presupuesto para arreglar mis equipos. ¿Qué hago ahora?
+                  </h5>
+                  <p class="mg-p gray">
+                    Primero comunícate con nosotros. Llámanos al <a href="tel:+56229527652">22 9527652</a>/ <a href="tel:+56225023258">22 5023258</a>/ <a href="tel:+5650664815">+569 5 066 4815</a><a href="mailto:contacto@macgarage.cl"> contacto@macgarage.cl </a>o a nuestro formulario en línea y te enviaremos una Orden de Trabajo. A contar de este punto nuestros técnicos solucionarán el problema de tus equipos y te los entregaremos en 72 horas.
+                  </p>
+                </li>
+                <li class="mg-faq-item">
+                  <h5 class="mg-h5">
+                    La reparación de mi equipo requiere de pieza o repuestos nuevos. ¿Están incluidas en el presupuesto o debo comprarlas por separado?
+                  </h5>
+                  <p class="mg-p gray">
+                    Sí, está todo incluido en el presupuesto, así que no necesitas comprarlas por separado. Todas las Fichas de Diagnóstico vienen con un presupuesto anexo donde están incluidas todas las piezas o repuestos que sean necesarios para resolver el problema de tus equipos. Trabajamos con piezas y repuestos alternativos de alta calidad, que son garantizados por MAC. En caso que quieras comprarlos por tu cuenta, no podremos garantizarte resolver el problema de tu equipo en 72 horas, y el plazo de entrega te lo informaremos una vez que nos hagas llegar las piezas o repuestos.
+                  </p>
+                </li>
+                <li class="mg-faq-item">
+                  <h5 class="mg-h5">
+                    No puedo ir a dejar o retirar mi equipo del taller. ¿Tienen servicio a domicilio?
+                  </h5>
+                  <p class="mg-p gray">
+                    Sabemos que el tiempo es valioso. Si no puedes ir a nuestro taller, te ofrecemos nuestro servicio de PICK UP y DELIVERY. Vamos a buscar tus equipos y luego te los vamos a dejar donde necesites dentro de Santiago.
+                  </p>
+                </li>
+                <li class="mg-faq-item">
+                  <h5 class="mg-h5">
+                    Quiero optar por el servicio de pick up y delivery, ¿Qué costo tiene?
+                  </h5>
+                  <p class="mg-p gray">
+                    Es gratuito dentro de Santiago y es exclusivo para clientes que hayan aceptado el presupuesto enviado.
+                  </p>
+                </li>
+                <li class="mg-faq-item">
+                  <h5 class="mg-h5">
+                    Entregué mi equipo para diagnóstico con servicio de pick up y delivery pero no acepté el presupuesto. ¿Tiene algún costo?
+                  </h5>
+                  <p class="mg-p gray">
+                    Sí, tiene un costo fijo de $5.990 dentro de Santiago, incluido el PICK UP y DELIVERY. Este servicio es gratuito únicamente para clientes que hayan aceptado el presupuesto.
+                  </p>
+                </li>
+                <li class="mg-faq-item">
+                  <h5 class="mg-h5">
+                    Opté por servicio de pick up y delivery. ¿Los tiempos de traslado están incluidos en las 72 horas?
+                  </h5>
+                  <p class="mg-p gray">
+                    Sí. Si optaste por el servicio de PICK UP y DELIVERY recibirás tus equipos dentro de las 72 horas garantizadas. Recuerda que las 72 horas corren desde el momento en que aceptas el presupuesto, no desde el PICK UP.
+                  </p>
+                </li>
+                <li class="mg-faq-item">
+                  <h5 class="mg-h5">
+                    Mis equipos fueron entregados fuera del plazo estipulado y ¿Qué ocurre en caso que no se cumpla el plazo de 72 horas?
+                  </h5>
+                  <p class="mg-p gray">
+                    Si por algún motivo recibes tus equipos fuera de las 72 horas hábiles garantizadas, te lo informaremos previamente, y te compensaremos con un 50% de descuento en tu presupuesto final.
+                  </p>
+                </li>
+                <li class="mg-faq-item">
+                  <h5 class="mg-h5">
+                    Mi equipo necesita un upgrade. ¿Puedo solamente comprar las piezas o repuestos que necesito?
+                  </h5>
+                  <p class="mg-p gray">
+                    Sí, puedes revisarlos y comprarlos en línea a través de nuestro E-SHOP <a href="http://www.lyrics.cl/tienda"> lyrics.cl/tienda</a>
+                  </p>
+                </li>
+                <li class="mg-faq-item">
+                  <h5 class="mg-h5">
+                    Tengo una urgencia con mis equipos y estoy fuera del horario hábil. ¿Qué puedo hacer?
+                  </h5>
+                  <p class="mg-p gray">
+                    Por el momento no atendemos urgencias, pero estamos trabajando para iniciar pronto una marcha blanca para nuestro SERVICIO 24/7.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/es_ES/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+<div attribution="setup_tool" class="fb-customerchat" logged_in_greeting="¡Hola! ¿cómo te ayudamos? Horario Lu-Vi 10-24 y 25 a 19 y Sábado 10:30-14:00" logged_out_greeting="¡Hola! ¿cómo te ayudamos? Horario Lu-Vi 10-24 y 25 a 19 y Sábado 10:30-14:00" page_id="235150480217890" theme_color="#000000"></div>

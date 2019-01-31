@@ -108,7 +108,7 @@ html lang="es"
               h2.black.text-left Acá te contamos como
               p.gray.text-justify.static-content Si ocupas mucho tu dispositivo portátil de seguro habrás notado que la duración de la batería es cada vez menor con el paso de los meses y los años, por un lado, cada vez las aplicaciones son más pesadas, pero además, la batería va perdiendo vida útil.
           .flex.row.center
-            img.little  src="macgarage/assets/img/bateria-iphone.jpeg" title="apple devices" alt="apple devices"
+            img.little  src="macgarage/assets/img/bateria-iphone.jpeg" alt="Batería de iPhone"
 
         .flex.row.between
           .flex.col.center
@@ -116,7 +116,7 @@ html lang="es"
               p.gray.text-justify.static-content Este componente está formado por pequeños conjuntos de celdas de batería, que ensu conjunto entregan muchas horas de funcionamiento en tu dispositivo, sin embargo con el paso del tiempo estas celdas comienzan a dejar de funcionar de a poco, por lo que cada vez la batería tiene menos capacidad. Esto es completamente normal y es propio de la tecnología que se usa hoy en día para construirlas.
         .mg-us.flex.row.between.static-content
           .flex.row.center
-            img.little src="macgarage/assets/img/bateria-samsung.jpg" title="apple devices" alt="apple devices"
+            img.little src="macgarage/assets/img/bateria-samsung.jpg" alt="Batería de Samsung"
           .flex.col.center
             .flex.col.left
               p.gray.text-justify.static-content Por lo mismo, en MacGarage recomendamos hacer el cambio de este repuesto cada 12-18 meses a lo menos, con el fin de que no te quedes al 0% en los momentos más importantes. Contamos con un amplio repertorio de baterías para los distintos modelos de MacBook, iPhone, iPad y dispositivos Android (Samsung, Huawei, Motorola, etc) por lo que si tienes este problema tráenos tu equipo cuanto antes, y tan solo nos demoramos 20 minutos en hacer el reemplazo ¿qué mejor?
@@ -125,3 +125,156 @@ html lang="es"
             .flex.col.left
               p.gray.text-justify.static-content ¿Tuviste un accidente con tu equipo y necesitas urgentemente ayuda? Ingresa a nuestro formulario a través del botó inferior, llámanos o utiliza el chat en la zona inferior derecha de la página, ¡estamos para ayudarte!
         button.button.normal.display-none type="button" onclick="modalContact()" Contáctanos Ahora
+
+      /! FOOTER
+      footer.flex.row.between
+        .flex.col.start
+          p.white.text-left Síguenos en redes sociales
+          .flex.row.start
+            a href="https://www.facebook.com/macgarageonline/" target="_blank"
+              i.fab.fa-facebook-f
+            a href="https://www.instagram.com/macgarageonline/" target="_blank"
+              i.fab.fa-instagram
+        a.mg-logo-macgarage href="http://www.macgarage.cl"
+          img src="assets/img/logo-macgarage-light.svg" title="macgarage" alt="macgarage"
+        .flex.col.end
+          span.note.white.flex.row.start.text-right 
+            | Dirección Laboratorio Providencia: 
+            a href="https://goo.gl/maps/Hn9JiHm5zkM2" target="_blank"
+              | &nbsp; Luis Thayer Ojeda Norte 0180 Of. 809, Providenchia.
+          span.note.white.flex.row.start.text-right 
+            | Dirección Laboratorio Ñuñoa: 
+            a href="https://goo.gl/maps/tipDj8xAbM62" target="_blank"
+              | &nbsp; Nancy 570, Ñuñoa.
+          span.note.white.flex.row.start.text-right 
+            | Teléfonos: 
+            a href="tel:+56229527652"
+              | &nbsp; 22 9527652&nbsp;
+            a href="tel:+56222503258"
+              | / 22 5023258&nbsp;
+            a href="tel:+56950664815"
+              | / +569 5 066 4815
+          span.note.white.flex.row.start.text-right 
+            | Horario: LUN-VIER 10 - 14hrs / 15 - 19hrs - SAB 10:30hr - 14.30hrs
+          span.note.white.flex.row.start.text-right 
+            | Email: 
+            a href="mailto:contacto@macgarage.cl"
+              | &nbsp;contacto@macgarage.cl
+          span.note.white.flex.row.start.text-right 
+            | E-Shop:
+            a href="http://www.lyrics.cl/tienda" target="_blank"
+              | &nbsp;www.lyrics.cl/tienda
+
+      /! MODAL
+      .mg-modal-display.display-none
+        .mg-modal-bg.flex.col.center
+          .mg-modal.flex.col.center.modal-contact
+            i.fas.fa-times
+            h1.white Contacto
+            p.white ¡Contestamos de inmediato entre 10am - 18pm!
+            form.flex.col.center action="mailer.php" method="post"
+              .mg-form-item.mg-combo
+                select name="device" type="text"
+                  option value="iPhone" iPhone
+                  option value="iPad" iPad
+                  option value="Macbook" Macbook
+                  option value="iMac" iMac
+                  option value="otro dispositivo" Otro Dispositivo
+              .mg-form-item.mg-input
+                input name="name" placeholder="Tu nombre..." required=""
+              .mg-form-item.mg-input
+                input name="email" placeholder="Tu correo..." required=""
+              .mg-form-item.mg-textarea
+                textarea name="message" placeholder="Tu mensaje..." required=""
+              button.button.normal enviar
+
+      /! MODAL VENUES
+      .mg-modal-display.display-none
+        .mg-modal-bg.flex.col.center
+          .mg-modal.flex.col.center.mg-modal-venue
+            i.fas.fa-times
+            h1.white Laboratorios
+            .flex.row.center 
+              /! VENUE
+              a.flex.col.center href="./sede-nunoa.html" target="_blank"
+                .mg-venue-picture
+                h3.text-center.black Laboratorio Ñuñoa
+              /! VENUE
+              a.flex.col.center href="./sede-providencia.html" target="_blank"
+                .mg-venue-picture
+                h3.text-center.black Laboratorio Providencia
+        
+      /! MODAL FAQ
+      .mg-modal-display.display-none
+        .mg-modal-bg.flex.col.center
+          .mg-modal-faq.flex.col.center
+            h1.white.text-center 
+              | Preguntas frecuentes
+            i.fas.fa-times
+            .mg-faq-container
+              ul.mg-faq-list
+                li.mg-faq-item
+                  h5.mg-h5 ¿En qué consiste el diagnóstico?
+                  p.mg-p.gray
+                    | Si el problema es evidente el diagnóstico nos permite saber qué hacer para ayudarte y el tiempo de reparación. Fallas comunes se arreglan en 30 minutos (teniendo disponibilidad de piezas). Muchas veces los problemas de tus equipos no son evidentes. Nuestros técnicos deben revisarlo y/o desarmarlo para poder determinar la causa del problema. Si ese ese el caso, te enviaremos una Ficha de Diagnóstico en un plazo máximo de 3 horas y te anexaremos un presupuesto.
+                li.mg-faq-item
+                  h5.mg-h5 Acepté el presupuesto para arreglar mis equipos. ¿Qué hago ahora?
+                  p.mg-p.gray
+                      | Primero comunícate con nosotros. Llámanos al 
+                      a href="tel:+56229527652"
+                        | 22 9527652
+                      | / 
+                      a href="tel:+56225023258" 
+                        | 22 5023258
+                      | / 
+                      a href="tel:+5650664815"
+                        | +569 5 066 4815
+                      a href="mailto:contacto@macgarage.cl" 
+                        |  contacto@macgarage.cl 
+                      | o a nuestro formulario en línea y te enviaremos una Orden de Trabajo. A contar de este punto nuestros técnicos solucionarán el problema de tus equipos y te los entregaremos en 72 horas.
+                li.mg-faq-item
+                  h5.mg-h5 La reparación de mi equipo requiere de pieza o repuestos nuevos. ¿Están incluidas en el presupuesto o debo comprarlas por separado?
+                  p.mg-p.gray
+                    | Sí, está todo incluido en el presupuesto, así que no necesitas comprarlas por separado. Todas las Fichas de Diagnóstico vienen con un presupuesto anexo donde están incluidas todas las piezas o repuestos que sean necesarios para resolver el problema de tus equipos. Trabajamos con piezas y repuestos alternativos de alta calidad, que son garantizados por MAC. En caso que quieras comprarlos por tu cuenta, no podremos garantizarte resolver el problema de tu equipo en 72 horas, y el plazo de entrega te lo informaremos una vez que nos hagas llegar las piezas o repuestos.
+                li.mg-faq-item
+                  h5.mg-h5 No puedo ir a dejar o retirar mi equipo del taller. ¿Tienen servicio a domicilio?
+                  p.mg-p.gray
+                    | Sabemos que el tiempo es valioso. Si no puedes ir a nuestro taller, te ofrecemos nuestro servicio de PICK UP y DELIVERY. Vamos a buscar tus equipos y luego te los vamos a dejar donde necesites dentro de Santiago.
+                li.mg-faq-item
+                  h5.mg-h5 Quiero optar por el servicio de pick up y delivery, ¿Qué costo tiene?
+                  p.mg-p.gray
+                    | Es gratuito dentro de Santiago y es exclusivo para clientes que hayan aceptado el presupuesto enviado.
+                li.mg-faq-item 
+                  h5.mg-h5 Entregué mi equipo para diagnóstico con servicio de pick up y delivery pero no acepté el presupuesto. ¿Tiene algún costo?
+                  p.mg-p.gray
+                    | Sí, tiene un costo fijo de $5.990 dentro de Santiago, incluido el PICK UP y DELIVERY. Este servicio es gratuito únicamente para clientes que hayan aceptado el presupuesto.
+                li.mg-faq-item
+                  h5.mg-h5 Opté por servicio de pick up y delivery. ¿Los tiempos de traslado están incluidos en las 72 horas?
+                  p.mg-p.gray
+                    | Sí. Si optaste por el servicio de PICK UP y DELIVERY recibirás tus equipos dentro de las 72 horas garantizadas. Recuerda que las 72 horas corren desde el momento en que aceptas el presupuesto, no desde el PICK UP.
+                li.mg-faq-item 
+                  h5.mg-h5 Mis equipos fueron entregados fuera del plazo estipulado y ¿Qué ocurre en caso que no se cumpla el plazo de 72 horas?
+                  p.mg-p.gray
+                    | Si por algún motivo recibes tus equipos fuera de las 72 horas hábiles garantizadas, te lo informaremos previamente, y te compensaremos con un 50% de descuento en tu presupuesto final.
+                li.mg-faq-item
+                  h5.mg-h5 Mi equipo necesita un upgrade. ¿Puedo solamente comprar las piezas o repuestos que necesito?
+                  p.mg-p.gray
+                    | Sí, puedes revisarlos y comprarlos en línea a través de nuestro E-SHOP 
+                    a href="http://www.lyrics.cl/tienda" 
+                      | lyrics.cl/tienda
+                li.mg-faq-item
+                  h5.mg-h5 Tengo una urgencia con mis equipos y estoy fuera del horario hábil. ¿Qué puedo hacer?
+                  p.mg-p.gray
+                    | Por el momento no atendemos urgencias, pero estamos trabajando para iniciar pronto una marcha blanca para nuestro SERVICIO 24/7.
+
+div id="fb-root"
+javascript:
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/es_ES/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+div class="fb-customerchat" attribution="setup_tool" page_id="235150480217890" theme_color="#000000" logged_in_greeting="¡Hola! ¿cómo te ayudamos? Horario Lu-Vi 10-24 y 25 a 19 y Sábado 10:30-14:00" logged_out_greeting="¡Hola! ¿cómo te ayudamos? Horario Lu-Vi 10-24 y 25 a 19 y Sábado 10:30-14:00"

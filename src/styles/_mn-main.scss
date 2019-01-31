@@ -544,6 +544,10 @@ section.mg-services {
     }
     > .flex {
       width: 50%;
+      @media #{$md}{
+        width: 100%;
+      }
+
       .flex {
         h1 {
           @media #{$sm}{
@@ -648,6 +652,12 @@ section.mg-services {
     width: auto;
     margin: 0 auto;
     margin-top: 40px;
+    @media #{$md}{
+      width: 100%;
+      height: 50px;
+      font-size: 23px;
+      font-weight: 600;
+    }
   }
 }
 
@@ -1152,6 +1162,10 @@ section.mg-device-page {
           @media #{$sm}{
             text-align: center;
           }
+        }
+        li{
+          font-weight: 700;
+          cursor: pointer;
         }
         button {
           margin-top: 40px!important;
