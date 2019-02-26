@@ -110,7 +110,7 @@ html lang="es"
                 h1.highlight.up.text-center  Funciona en 5 de cada 10 equipos.
                 h2.white.text-center
                   | (La fórmula estándar garantiza sólo 3 de cada 10 casos)
-                button.button.normal type="button" onclick="modalContact()" SALVA TU EQUIPO
+                button.button.normal type="button" onclick="modalContact();ga('send', 'event', 'contacto', 'formulario');" SALVA TU EQUIPO
                 span.note.white.text-center
                   | O visítanos y comienza la reperación de tu dispositivo ahora
           #slide-welcome-b.slide-home-container
@@ -120,7 +120,7 @@ html lang="es"
                 h1.white.text-center ¿Pantalla Rota? ¿Problemas de Placa? 
                 h1.highlight.up.text-center ¿Baterías que no duran?
                 h2.white.text-center Elije una reparación de calidad
-                button.button.normal type="button" onclick="modalContact()" COTIZA CON NOSOTROS
+                button.button.normal type="button" onclick="modalContact();ga('send', 'event', 'contacto', 'formulario');" COTIZA CON NOSOTROS
                 span.note.white.text-center
                   img.android-icon src="macgarage/assets/img/android-icon.png" title="android" alt="reparación de celulares android"
                   | ¿Tienes un Android? También reparamos Samsung, LG, Huawei, Sony y más.
@@ -134,9 +134,9 @@ html lang="es"
               .flex.col.start
                 h2.white Llámanos ahora:
                 .flex.row.start
-                  a.white href="tel:+56229527652"
+                  a.white href="tel:+56229527652" onclick="ga('send', 'event', 'contacto', 'llamada');"
                     | +56 22 9527652&nbsp; /
-                  a.white href="tel:+56950664815"
+                  a.white href="tel:+56950664815" onclick="ga('send', 'event', 'contacto', 'llamada');"
                     | &nbsp;+569 5 066 4815
             /! ADRESS
             .mg-adress.flex.row.start
@@ -146,9 +146,9 @@ html lang="es"
               .flex.col.start
                 h2.white Visítanos 
                 .flex.row.start
-                  a.white href="https://goo.gl/maps/Hn9JiHm5zkM2" target="_blank" Luis Thayer Ojeda Norte 0180 Of. 809, Providencia
+                  a.white href="https://goo.gl/maps/Hn9JiHm5zkM2" onclick="ga('send', 'event', 'mapa', 'informacion');" target="_blank" Luis Thayer Ojeda Norte 0180 Of. 809, Providencia
                 .flex.row.start
-                  a.white href="https://goo.gl/maps/tipDj8xAbM62" target="_blank" Nancy 570, Ñuñoa
+                  a.white href="https://goo.gl/maps/tipDj8xAbM62" onclick="ga('send', 'event', 'mapa', 'informacion');" target="_blank" Nancy 570, Ñuñoa
             /! MAIL
             .mg-mail.flex.row.start
               .mg-icon-access
@@ -160,7 +160,7 @@ html lang="es"
 
       /! WHATSAPP
       .flex.center.row.mg-promo-bar
-        a.mg-whatsapp.flex.row.center href="https://wa.me/56950664815"
+        a.mg-whatsapp.flex.row.center href="https://wa.me/56950664815" onclick="ga('send', 'event', 'whatsapp', 'mensaje');"
           img src="macgarage/assets/img/whatsapp-icon.svg" title="whatsapp" alt="whatsapp"
           | Conversemos por Whatsapp
           span +56950664815
@@ -217,7 +217,7 @@ html lang="es"
             p.gray.text-justify
               | La tecnología avanza rápido y sabemos la importancia  de que tus equipos funcionen fluido como el primer día, para esto ampliamos las características de hardware y potenciamos la capacidad reemplazando piezas por otras más poderosas.
           
-        button.button.normal type="button" onclick="modalContact()" Cotizar ahora
+        button.button.normal type="button" onclick="modalContact();ga('send', 'event', 'contacto', 'formulario');" Cotizar ahora
         nav.mg-slider.display-none
           i.fas.fa-chevron-circle-left
           .mg-slider-bar
@@ -229,58 +229,43 @@ html lang="es"
         ul.mg-products-list.flex.row.center
           /! PRODUCT #1
           li.mg-products-detail.flex.col.center.product-1
-            h4.white.text-center OWC - Memoria SSD
+            h4.white.text-center SSD Mercury Electra (120gb) 6G 2.5'- OWC
             .flex.row.center
-              img src="macgarage/assets/img/product-1.jpg" title="OWC - Memoria SSD" alt="OWC - Memoria SSD"
-            p.white.text-justify
-              | $269.990
-            a href="https://lyrics.cl/tienda/producto/240gb-aura-ssd-flash-internal-drive-upgrade-para-mid-2013-and-later-macbook-air-and-macbook-pro-with-retina-display/"
+              img src="macgarage/assets/img/540.png" title="SSD Mercury Electra (120gb) 6G 2.5' (Serial-ATA 7mm) - OWC" alt="SSD Mercury Electra (120gb) 6G 2.5' (Serial-ATA 7mm) - OWC"
+            p.white.text-justify $85.990
+            a href="https://lyrics.jumpseller.com/ssd-mercury-electra-120gb-6g-25-serial-ata-7mm-owc"
               button.button.highlight type="button" Ir a la tienda
-          /! PRODUCT #2
           li.mg-products-detail.flex.col.center.product-2
-            h4.white.text-center Pantalla iPhone 6/iPhone X (Instalación incl.)
+            h4.white.text-center Dock OWC Tipo USB-C Compatible con Macbook
             .flex.row.center
-              img src="macgarage/assets/img/product-2.jpg" title="Pantalla iPhone 6/iPhone X" alt="Pantalla iPhone 6/iPhone X"
-            p.white.text-justify
-              | $49.990 / $349.000
-              button.button.highlight  onclick="modalContact()" type="button" Consultar
-          /! PRODUCT #3
-          li.mg-products-detail.flex.col.center.product-3
-            h4.white.text-center Glyph - Blackbox USB 3.0 500gb
-            .flex.row.center
-              img src="macgarage/assets/img/product-3.png" title="Glyph - Blackbox USB 3.0 500gb" alt="Glyph - Blackbox USB 3.0 500gb"
-            p.white.text-justify
-              | $69.030
-            a href="https://lyrics.cl/tienda/producto/blackbox-usb3-500gb-glyph/"
+              img src="macgarage/assets/img/541.png" title="USB-C Dock OWC" alt="USB-C Dock OWC"
+            p.white.text-justify $174.990
+            a href="https://lyrics.jumpseller.com/usb-c-dock-owc"
               button.button.highlight type="button" Ir a la tienda
-          /! PRODUCT #4
-          li.mg-products-detail.flex.col.center.product-4
-            h4.white.text-center OWC - 120GB SSD Mercury Electra 6G 2.5″ SATA
+          li.mg-products-detail.flex.col.center.product-3
+            h4.white.text-center Hub 4 puertos USB 3.0 para iMac - Sabrent
             .flex.row.center
-              img src="macgarage/assets/img/product-4.jpg" title="OWC - 120GB SSD Mercury Electra 6G 2.5″ SATA" alt="OWC - 120GB SSD Mercury Electra 6G 2.5″ SATA"
-            p.white.text-justify
-              | $85.990
-            a href="https://lyrics.cl/tienda/producto/120gb-ssd-mercury-electra-6g-2-5-serial-ata-7mm/"
+              img src="macgarage/assets/img/542.png" title="Hub 4 puertos USB 3.0 para iMac - Sabrent" alt="Hub 4 puertos USB 3.0 para iMac - Sabrent"
+            p.white.text-justify $44.990
+            a href="https://lyrics.jumpseller.com/hub-4-puertos-usb-30-para-imac-sabrent"
               button.button.highlight type="button" Ir a la tienda
         /! PRODUCT SUBSECTION B
         ul.mg-products-list.flex.row.center
           /! PRODUCT #5
           li.mg-products-detail.flex.col.center.product-5
-            h4.white.text-center Apple - Magic Mouse (reacondicionado)
+            h4.white.text-centerCargador Magsafe Apple 60W Cargador Original
             .flex.row.center
-              img src="macgarage/assets/img/product-5.jpg" title="Apple - Magic Mouse (reacondicionado)" alt="Apple - Magic Mouse (reacondicionado)"
-            p.white.text-justify
-              | $45.990
-            a href="https://lyrics.cl/tienda/producto/magic-mouse-apple/"
+              img src="macgarage/assets/img/543.png" title="Magsafe Apple 60W" alt="Magsafe Apple 60W"
+            p.white.text-justify $59.990
+            a href="https://lyrics.jumpseller.com/cargador-magsafe-apple-60w" 
               button.button.highlight type="button" Ir a la tienda
           /! PRODUCT #6
           li.mg-products-detail.flex.col.center.product-6
-            h4.white.text-center Apple - Cargador Macsafe 85w
+            h4.white.text-center Cambio pantalla alternativa iPhone 5/5C/5S
             .flex.row.center
-              img src="macgarage/assets/img/product-6.jpg" title="Apple - Cargador Macsafe 85w" alt="Apple - Cargador Macsafe 85w"
-            p.white.text-justify
-              | $59.990
-            a href="https://lyrics.cl/tienda/producto/cargador-magsafe-85w-apple-para-macbook-pro/"
+              img src="macgarage/assets/img/544.png" title="Cambio pantalla alternativa iPhone 5 (5, 5C, 5S, 5SE)" alt="Cambio pantalla alternativa iPhone 5 (5, 5C, 5S, 5SE)"
+            p.white.text-justify $21.900
+            a href="https://lyrics.jumpseller.com/cambio-pantalla-alternativa-iphone-5-5-5c-5s-5se"
               button.button.highlight type="button" Ir a la tienda
 
       /! SECTION DEVICES
@@ -412,7 +397,7 @@ html lang="es"
         .mg-instagram-panel
           iframe.snapwidget-widget src="https://snapwidget.com/embed/524777" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; height: 100%;"
 
-        button.button.highlight type="button" onclick="modalContact()" Cotizar ahora
+        button.button.highlight type="button" onclick="modalContact();ga('send', 'event', 'contacto', 'formulario');" Cotizar ahora
       
       /! FOOTER
       footer.flex.row.between

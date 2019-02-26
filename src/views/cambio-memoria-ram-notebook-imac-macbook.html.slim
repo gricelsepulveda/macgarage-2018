@@ -124,7 +124,7 @@ html lang="es"
           .flex.col.center
             .flex.col.left
               p.gray.text-justify.static-content ¿Tuviste un accidente con tu equipo y necesitas urgentemente ayuda? Ingresa a nuestro formulario a través del botó inferior, llámanos o utiliza el chat en la zona inferior derecha de la página, ¡estamos para ayudarte!
-        button.button.normal.display-none type="button" onclick="modalContact()" Contáctanos Ahora
+        button.button.normal.display-none type="button" onclick="modalContact();ga('send', 'event', 'contacto', 'formulario');" Contáctanos Ahora
 
       /! FOOTER
       footer.flex.row.between
