@@ -1618,14 +1618,14 @@ section.mg-venue-page {
       @media #{$sm}{
         display: none;
       }
-      &.mg-lo-barnechea {
-        background-image: url('/macgarage/assets/img/nunoa-map.png');
+      &.mg-vitacura {
+        background-image: url('/macgarage/assets/img/map-vitacura.png');
       }
       &.mg-nunoa {
         background-image: url('/macgarage/assets/img/nunoa-map.png');
       }
-      &.mg-nunoa {
-        background-image: url('/macgarage/assets/img/sede-nunoa.jpg');
+      &.mg-providencia {
+        background-image: url('/macgarage/assets/img/providencia-map.png');
       }
     }
   }
