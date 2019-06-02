@@ -1082,6 +1082,10 @@ footer {
     }
   }
   .flex.col.end {
+    margin-right: 300px;
+    @media #{$md}{
+      margin-right: 0;
+    }
     span {
       margin-bottom: 5px!important;
       font-style: normal;
@@ -1478,7 +1482,7 @@ section.mg-device-page {
       &:nth-of-type(3){
         .mg-venue-picture {
           background: {
-            image: url('/macgarage/assets/img/logo-macgarage-light.svg');
+            image: url('/macgarage/assets/img/vitacura.jpg');
             size: 120px auto;
             repeat: no-repeat;
             position: center;

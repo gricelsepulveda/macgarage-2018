@@ -95,8 +95,18 @@ module.exports = function(grunt) {
         files: ['src/scripts/*.js'],
         tasks: ['uglify']
       },
+    },
+    htmlbuild: {
+      src: 'index.html',
+      dest: 'dist/',
+      options: {
+        sections: {
+          footer: 'views/footer.html'
+        }
+      }
     }
   });
+  grunt.loadNpmTasks('grunt-html-build');
   grunt.loadNpmTasks('grunt-slim');
   grunt.loadNpmTasks('grunt-autoprefixer');  
   grunt.loadNpmTasks('grunt-contrib-sass');
