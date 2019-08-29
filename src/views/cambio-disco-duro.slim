@@ -4,8 +4,8 @@ html lang="es"
     meta charset="utf-8"
     title MacGarage - Servicio Técnico Especializado en Apple
     meta name="description" content="Reparamos tus equipos Apple, iPhone, Macbook. Soluciones en 30 minutos."
-    meta name="keywords" content="reparación, apple, tecnología, macbook, iphone, ipad, imac"/
-    meta name="author" content="Lyrics Música &amp; Tecnología"
+    meta name="keywords" content="reparación, apple, tecnología, macbook, iphone, ipad, imac"
+    meta name="author" content="MacGarage"
     link rel="stylesheet" href="macgarage/styles/normalize.min.css" type="text/css"
     /! VIEWPORT RESPONSIVE
     meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/
@@ -14,15 +14,11 @@ html lang="es"
     /! STYLES 
     link rel="stylesheet" href="macgarage/styles/mn-styles.css" type="text/css"
     /! JQUERY
-    script src="macgarage/scripts/jquery-3.3.1.min.js" type="text/javascript"
-    /! LIVERELOAD
-    script src="http://localhost:35729/livereload.js" 
+    script async="" src="macgarage/scripts/jquery-3.3.1.min.js" type="text/javascript"
     /! SCRIPTS 
-    script src="macgarage/scripts/mg-scripts.min.js"
+    script defer="" src="macgarage/scripts/mg-scripts.min.js"
     /! FAVICON
     link rel="icon" type="image/png" href="macgarage/favicon.ico" 
-    /! SCROLL
-    script src="macgarage/scripts/smooth-scroll.min.js"
     script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-109501441-1"
     noscript
       img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1629610427076491&ev=PageView&noscript=1"
@@ -33,16 +29,6 @@ html lang="es"
     meta property="og:site_name" content="MacGarage"
     meta property="og:url" content="https://www.macgarage.cl"
     javascript:
-      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-      (function(){
-      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-      s1.async=true;
-      s1.src='https://embed.tawk.to/5a97fbea4b401e45400d5166/default';
-      s1.charset='UTF-8';
-      s1.setAttribute('crossorigin','*');
-      s0.parentNode.insertBefore(s1,s0);
-      })();
-
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -51,6 +37,7 @@ html lang="es"
       ga('create', 'UA-109501441-1', 'auto');
       ga('send', 'pageview');
   body
+    link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" lazyload=""
     .mg-center
       /!NAVBAR
       nav.mg-top-navbar
@@ -104,7 +91,7 @@ html lang="es"
           .flex.col.center
             .flex.col.left
               h1.black.text-left Cambiarle el Disco Duro a mi equipo
-              h1.highlight.text-left ¿Qué significa?
+              h2.highlight.text-left ¿Qué significa?
               h2.black.text-left Muchas veces puede salvarte de tener que comprar uno nuevo
               p.gray.text-justify.static-content Si te ha pasado que muchas veces no puedes acceder a determinado archivo en tu computador, está lento y con problemas a pesar de que lo hayas formateado e instalado su Sistema Operativo desde cero, o derechamente no prende, hay buenas posibilidades de que tu disco duro esté con problemas y debas considerar cambiarlo por uno nuevo. O bien, tu equipo anda fantástico pero notas que está lento o quieres darle más velocidad y no sabes como, muchas veces un cambio de disco duro podría aumentar notablemente la velocidad del equipo, ya que los Discos de Estado Sólido (SSD) cuentan con una velocidad varias veces mayor que sus contrapartes más antiguas HDD (que es el tipo de disco duro que viene en la mayoría de los computadores que no son de gama alta).
           .flex.row.center
@@ -162,7 +149,7 @@ html lang="es"
         .mg-modal-bg.flex.col.center
           .mg-modal.flex.col.center.modal-contact
             i.fas.fa-times
-            h1.white Contacto
+            h2.white Contacto
             p.white ¡Contestamos de inmediato entre 10am - 18pm!
             form.flex.col.center action="mailer.php" method="post"
               .mg-form-item.mg-combo
@@ -185,7 +172,7 @@ html lang="es"
         .mg-modal-bg.flex.col.center
           .mg-modal.flex.col.center.mg-modal-venue
             i.fas.fa-times
-            h1.white Laboratorios
+            h2.white Laboratorios
             .flex.row.center 
               /! VENUE
               a.flex.col.center href="./sede-nunoa.html" target="_blank"
@@ -204,7 +191,7 @@ html lang="es"
       .mg-modal-display.display-none
         .mg-modal-bg.flex.col.center
           .mg-modal-faq.flex.col.center
-            h1.white.text-center 
+            h2.white.text-center 
               | Preguntas frecuentes
             i.fas.fa-times
             .mg-faq-container

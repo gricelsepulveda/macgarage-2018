@@ -1,5 +1,21 @@
 module.exports = function(grunt) {
   grunt.initConfig({
+    htmlmin: {                                     
+      dist: {                                      
+        options: {                                 
+          removeComments: true,
+          collapseWhitespace: true,
+          minifyJS: true,
+          minifyCSS: true
+        },
+        files: [{
+          expand: true,
+          cwd: 'dist',
+          src: ['dist/**/*.html', '*.html'],
+          dest: 'distmin'
+        }]
+      }
+    },
     slim: {                    
       dist: {   
         options: {                   
@@ -115,4 +131,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.registerTask('default',['slim', 'sass', 'autoprefixer','http-server', 'uglify','watch']);
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
 };

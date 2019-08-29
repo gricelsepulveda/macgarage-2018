@@ -4,8 +4,8 @@ html lang="es"
     meta charset="utf-8"
     title MacGarage - Servicio Técnico Especializado en Apple
     meta name="description" content="Reparamos tus equipos Apple, iPhone, Macbook. Soluciones en 30 minutos."
-    meta name="keywords" content="reparación, apple, tecnología, macbook, iphone, ipad, imac"/
-    meta name="author" content="Lyrics Música &amp; Tecnología"
+    meta name="keywords" content="reparación, apple, tecnología, macbook, iphone, ipad, imac"
+    meta name="author" content="MacGarage"
     link rel="stylesheet" href="styles/normalize.min.css" type="text/css"
     /! VIEWPORT RESPONSIVE
     meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/
@@ -16,9 +16,7 @@ html lang="es"
     /! JQUERY
     script src="scripts/jquery-3.3.1.min.js" type="text/javascript"
     /! SCRIPTS
-    script src="scripts/mg-scripts.min.js"
-    /! LIVERELOAD
-    script src="http://localhost:35729/livereload.js"
+    script defer="" src="scripts/mg-scripts.min.js"
     /! FAVICON
     link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg"
     script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-109501441-1"
@@ -26,8 +24,8 @@ html lang="es"
       img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1629610427076491&ev=PageView&noscript=1"
     script src="https://widget.flowxo.com/embed.js" data-fxo-widget="eyJ0aGVtZSI6IiMwMDAwMDAiLCJ3ZWIiOnsiYm90SWQiOiI1YWZhY2RiM2M4OGY3YjY1N2VjMGQ0Y2QiLCJ0aGVtZSI6IiMwMDAwMDAiLCJsYWJlbCI6IsKhRXNjcsOtYmVub3MhIn0sIndlbGNvbWVUZXh0Ijoiwr9UaWVuZXMgZHVkYXM/IMKhQ29udmVyc2Vtb3MhIn0=" async="" defer=""
   body
+    link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" lazyload=""
     .mg-center
-
       /!NAVBAR
       nav.mg-top-navbar
         /! NOTCH IPHONE X
@@ -80,8 +78,7 @@ html lang="es"
               .mg-venue-photo-container
                 img.mg-img-venue src="assets/img/providencia-photo.jpg" title="sede nunoa reparaciones mac" alt="sede nunoa reparaciones mac"
               .flex.col.start
-                h1.highlight.text-left Sede
-                h1.black.text-left Providencia
+                h1.highlight.text-left Sede Providencia
             .flex.col.start.mg-venue-data
               .flex.row.start
                 .mg-icon-venue
@@ -133,7 +130,7 @@ html lang="es"
         .mg-modal-bg.flex.col.center
           .mg-modal.flex.col.center.modal-contact
             i.fas.fa-times
-            h1.white Contacto
+            h2.white Contacto
             p.white ¡Contestamos de inmediato entre 10am - 18pm!
             form.flex.col.center action="mailer.php" method="post"
               .mg-form-item.mg-combo
@@ -156,7 +153,7 @@ html lang="es"
         .mg-modal-bg.flex.col.center
           .mg-modal.flex.col.center.mg-modal-venue
             i.fas.fa-times
-            h1.white Laboratorios
+            h2.white Laboratorios
             .flex.row.center 
               /! VENUE
               a.flex.col.center href="./sede-nunoa.html" target="_blank"
@@ -175,7 +172,7 @@ html lang="es"
       .mg-modal-display.display-none
         .mg-modal-bg.flex.col.center
           .mg-modal-faq.flex.col.center
-            h1.white.text-center 
+            h2.white.text-center 
               | Preguntas frecuentes
             i.fas.fa-times
             .mg-faq-container
