@@ -71,7 +71,7 @@ h1 {
 h2 {
   font: {
     size: 16px;
-    weight: 400; 
+    weight: 400;
   }
 }
 
@@ -176,7 +176,7 @@ button.button {
       }
       &.part-3{
         position: absolute;
-        height: 38px; 
+        height: 38px;
         width: calc(50% - 20px);
         top: 0px;
         left: calc(25% + 11px);
@@ -222,7 +222,7 @@ button.button {
       align-items: flex-end;
       margin-top: 5px;
       @media #{$sm} {
-        width: auto; 
+        width: auto;
         position: absolute;
         top: -15px;
         right: calc(50% - 50px);
@@ -323,7 +323,7 @@ section.mg-welcome {
   background: {
     image: url('/macgarage/assets/img/bg-3.jpg');
     size: 65%;
-    position: center bottom; 
+    position: center bottom;
     repeat: no-repeat;
     color: black;
   }
@@ -344,8 +344,10 @@ section.mg-welcome {
       }
       .slide-welcome {
         > img {
-          width: 100%;
           margin-top: 125px;
+          width: auto;
+          margin-top: 150px;
+          height: 350px;
           &.apple-family {
             height: auto;
             width: 450px;
@@ -370,7 +372,7 @@ section.mg-welcome {
             /*background: {
               image: url('../assets/img/apple-family-2.png');
               size: auto 100%;
-              position: 100%; 
+              position: 100%;
               repeat: no-repeat;
               color: rgba($black, 0.35);
               blend-mode: multiply;
@@ -399,6 +401,21 @@ section.mg-welcome {
           button {
             margin-top: 20px!important;
             cursor: pointer;
+            @media #{$sm}{
+              font-size: 30px;
+              width: 100%;
+            }
+            &.mobile{
+              display:none;
+              @media #{$sm}{
+                display: flex;
+              }
+            }
+            &.desktop{
+              @media #{$sm}{
+                display: none;
+              }
+            }
           }
           span.note {
             @include flex-row-center;
@@ -435,7 +452,7 @@ section.mg-welcome {
       }
       // ADRESS
       .mg-adress {
-        .mg-icon-access { 
+        .mg-icon-access {
           background: linear-gradient(180deg, lighten($color-6, 10%) 0%, $color-6 100%);
         }
         @media #{$sm}{
@@ -499,7 +516,7 @@ section.mg-welcome {
 .mg-promo-bar {
   width: 100%;
   background-color: #075e54;
-  a.mg-whatsapp { 
+  a.mg-whatsapp {
     @include clean-href;
     box-sizing: border-box;
     height: 32px;
@@ -849,7 +866,7 @@ section.mg-rate-feedback {
         }
         &:after {
           content: '';
-          width: 0; 
+          width: 0;
           height: 0;
           border-top: 10px solid transparent;
           border-bottom: 10px solid transparent;
@@ -1119,7 +1136,7 @@ section.mg-device-page {
   box-sizing: border-box;
   background: linear-gradient(45deg, $color-2 0%, $color-3 100%);
   padding: 180px 30px 40px 30px;
-  min-height: calc(100vh - 123px); 
+  min-height: calc(100vh - 123px);
   //background-image: url('../assets/img/bg-2.jpg');
   background-size: cover;
   background-position: center;
@@ -1142,7 +1159,7 @@ section.mg-device-page {
   .mg-device-detail {
     padding-bottom: 80px;
     box-sizing: border-box;
-    min-height:  calc(100vh - 123px - 210px); 
+    min-height:  calc(100vh - 123px - 210px);
     @media #{$sm}{
       flex-direction: column!important;
       justify-content: center!important;
@@ -1353,7 +1370,7 @@ section.mg-device-page {
           textarea {
             height: 120px;
             border-radius: 20px;
-            padding-top: 18px; 
+            padding-top: 18px;
           }
         }
         button {
@@ -1502,7 +1519,7 @@ section.mg-venue-page {
   width: 100%;
   box-sizing: border-box;
   padding: 0px 0px 0px 0px;
-  min-height: calc(100vh - 123px); 
+  min-height: calc(100vh - 123px);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

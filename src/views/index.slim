@@ -89,7 +89,18 @@ html lang="es"
 
       /! SECTION WELCOME
       section#welcome.mg-welcome
-        img src="macgarage/assets/img/banner.jpg" title="promocion" alt="promocion"
+        .mg-slider-welcome
+          #slide-welcome-a.slide-home-container.active
+            .flex.row.between.slide-welcome
+              img src="macgarage/assets/img/imac.png" title="mac" alt="repara tu mac"
+              .flex.col.center
+                h1.white.text-center Haz Upgrade de tu Mac
+                h1.highlight.up.text-center  SSD, Memoria RAM y más
+                a href="tel:+56950664815"
+                  button.mobile.button.normal type="button"LLÁMANOS
+                button.desktop.button.normal type="button" onclick="modalContact()" CONTÁCTANOS
+                span.note.white.text-center
+                  | O visítanos y comienza la reperación de tu dispositivo ahora
         nav.mg-quick-access
           .flex.row.around
             /! PHONE
