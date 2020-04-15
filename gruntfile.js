@@ -1,8 +1,8 @@
 module.exports = function(grunt) {
   grunt.initConfig({
-    htmlmin: {                                     
-      dist: {                                      
-        options: {                                 
+    htmlmin: {
+      dist: {
+        options: {
           removeComments: true,
           collapseWhitespace: true,
           minifyJS: true,
@@ -16,11 +16,11 @@ module.exports = function(grunt) {
         }]
       }
     },
-    slim: {                    
-      dist: {   
-        options: {                   
+    slim: {
+      dist: {
+        options: {
           pretty: true
-        }, 
+        },
         files: [{
           expand: true,
           cwd: 'src/views',
@@ -124,7 +124,7 @@ module.exports = function(grunt) {
   });
   grunt.loadNpmTasks('grunt-html-build');
   grunt.loadNpmTasks('grunt-slim');
-  grunt.loadNpmTasks('grunt-autoprefixer');  
+  grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-http-server');
@@ -132,4 +132,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.registerTask('default',['slim', 'sass', 'autoprefixer','http-server', 'uglify','watch']);
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
+  grunt.loadNpmTasks('grunt-contrib');
 };

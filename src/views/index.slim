@@ -37,10 +37,15 @@ html lang="es"
 
       ga('create', 'UA-109501441-1', 'auto');
       ga('send', 'pageview');
-  body
+    script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"
+    link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
     link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" lazyload=""
+    javascript:
+      $(window).on('load',function(){
+        $('#ex1').modal();
+      });
+  body
     .mg-center
-
       /!NAVBAR
       nav.mg-top-navbar
         /! NOTCH IPHONE X
@@ -115,13 +120,9 @@ html lang="es"
                     | &nbsp;+569 5 066 4815
             /! ADRESS
             .mg-adress.flex.row.start
-              a href="https://goo.gl/maps/Hn9JiHm5zkM2" title="Ubicación Sucursal Providencia" target="_blank"
-                .mg-icon-access
-                  img src="macgarage/assets/img/mg-location.svg" title="location" alt="location service"
+              .mg-icon-access
               .flex.col.start
                 h2.white Visítanos
-                .flex.row.start
-                  a.white href="https://goo.gl/maps/Hn9JiHm5zkM2" target="_blank" Luis Thayer Ojeda Norte 0180 Of. 809, Providencia.
                 .flex.row.start
                   a.white href="https://goo.gl/maps/tipDj8xAbM62" target="_blank" Nancy 570, Ñuñoa.
             /! MAIL
@@ -381,10 +382,6 @@ html lang="es"
           img src="assets/img/logo-macgarage-light.svg" title="macgarage" alt="macgarage"
         .flex.col.end
           span.note.white.flex.row.start.text-right
-            | Providencia:
-            a href="https://goo.gl/maps/Hn9JiHm5zkM2" target="_blank" &nbsp; Luis Thayer Ojeda Norte 0180 Of. 809, Providencia.
-            a href="tel:+56229527652" F: +56229527652
-          span.note.white.flex.row.start.text-right
             | Ñuñoa
             a href="https://goo.gl/maps/tipDj8xAbM62" target="_blank" &nbsp; Nancy 570, Ñuñoa.
             a href="tel:+56225023258" F: +56225023258
@@ -434,10 +431,6 @@ html lang="es"
               a.flex.col.center href="./sede-nunoa.html" target="_blank"
                 .mg-venue-picture
                 h3.text-center.black Laboratorio Ñuñoa
-              /! VENUE
-              a.flex.col.center href="./sede-providencia.html" target="_blank"
-                .mg-venue-picture
-                h3.text-center.black Laboratorio Providencia
 
 
       /! MODAL FAQ
@@ -503,6 +496,13 @@ html lang="es"
                   p.mg-p.gray
                     | Por el momento no atendemos urgencias, pero estamos trabajando para iniciar pronto una marcha blanca para nuestro SERVICIO 24/7.
 
+    #ex1.modal[style="display: inline-block;"]
+      p Hola! Información importante:
+      p Estamos atendiendo en nuestra sucursal de Ñuñoa, Nancy #570 previo llamado al 22-5023258 o Whatsapp +569 50664815.
+      p Gracias por su comprensión y recuerde seguir todos los consejos en materia de prevención!
+      br
+      a[href="#" rel="modal:close"] Cerrar
+      a.close-modal[href="#close-modal" rel="modal:close"] Close
 div id="fb-root"
 javascript:
   (function(d, s, id) {
